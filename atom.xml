@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2020-03-01T13:30:48.423Z</updated>
+  <updated>2020-03-01T15:17:02.909Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Keepass使用安全桌面登录系统白屏问题]]></title>
+    <link href="http://lvxu.site/2020/03/01/Keepass%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%A1%8C%E9%9D%A2%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F%E7%99%BD%E5%B1%8F%E9%97%AE%E9%A2%98/"/>
+    <id>http://lvxu.site/2020/03/01/Keepass使用安全桌面登录系统白屏问题/</id>
+    <published>2020-03-01T15:15:11.000Z</published>
+    <updated>2020-03-01T15:17:02.909Z</updated>
+    <content type="html"><![CDATA[<h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。</p>
+<p>该问题在v1909系统中仍然存在。</p>
+<h2 id="解决方案">解决方案</h2><h3 id="卸载KB4515384">卸载KB4515384</h3><p>V2EX网友反应，卸载更新KB4515384可以解决（<a href="https://www.v2ex.com/t/601017" target="_blank" rel="noopener">Keepass 用户请谨慎安装 KB4515384</a>），但是笔者不建议这样做。卸载系统更新可能带来无法预料的安全问题。</p>
+<h3 id="停用_Keepass_的安全登录功能">停用 Keepass 的安全登录功能</h3><p>除了卸载更新之外，停用Keepass的「在安全桌面输入管理密钥」功能也可以解决白屏问题。</p>
+<p>但是麻烦在于，此时无法进入 Keepass 的更改设置。为了解决这一矛盾，做如下操作可以在不打开软件的情况下修改该项配置。</p>
+<p>打开文件夹<code>C:\Users\[UserName]\AppData\Roaming\KeePass</code>，用文本编辑软件打开文件<code>KeePass.config.xml</code>，并在其中找到<code>&lt;MasterKeyOnSecureDesktop&gt;true&lt;/MasterKeyOnSecureDesktop</code>，将其中的<code>true</code>改为<code>false</code>并保存。</p>
+<p>再打开Keepass，「在安全桌面输入管理密钥」功能已经关闭。</p>
+<p>还是希望微软或者Keepass尽快修正这个问题吧。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系]]>
+    </summary>
+    
+      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="Keepass" scheme="http://lvxu.site/tags/Keepass/"/>
+    
+      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[中国传统历法-干支日速算问题]]></title>

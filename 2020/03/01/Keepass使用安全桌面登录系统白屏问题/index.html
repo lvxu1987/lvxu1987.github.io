@@ -4,25 +4,25 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   
-    <title>「请稍候」与「请稍后」 | 吕旭说</title>
+    <title>Keepass使用安全桌面登录系统白屏问题 | 吕旭说</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="吕旭">
     
 
     
-    <meta name="description" content="许多软件在等候时会出现「请稍后」的字样，故此对「请稍后」和「请稍候」进行一下辨析">
-<meta name="keywords" content="网络,文化">
+    <meta name="description" content="问题的起因Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。 该问题在v1909系统中仍然存在。 解决">
+<meta name="keywords" content="网络,Keepass">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「请稍候」与「请稍后」">
-<meta property="og:url" content="http://lvxu.site/2015/03/28/「请稍候」与「请稍后」/index.html">
+<meta property="og:title" content="Keepass使用安全桌面登录系统白屏问题">
+<meta property="og:url" content="http://lvxu.site/2020/03/01/Keepass使用安全桌面登录系统白屏问题/index.html">
 <meta property="og:site_name" content="吕旭说">
-<meta property="og:description" content="许多软件在等候时会出现「请稍后」的字样，故此对「请稍后」和「请稍候」进行一下辨析">
+<meta property="og:description" content="问题的起因Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。 该问题在v1909系统中仍然存在。 解决">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2015-12-15T13:19:05.000Z">
+<meta property="og:updated_time" content="2020-03-01T15:17:02.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「请稍候」与「请稍后」">
-<meta name="twitter:description" content="许多软件在等候时会出现「请稍后」的字样，故此对「请稍后」和「请稍候」进行一下辨析">
+<meta name="twitter:title" content="Keepass使用安全桌面登录系统白屏问题">
+<meta name="twitter:description" content="问题的起因Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。 该问题在v1909系统中仍然存在。 解决">
 
     
     <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
@@ -81,14 +81,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/03/28/「请稍候」与「请稍后」/" title="「请稍候」与「请稍后」" itemprop="url">「请稍候」与「请稍后」</a>
+      <a href="/2020/03/01/Keepass使用安全桌面登录系统白屏问题/" title="Keepass使用安全桌面登录系统白屏问题" itemprop="url">Keepass使用安全桌面登录系统白屏问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
 		
   <p class="article-time">
-    <time datetime="2015-03-28T06:15:30.000Z" itemprop="datePublished"> 发表于 2015-03-28</time>
+    <time datetime="2020-03-01T15:15:11.000Z" itemprop="datePublished"> 发表于 2020-03-01</time>
     
   </p>
 </header>
@@ -97,23 +97,18 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正文"><span class="toc-number">1.</span> <span class="toc-text">正文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的起因"><span class="toc-number">1.</span> <span class="toc-text">问题的起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载KB4515384"><span class="toc-number">2.1.</span> <span class="toc-text">卸载KB4515384</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停用_Keepass_的安全登录功能"><span class="toc-number">2.2.</span> <span class="toc-text">停用 Keepass 的安全登录功能</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="正文">正文</h2><p>现在很多软件在载入界面时显示<strong>「请稍后」</strong>，其实是有问题的。</p>
-<p>虽然<strong>「请稍后」</strong>和<strong>「请稍候」</strong>都有等待一段时间的意思，但是使用上颇有不同。</p>
-<p><strong>「请稍候」</strong>意思完整，可以单独使用，意思是保持现有状态不变的情况下等候一会。</p>
-<p><strong>「请稍后」</strong>意思并不完整，必须搭配动词才有完整意义，意思是终止现状态，等待一会，再做后面动词所说的事情。</p>
-<a id="more"></a>
-<p>举几个例子说明一下：</p>
-<p>你去别人家，敲门，人家说：「请稍候。」说明人家马上来开门，你在门口等一下就行了，不要走开。</p>
-<p>如果人家说：「请稍后再来。」那说明人家忙着呢，没功夫答理你，你应该离开，过一会再来。</p>
-<p>再比如打电话对方通话中，会提示「您拨打的电话正在通话中，请稍后再拨。」就是说你要中断现在所做的事情，挂断电话，过一会再拨。</p>
-<p>如果对方有通话等待的功能，会提示你「请不要挂断电话，您拨打的电话正在通话中。」这个时候你应该「稍候」，就是说你不要挂电话，保持现有状态，等候一会。</p>
-<p>在软件载入的时候，提示文字配合进度条或者旋转的圆圈等图形，是希望用户有耐心一点，不要离开软件介面。因此应该是<strong>「请稍候」</strong>而非<strong>「请稍后」</strong>。</p>
-<p>所以还是希望软件的开发者们注意一下。</p>
-<h2 id="原文链接">原文链接</h2><p>转载请注明原文链接：<a href="http://t.cn/RA4BLOF" target="_blank" rel="noopener">http://t.cn/RA4BLOF</a></p>
+		<h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。</p>
+<p>该问题在v1909系统中仍然存在。</p>
+<h2 id="解决方案">解决方案</h2><h3 id="卸载KB4515384">卸载KB4515384</h3><p>V2EX网友反应，卸载更新KB4515384可以解决（<a href="https://www.v2ex.com/t/601017" target="_blank" rel="noopener">Keepass 用户请谨慎安装 KB4515384</a>），但是笔者不建议这样做。卸载系统更新可能带来无法预料的安全问题。</p>
+<h3 id="停用_Keepass_的安全登录功能">停用 Keepass 的安全登录功能</h3><p>除了卸载更新之外，停用Keepass的「在安全桌面输入管理密钥」功能也可以解决白屏问题。</p>
+<p>但是麻烦在于，此时无法进入 Keepass 的更改设置。为了解决这一矛盾，做如下操作可以在不打开软件的情况下修改该项配置。</p>
+<p>打开文件夹<code>C:\Users\[UserName]\AppData\Roaming\KeePass</code>，用文本编辑软件打开文件<code>KeePass.config.xml</code>，并在其中找到<code>&lt;MasterKeyOnSecureDesktop&gt;true&lt;/MasterKeyOnSecureDesktop</code>，将其中的<code>true</code>改为<code>false</code>并保存。</p>
+<p>再打开Keepass，「在安全桌面输入管理密钥」功能已经关闭。</p>
+<p>还是希望微软或者Keepass尽快修正这个问题吧。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -121,13 +116,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/杂谈/">杂谈</a>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/文化/">文化</a>
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/Keepass/">Keepass</a>
   </div>
 
 </div>
@@ -136,7 +131,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://lvxu.site/2015/03/28/「请稍候」与「请稍后」/" data-title="「请稍候」与「请稍后」 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  <div data-url="http://lvxu.site/2020/03/01/Keepass使用安全桌面登录系统白屏问题/" data-title="Keepass使用安全桌面登录系统白屏问题 | 吕旭说" data-tsina="1657002674" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -149,19 +144,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/03/29/一个方便自己用hexo的批处理/" title="一个方便自己用hexo的批处理">
-  <strong>上一篇：</strong><br/>
-  <span>
-  一个方便自己用hexo的批处理</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/03/26/新博客新开始/"  title="新博客，新开始">
+<a href="/2020/03/01/中国传统历法-干支日速算问题/"  title="中国传统历法-干支日速算问题">
  <strong>下一篇：</strong><br/> 
- <span>新博客，新开始
+ <span>中国传统历法-干支日速算问题
 </span>
 </a>
 </div>
@@ -175,7 +162,7 @@
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Sat Mar 28 2015 14:15:30 GMT+0800', // 可选。默认为 location.href
+  id: 'Sun Mar 01 2020 23:15:11 GMT+0800', // 可选。默认为 location.href
   owner: 'lvxu1987',
   repo: 'lvxu.site',
   oauth: {
@@ -192,7 +179,7 @@ gitment.render('git-comments')
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正文"><span class="toc-number">1.</span> <span class="toc-text">正文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">2.</span> <span class="toc-text">原文链接</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的起因"><span class="toc-number">1.</span> <span class="toc-text">问题的起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载KB4515384"><span class="toc-number">2.1.</span> <span class="toc-text">卸载KB4515384</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停用_Keepass_的安全登录功能"><span class="toc-number">2.2.</span> <span class="toc-text">停用 Keepass 的安全登录功能</span></a></li></ol></li></ol>
  
   </div>
 

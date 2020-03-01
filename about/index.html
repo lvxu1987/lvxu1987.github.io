@@ -125,6 +125,21 @@
 	
 	
 
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: 'lvxu1987',
+  repo: 'lvxu.site',
+  oauth: {
+    client_id:dac9155eb78fe699d034 '你的 client ID',
+    client_secret: 0de23fd133019006429a9713d4eb28181ad6248d'你的 client secret',
+  },
+})
+gitment.render('container')
+</script>
 </div>  
         </div>
         <footer><div id="footer" >
@@ -164,9 +179,6 @@
 		
 		<a href="http://lvxu.site/about" target="_blank" title="吕旭">吕旭</a>
 		
-		</p>
-		<p class="copyright" >
-		<a href="http://www.miitbeian.gov.cn/">晋ICP备17005964号</a> 
 		</p>
 </div>
 </footer>

@@ -1,0 +1,500 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  
+    <title>新博客，新开始 | 吕旭说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="吕旭">
+    
+
+    
+    <meta name="description" content="分享一下搭建博客的心得体会和搭建过程，并对搭建过程中遇到的一些问题进行一下总结。">
+<meta name="keywords" content="hexo,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新博客，新开始">
+<meta property="og:url" content="http://lvxu.site/2015/03/26/新博客新开始/index.html">
+<meta property="og:site_name" content="吕旭说">
+<meta property="og:description" content="分享一下搭建博客的心得体会和搭建过程，并对搭建过程中遇到的一些问题进行一下总结。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xib7y.com1.z0.glb.clouddn.com/weiboshow_demo1.JPG">
+<meta property="og:image" content="http://7xib7y.com1.z0.glb.clouddn.com/weiboshow_demo2.JPG">
+<meta property="og:updated_time" content="2020-03-01T07:00:05.861Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新博客，新开始">
+<meta name="twitter:description" content="分享一下搭建博客的心得体会和搭建过程，并对搭建过程中遇到的一些问题进行一下总结。">
+<meta name="twitter:image" content="http://7xib7y.com1.z0.glb.clouddn.com/weiboshow_demo1.JPG">
+
+    
+    <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/apple_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="吕旭说" title="吕旭说"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="吕旭说">吕旭说</a></h1>
+				<h2 class="blog-motto">汽车、网络、职教和生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lvxu.site">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/03/26/新博客新开始/" title="新博客，新开始" itemprop="url">新博客，新开始</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2015-03-26T06:37:14.000Z" itemprop="datePublished"> 发表于 2015-03-26</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客的过程"><span class="toc-number">1.</span> <span class="toc-text">搭建博客的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客的过程中遇到的一些问题"><span class="toc-number">2.</span> <span class="toc-text">搭建博客的过程中遇到的一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何把程序也同步到_GitHub_上"><span class="toc-number">2.1.</span> <span class="toc-text">如何把程序也同步到 GitHub 上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改_-gitignore_文件"><span class="toc-number">2.2.</span> <span class="toc-text">修改 .gitignore 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把网站同时部署到_GitHub_和_GitCafe"><span class="toc-number">2.3.</span> <span class="toc-text">把网站同时部署到 GitHub 和 GitCafe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#README-MD_的问题"><span class="toc-number">2.4.</span> <span class="toc-text">README.MD 的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加微博秀"><span class="toc-number">2.5.</span> <span class="toc-text">添加微博秀</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源文件地址"><span class="toc-number">3.</span> <span class="toc-text">源文件地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">4.</span> <span class="toc-text">原文链接</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="搭建博客的过程">搭建博客的过程</h2><p>之前一直是在新浪 SAE 平台上用 wordpress4SAE 搭建<a href="http://lvxu1987.sinaapp.com/" target="_blank" rel="noopener">我的博客</a>。虽然也听说过静态博客、 GitHub Pages 什么的，但是一直也没有动力去弄。</p>
+<p>最近，我以前用的域名 lyuxu.com 快到期了，我感觉 .com 域名不适合个人使用，就在 <a href="http://www.enom.com/" target="_blank" rel="noopener">eNom</a> 上另外注册了一个 .me 的域名，也就是现在这个 <a href="http://lvxu.me" target="_blank" rel="noopener">lvxu.me</a>。</p>
+<p>后来一想，域名都换了，干脆把后台程序也换了吧，就开始研究怎么在 GitHub 上搭建博客。</p>
+<p>因为自己也不是程序猿，对 GitHub 并不熟悉，而互联网上用 GitHub 搭建博客的教程大都没有对 git 本身有什么讲解，所以一开始研究 GitHub 费了一番功夫，好在 <a href="http://rogerdudler.GitHub.io/git-guide/index.zh.html" target="_blank" rel="noopener">Git 简明指南</a> 和一个叫 <a href="http://git-scm.com/book/zh/" target="_blank" rel="noopener">Git - Book</a> 的网站给了我很大帮助。</p>
+<p>鼓捣鼓捣了几天，终于大概会用 GitHub 了，就开始研究怎么用 GitHub pages 搭建博客。在这个过程中，cnFeat的一篇文章<a href="https://www.cnfeat.com/blog/2014/05/11/how-to-build-a-blog/" target="_blank" rel="noopener">如何搭建一个独立博客——简明GitHub Pages与Hexo教程</a> 和 <a href="http://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 的官方文档</a> 对我的帮助很大。另外还要感谢 WuChong 他的<a href="http://wuchong.me/jacman/" target="_blank" rel="noopener">Jacman 主题</a> 真的很棒。</p>
+<a id="more"></a>
+<p>另，后来考虑到国内访问速度的问题，把博客从 GitHub 转到了 GitCafe 上。</p>
+<h2 id="搭建博客的过程中遇到的一些问题">搭建博客的过程中遇到的一些问题</h2><h3 id="如何把程序也同步到_GitHub_上">如何把程序也同步到 GitHub 上</h3><p>因为 hexo 程序部署的时候会部署到 <code>master</code> 分支（或者 <code>gh-pages</code>）上，要想把hexo的程序也同步到 GitHub 上，需要新建一个分支（比如 <code>hexo</code>），在本地转到 <code>hexo</code> 分支上工作，然后再配置<code>_config.yml</code>，使之部署到 <code>master</code> 分支（或者 <code>gh-pages</code>）上。</p>
+<h3 id="修改_-gitignore_文件">修改 .gitignore 文件</h3><p>hexo 安装后默认的 <code>.gitignore</code> 文件是以下这个样子的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
+<p>这会导致 hexo 的程序本身不会被上传， checkout 的时候，hexo 的程序本身会丢失，在重装 hexo 的时候，<code>_config.yml</code>文件又会被覆盖。所以要把修改<code>.gitignore</code> 文件为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#.DS_Store  取消忽略</span><br><span class="line">#*.log  取消忽略</span><br><span class="line">#node_modules/  取消忽略</span><br><span class="line">.deploy*/</span><br><span class="line">!.deploy_git/README.md  不忽略 README.md 文件</span><br><span class="line">/public/</span><br><span class="line">db.json</span><br><span class="line">*.bak  #忽略 notepad++ 的备份文件</span><br><span class="line">Thumbs.db</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，如果在没有更改<code>.gitignore</code> 文件的前提下，已经上传到 GitHub 过，那已经上传过的文件就已经纳入了本管理，不受<code>.gitignore</code> 文件的影响，这样的话，就需要修复<code>.gitignore</code> 文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached .   <span class="comment"># 从暂存区域删除所有文件</span></span><br><span class="line">git add .                <span class="comment"># 把所有文件添加到暂存区域</span></span><br><span class="line">git commit -m <span class="string">".gitignore 文件已经可以正常工作"</span></span><br></pre></td></tr></table></figure>
+<p>这样把暂存区所有文件删除，再重新添加时，<code>.gitignore</code> 文件就会起作用。</p>
+<h3 id="把网站同时部署到_GitHub_和_GitCafe">把网站同时部署到 GitHub 和 GitCafe</h3><p>由于GitHub在国内访问延迟较大，因此不少人也把博客部署在 GitCafe 上。 GitCafe 上建站和 GitHub 类似，只是无论建立个人页面还是项目页面，都需要建立一个 GitCafe-Pages 的分支，还有绑定域名的方法不同，其他都大同小异。</p>
+<p>如果想让 GitHub 和 GitCafe 上都是最新的页面，就需要把网站同时部署到 GitHub 和 GitCafe 上。hexo 本身有同时部署到多个地址的功能，hexo 的官方文档有说明，再次不再赘述。需要注意的是， GitHub 和 GitCafe 都支持 SSH 加密，可以使用同一套密钥，这样部署时比较方便。</p>
+<p>部署完成后，就可以修改域名记录，以 DNSpod 为例，可以设置线路类型，将<strong>默认线路</strong>指向 GitHub 的IP，将<strong>电信</strong>和<strong>联通</strong>线路指向 GitCafe的IP，这样就可以使国外 ip 访问 GitHub，国内 ip 访问 GitCafe。</p>
+<h3 id="README-MD_的问题">README.MD 的问题</h3><p>GitHub 通常要求建立一个 README.MD 文件，这个README.ME 文件会显示在项目主页上。但是hexo会把所有的 .md 文件都解析成 .html 文件。</p>
+<p><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/#Hexo上传README文件" target="_blank" rel="noopener">cnFeat的博客</a> 里说上传 README.MD 文件到 <code>.deploy</code> 文件夹里再 deploy 就可以，但是经我测试，hexo3.0 下，deploy会生成一个 <code>.deploy_git</code> 的文件夹，部署时会将其中的文件推送到 GitHub / GitCafe 中。但是部署时会重新生成文件，README.MD 会被自动删除掉，因而无法部署到服务器上。</p>
+<p>我目前的解决方法是把 README.MD 文件改名成 README.mdown 文件，放在 <code>/source</code> 里面。这样的话，hexo不会将其解析成 .html 文件，而在 GitHub / GitCafe 中，也能正常显示。</p>
+<h3 id="添加微博秀">添加微博秀</h3><p>我使用的 Jacman 主题本身是支持微博秀的，但是主题生成的微博秀是下图的样子</p>
+<p><img src="http://7xib7y.com1.z0.glb.clouddn.com/weiboshow_demo1.JPG" alt></p>
+<p>想要其他样式，需要自定义。</p>
+<p>首先打开新浪微博开放平台中的<a href="http://app.weibo.com/tool/weiboshow" target="_blank" rel="noopener">微博秀设置</a> 的页面，根据自己的喜好生成代码。</p>
+<p>比如我生成的代码是：</p>
+<pre><code>&lt;iframe <span class="variable">width=</span><span class="string">"100%"</span> <span class="variable">height=</span><span class="string">"550"</span> <span class="variable">class=</span><span class="string">"share_self"</span>  <span class="variable">frameborder=</span><span class="string">"0"</span> <span class="variable">scrolling=</span><span class="string">"no"</span> <span class="variable">src=</span><span class="string">"http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=550&amp;fansRow=1&amp;ptype=1&amp;speed=0&amp;skin=9&amp;isTitle=1&amp;noborder=1&amp;isWeibo=1&amp;isFans=0&amp;uid=1234567890&amp;verifier=abcdefgh&amp;colors=2CA6CB,ffffff,666666,0082cb,e6e6e6&amp;dpc=1"</span>&gt;&lt;/iframe&gt;
+</code></pre><p>然后在 <code>\hexo\themes\jacman\layout\_widget</code>  中新建名为 <code>weiboshow.ejs</code>的文件，添加如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"weiboshow"</span>&gt;</span><br><span class="line">  &lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">"asidetitle"</span>&gt;&lt;%= __(<span class="string">'weibo'</span>) %&gt;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    微博秀代码</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+<p>但是为了代码美观，也方便自己万一要更换微博帐号，最好把 <code>uid=1234567890&amp;verifier=abcdefgh</code> 改成 <code>uid=&lt;%= theme.author.tsina %&gt;&amp;verifier=&lt;%- theme.author.weibo_verifier %&gt;</code> ，这样就可以在主题的配置文件中修改微博帐号了。</p>
+<p>最后记得重新配置 Jacman 主题的 <code>_config.yml</code> 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">....</span><br><span class="line">widgets: </span><br><span class="line">- rss</span><br><span class="line">- category</span><br><span class="line">- tag</span><br><span class="line">- weiboshow ##启用刚才新建的 weiboshow 插件</span><br><span class="line">- links</span><br><span class="line">....</span><br><span class="line">author：</span><br><span class="line">....</span><br><span class="line">  weibo_verifier: abcdefgh ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.</span><br><span class="line">  tsina: 1234567890    ## e.g. 2176287895  Your weibo ID,It will be used in share button. </span><br><span class="line">  ## 从微博秀的代码里找到这两个值填在这里</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<p>最后效果是这样的</p>
+<p><img src="http://7xib7y.com1.z0.glb.clouddn.com/weiboshow_demo2.JPG" alt></p>
+<h2 id="源文件地址">源文件地址</h2><p>如果你需要本文的 MarkDown 源文件，可以 <strong><a href="https://GitHub.com/lvxu1987/lvxu1987.GitHub.io/raw/hexo/source/_posts/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B.md" target="_blank" rel="noopener">点击这里</a></strong> 下载</p>
+<h2 id="原文链接">原文链接</h2><p>转载请保留原文链接：<a href="http://t.cn/RA4RwOW" target="_blank" rel="noopener">http://t.cn/RA4RwOW</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/github/">github</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lvxu.site/2015/03/26/新博客新开始/" data-title="新博客，新开始 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/03/28/「请稍候」与「请稍后」/" title="「请稍候」与「请稍后」">
+  <strong>上一篇：</strong><br/>
+  <span>
+  「请稍候」与「请稍后」</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客的过程"><span class="toc-number">1.</span> <span class="toc-text">搭建博客的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客的过程中遇到的一些问题"><span class="toc-number">2.</span> <span class="toc-text">搭建博客的过程中遇到的一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何把程序也同步到_GitHub_上"><span class="toc-number">2.1.</span> <span class="toc-text">如何把程序也同步到 GitHub 上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改_-gitignore_文件"><span class="toc-number">2.2.</span> <span class="toc-text">修改 .gitignore 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把网站同时部署到_GitHub_和_GitCafe"><span class="toc-number">2.3.</span> <span class="toc-text">把网站同时部署到 GitHub 和 GitCafe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#README-MD_的问题"><span class="toc-number">2.4.</span> <span class="toc-text">README.MD 的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加微博秀"><span class="toc-number">2.5.</span> <span class="toc-text">添加微博秀</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源文件地址"><span class="toc-number">3.</span> <span class="toc-text">源文件地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">4.</span> <span class="toc-text">原文链接</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/" title="网络">网络<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/文化/" title="文化">文化<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历法/" title="历法">历法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jianshu.com/u/6152f9026a7e" target="_blank" title="我的简书主页">我的简书主页</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自从当了老师 <br/>
+			学习努力多了</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/lvxu1987" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/lvxu1987" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/lyuxu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:lvxu1987@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="http://lvxu.site/about" target="_blank" title="吕旭">吕旭</a>
+		
+		</p>
+		<p class="copyright" >
+		<a href="http://www.miitbeian.gov.cn/">晋ICP备17005964号</a> 
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+    
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15503066-3', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

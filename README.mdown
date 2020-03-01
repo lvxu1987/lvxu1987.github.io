@@ -1,0 +1,11 @@
+# README
+
+用于我的个人博客**[吕旭的学习笔记](http://lvxu.me/)** 主要关于汽车、网络和生活，以及一些其他我感兴趣事情。
+
+博客部署于 Github Pages / Gitcafe Pages ，使用[Hexo](http://hexo.io) 程序，和[Jacman 主题](http://wuchong.me/blog/2014/11/20/how-to-use-jacman/)
+
+[github](https://github.com/lvxu1987/lvxu1987.github.io) 中，hexo 分支是程序文件，master 分支是页面文件。[gitcafe](https://gitcafe.com/lvxu1987/lvxu1987) 中，gitcafe-pages 分支是页面文件，master 分支为空。
+
+我以前的博客是[明心斋][1]，今后会逐渐把上面的文章用 markdown 重写并发到这个博客上。
+
+[1]: http://lvxu1987.sinaapp.com

@@ -1,0 +1,487 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  
+    <title>一个方便自己用hexo的批处理 | 吕旭说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="吕旭">
+    
+
+    
+    <meta name="description" content="为了方便自己使用，做了一个批处理文件，也共享给大家。">
+<meta name="keywords" content="网络,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个方便自己用hexo的批处理">
+<meta property="og:url" content="http://lvxu.site/2015/03/29/一个方便自己用hexo的批处理/index.html">
+<meta property="og:site_name" content="吕旭说">
+<meta property="og:description" content="为了方便自己使用，做了一个批处理文件，也共享给大家。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2015-12-15T13:19:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个方便自己用hexo的批处理">
+<meta name="twitter:description" content="为了方便自己使用，做了一个批处理文件，也共享给大家。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/apple_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="吕旭说" title="吕旭说"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="吕旭说">吕旭说</a></h1>
+				<h2 class="blog-motto">汽车、网络、职教和生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lvxu.site">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/03/29/一个方便自己用hexo的批处理/" title="一个方便自己用hexo的批处理" itemprop="url">一个方便自己用hexo的批处理</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2015-03-29T06:05:15.000Z" itemprop="datePublished"> 发表于 2015-03-29</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#批处理文件"><span class="toc-number">1.</span> <span class="toc-text">批处理文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">3.</span> <span class="toc-text">原文链接</span></a></li></ol>
+		
+		</div>
+		
+		<p>用 Hexo 老要在 Bash 里输入命令，挺麻烦的所以自己作了一个批处理文件，方便自己使用。</p>
+<p>为了弄出这个东西，也鼓捣了好一阵，看了好多批处理方面的文章，后来弄出来以后发现其他都能用，就是遇到 deploy 的时候，就不行了。后来想到可能是在 cmd 命令行里无法用 Git 的缘故，又研究了半天。</p>
+<p>后来又增加了新建文章、新建草稿，发布草稿的功能。</p>
+<p>其中发布草稿的功能颇费了一番心思。</p>
+<p>把批处理文件发出来，大家交流一下把，也请指正。</p>
+<h2 id="批处理文件">批处理文件</h2><p>批处理文件如下：</p>
+<a id="more"></a>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off &amp; <span class="built_in">rem</span> 关闭显示命令</span><br><span class="line"><span class="built_in">title</span> Hexo &amp; <span class="built_in">rem</span> 设置</span><br><span class="line"><span class="built_in">setlocal</span> enabledelayedexpansion &amp; <span class="built_in">REM</span> 启用延迟环境变量扩展，从而可以使用类似 <span class="variable">!var!</span> 这样的低优先级变量，实现变量嵌套。</span><br><span class="line"><span class="comment">rem ===============</span></span><br><span class="line"><span class="comment">rem 这是一个用于 Hexo 的批处理。</span></span><br><span class="line"><span class="comment">rem 使用前请先把 Git 安装目录下的 "\bin" 目录 和 "\libexec\git-core" 目录加入环境变量使得在 CMD 命令行下可以使用 Git 命令。</span></span><br><span class="line"><span class="comment">rem 还需要复制 ~/.ssh 目录到 Git 的安装目录下（比如"C:\Program Files (x86)\Git"），使得 CMD 命令行可以访问 SSH密钥。</span></span><br><span class="line"><span class="comment">rem ===============</span></span><br><span class="line"><span class="comment">rem 选择操作开始</span></span><br><span class="line">:<span class="built_in">Start</span></span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ==============================================</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =               请选择需要的操作             =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">1</span>.启动Hexo本地服务器                =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">2</span>.生成                              =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">3</span>.部署                              =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">4</span>.生成并部署                        =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">5</span>.清除临时文件                      =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">6</span>.新建文章                          =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">7</span>.新建草稿                          =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">8</span>.发布草稿                          =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">9</span>.退出                              =</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =              BY:吕旭（lvxu1987@gmail.com） =</span><br><span class="line"><span class="built_in">echo</span> ==============================================</span><br><span class="line"><span class="built_in">echo</span> 请输入您的选择</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p Choice=</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">1</span>" <span class="keyword">goto</span> server</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">2</span>" <span class="keyword">goto</span> generate</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">3</span>" <span class="keyword">goto</span> deploy</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">4</span>" <span class="keyword">goto</span> generate_deploy</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">5</span>" <span class="keyword">goto</span> clean</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">6</span>" <span class="keyword">goto</span> new</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">7</span>" <span class="keyword">goto</span> new_draft</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">8</span>" <span class="keyword">goto</span> publish_draft</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">9</span>" <span class="keyword">goto</span> end</span><br><span class="line"><span class="keyword">goto</span> Input_Error</span><br><span class="line"><span class="comment">rem 选择操作结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 启动Hexo本地服务器开始</span></span><br><span class="line">:server</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ==============================================</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =       请选择服务器启动方式的操作           =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">1</span>.标准启动                          =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">2</span>.设置端口                          =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">3</span>.静态启动（只显示public文件夹）    =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">4</span>.包括草稿                          =</span><br><span class="line"><span class="built_in">echo</span> =        <span class="number">5</span>.返回                              =</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =                                            =</span><br><span class="line"><span class="built_in">echo</span> =              BY:吕旭（lvxu1987@gmail.com） =</span><br><span class="line"><span class="built_in">echo</span> ==============================================</span><br><span class="line"><span class="built_in">echo</span> 请选择</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p Choice=</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">1</span>" hexo server</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">2</span>" <span class="keyword">goto</span> Server_Port</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">3</span>" hexo server -s</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">4</span>" hexo server --drafts</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="number">5</span>" <span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="keyword">goto</span> server</span><br><span class="line"><span class="comment">rem 启动Hexo本地服务器结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 启动非4000端口服务器</span></span><br><span class="line">:Server_Port</span><br><span class="line"><span class="built_in">set</span> /p port=请输入端口号：</span><br><span class="line">hexo server -p <span class="variable">%port%</span></span><br><span class="line"><span class="keyword">goto</span> server</span><br><span class="line"></span><br><span class="line"><span class="comment">rem 生成静态文件开始</span></span><br><span class="line">:generate</span><br><span class="line">hexo generate</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 生成静态文件结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 部署到服务器开始</span></span><br><span class="line">:deploy</span><br><span class="line">hexo deploy</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 部署到服务器结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 生成并部署开始</span></span><br><span class="line">:generate_deploy</span><br><span class="line">hexo generate --deploy</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 生成并部署结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 清除临时文件开始</span></span><br><span class="line">:clean</span><br><span class="line">hexo clean</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 清除临时文件结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 生成新文章开始</span></span><br><span class="line">:new</span><br><span class="line"><span class="built_in">echo</span> 请输入新文章的标题</span><br><span class="line"><span class="built_in">set</span> /p post_title=</span><br><span class="line">hexo new post "<span class="variable">%post_title%</span>"</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 生成新文章结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 生成新草稿开始</span></span><br><span class="line">:new_draft</span><br><span class="line"><span class="built_in">echo</span> 请输入新草稿的标题</span><br><span class="line"><span class="built_in">set</span> /p draft_title=</span><br><span class="line">hexo new draft "<span class="variable">%draft_title%</span>"</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 生成新草稿结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 发布新草稿开始</span></span><br><span class="line">:publish_draft</span><br><span class="line"><span class="built_in">dir</span> "source\_drafts" /b &gt; list_exp _exp &amp; <span class="built_in">rem</span> 输出草稿文件夹中的所有草稿的文件名到 list_exp 里（包含扩展名）</span><br><span class="line"><span class="built_in">cd</span>. &gt;list &amp; <span class="built_in">rem</span> 清空 list 文件的内容，防止存在 list 文件导致错误（直接删除的话如果不存在list文件会出错）</span><br><span class="line"><span class="keyword">for</span> /f "delims=" <span class="variable">%%i</span> <span class="keyword">in</span> (list_exp) <span class="keyword">do</span> (<span class="built_in">echo</span>.<span class="variable">%%i</span>&gt;&gt;list) &amp; <span class="built_in">rem</span> 将 list_exp 中非空行的内容输出到 list文件里</span><br><span class="line"><span class="built_in">set</span> /a sequence=<span class="number">1</span> &amp; <span class="built_in">rem</span> 设置顺序代号变量为 <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> /f <span class="variable">%%i</span> <span class="keyword">in</span> (list) <span class="keyword">do</span> <span class="keyword">call</span> :echo_list <span class="variable">%%i</span> &amp; <span class="built_in">rem</span> 为list 中的每一行内容调用 echo_list 函数</span><br><span class="line"><span class="built_in">echo</span> 您希望发布哪篇草稿？</span><br><span class="line"><span class="built_in">set</span> /p Choice= &amp; <span class="built_in">rem</span> 选择要发布的草稿</span><br><span class="line"><span class="keyword">for</span> /l <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">1</span>,<span class="variable">%sequence%</span>-<span class="number">1</span>) <span class="keyword">do</span> (</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%Choice%</span>"=="<span class="variable">%%i</span>" <span class="built_in">set</span> draft_name=<span class="variable">!draft_name%%i!</span></span><br><span class="line">) &amp; <span class="built_in">rem</span> 将被选中的草稿的文件名赋值给 "draft_name" 参数</span><br><span class="line"><span class="built_in">echo</span> 您希望提交的草稿是：<span class="variable">%draft_name%</span></span><br><span class="line"><span class="keyword">call</span> :no_ext <span class="variable">%draft_name%</span> &amp; <span class="built_in">rem</span> 删除草稿文件名的后缀名</span><br><span class="line"><span class="built_in">del</span> list &amp; <span class="built_in">rem</span> 删除临时文件</span><br><span class="line"><span class="built_in">del</span> list_exp &amp; <span class="built_in">rem</span> 删除临时文件</span><br><span class="line">hexo publish post "<span class="variable">%draft_name_no_ext%</span>" &amp; <span class="built_in">rem</span> 发布草稿</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="comment">rem 发布新草稿结束</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 输入错误时回到菜单</span></span><br><span class="line">:Input_Error</span><br><span class="line"><span class="built_in">echo</span> 输入错误，请重新选择</span><br><span class="line"><span class="keyword">goto</span> <span class="built_in">Start</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem 退出批处理</span></span><br><span class="line">:end</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"></span><br><span class="line"><span class="comment">rem "no_ext" 函数的作用是去除文件名中的扩展名，因为经测试必须不包括扩展名时 "hexo publish post" 命令才会生效</span></span><br><span class="line">:no_ext</span><br><span class="line"><span class="built_in">set</span> draft_name_no_ext=%~n1</span><br><span class="line"><span class="keyword">goto</span> :eof &amp; <span class="built_in">rem</span> 函数结束标志</span><br><span class="line"></span><br><span class="line"><span class="comment">rem 该函数的作用是输出 list 文件夹里每一个文件名并将其编号</span></span><br><span class="line">:echo_list</span><br><span class="line"><span class="built_in">echo</span> 草稿<span class="variable">%sequence%</span> : %<span class="number">1</span> &amp; <span class="built_in">rem</span> 显示草稿序号和文件名</span><br><span class="line"><span class="built_in">set</span> draft_name<span class="variable">%sequence%</span>=%<span class="number">1</span> &amp; <span class="built_in">rem</span> 将文件名赋值给 draft_name+序列号</span><br><span class="line"><span class="built_in">set</span> /a sequence=<span class="variable">%sequence%</span>+<span class="number">1</span> &amp; <span class="built_in">rem</span> 序列号+<span class="number">1</span></span><br><span class="line"><span class="keyword">goto</span> :eof &amp; <span class="built_in">rem</span> 函数结束标志</span><br></pre></td></tr></table></figure>
+<p><a href="https://raw.githubusercontent.com/lvxu1987/lvxu1987.github.io/hexo/Hexo%20Operates.cmd" target="_blank" rel="noopener">单击这里</a> 可以下载批处理源文件。</p>
+<h2 id="参考资料">参考资料</h2><p>1.<a href="http://blog.csdn.net/exlsunshine/article/details/18939329" target="_blank" rel="noopener">Windows下配置Git</a></p>
+<p>2.<a href="http://www.cnblogs.com/hustskyking/p/problems-in-git-when-ssh.html" target="_blank" rel="noopener">git/ssh捋不清的几个问题 </a></p>
+<p>3.<a href="http://czliu.com/windows-cmd-ssh-key-wen-ti/" target="_blank" rel="noopener">Windows Cmd SSH key 问题</a></p>
+<p>4.<a href="http://mysuperbaby.iteye.com/blog/1390283" target="_blank" rel="noopener">批处理如何提取文件位置和文件名 不包括后缀</a></p>
+<p>5.<a href="http://blog.csdn.net/xzz_hust/article/details/9311339" target="_blank" rel="noopener">批处理通过字符串截取得到文件名</a></p>
+<p>6.<a href="http://bbs.bathome.net/thread-6537-1-3.html" target="_blank" rel="noopener">批处理脚本高级编程技巧——变量嵌套</a></p>
+<p>7.<a href="http://www.bathome.net/thread-11529-1-1.html" target="_blank" rel="noopener">批处理怎么删除文件里的空行和含指定内容的行？</a></p>
+<p>8.<a href="http://blog.csdn.net/davidhsing/article/details/1996180" target="_blank" rel="noopener">Bat 批处理之 for/f 详解</a></p>
+<h2 id="原文链接">原文链接</h2><p>转载请注明原文地址：<a href="http://t.cn/RA4BPda" target="_blank" rel="noopener">http://t.cn/RA4BPda</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/hexo/">hexo</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lvxu.site/2015/03/29/一个方便自己用hexo的批处理/" data-title="一个方便自己用hexo的批处理 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/04/07/流氓软件快压/" title="流氓软件快压">
+  <strong>上一篇：</strong><br/>
+  <span>
+  流氓软件快压</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/03/28/「请稍候」与「请稍后」/"  title="「请稍候」与「请稍后」">
+ <strong>下一篇：</strong><br/> 
+ <span>「请稍候」与「请稍后」
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#批处理文件"><span class="toc-number">1.</span> <span class="toc-text">批处理文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">3.</span> <span class="toc-text">原文链接</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/" title="网络">网络<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/文化/" title="文化">文化<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历法/" title="历法">历法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jianshu.com/u/6152f9026a7e" target="_blank" title="我的简书主页">我的简书主页</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自从当了老师 <br/>
+			学习努力多了</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/lvxu1987" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/lvxu1987" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/lyuxu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:lvxu1987@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="http://lvxu.site/about" target="_blank" title="吕旭">吕旭</a>
+		
+		</p>
+		<p class="copyright" >
+		<a href="http://www.miitbeian.gov.cn/">晋ICP备17005964号</a> 
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+    
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15503066-3', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

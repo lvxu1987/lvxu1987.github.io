@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2015-12-15T13:19:05.000Z</updated>
+  <updated>2020-03-01T13:24:39.357Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -13,6 +13,199 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[中国传统历法-干支日速算问题]]></title>
+    <link href="http://lvxu.site/2020/03/01/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95-%E5%B9%B2%E6%94%AF%E6%97%A5%E9%80%9F%E7%AE%97%E9%97%AE%E9%A2%98/"/>
+    <id>http://lvxu.site/2020/03/01/中国传统历法-干支日速算问题/</id>
+    <published>2020-03-01T13:24:39.000Z</published>
+    <updated>2020-03-01T13:24:39.357Z</updated>
+    <content type="html"><![CDATA[<p>之前那篇<a href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/">中国传统历法</a>发出后，有人问我关于干支日速算的问题。</p>
+<blockquote>
+<p>吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。</p>
+</blockquote>
+<p>在此统一做一个解答。</p>
+<a id="more"></a>
+<h2 id="干支日速算口诀">干支日速算口诀</h2><p>网上流传的口诀是这样的：</p>
+<blockquote>
+<p>乘五除四九加日，<br>双月间隔三十天，<br>一二自加整少一，<br>三五七八十尾前。</p>
+</blockquote>
+<h2 id="口诀的解释">口诀的解释</h2><p>这个计算法，实际上就是找一个已知干支日的具体日期，然后算循环。</p>
+<ol>
+<li><p>1900年1月1日是甲戌日，干支序数为11（假设一个1月0日，干支为序号10，方便计算，这样1月X日的干支序号就是X+10）。</p>
+</li>
+<li><p>乘五除四是因为一年365天，一年干支差5天，算上闰年每4年多差一天。这样算下来，就是当年1月1日和1900年1月1日干支的差值。需要注意的是，闰年润在2月，闰年当年的1月1日并不差闰年当年那一天，所以如果恰好除尽的话应该再减1。</p>
+</li>
+<li><p>得到当年1月1日干支后，再算当前月1日和1月1日差几天。把当月之前的月份天数相加即可，如2月1日和1月1日差31天，4月1日和1月1日差（31＋28＋31）天，除60取余为30天。6月1日和1月1日差31＋28＋31＋30＋31＋30天，相当于差1天。这就是所谓调整系数。要注意闰年2月多一天，当年调整系数都不一样。</p>
+</li>
+</ol>
+<ol>
+<li>得到当月1日的干支数，加上当天天数，就是当天干支数了。</li>
+</ol>
+<p>我的公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10+（Y-1900）÷4❨取整，如除尽则再减1❩+（Y-1900）×5+月份调整系数+日期</span><br></pre></td></tr></table></figure>
+<p>得到的数字除60取余就是干支序号。</p>
+<p>其实就是<strong>(基准干支序数+闰年差值+基本年初差值+月初差值+日期)/60</strong> 再<strong>取余数</strong>。</p>
+<p>明白了这个道理，完全可以自己定义一个新的口诀，比如2000年1月1日是戊午日（干支序号55），以此为起点可以制定以下公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">54+（Y-2000）÷4❨取整❩+（Y-2000）×5+月份调整系数+日期</span><br></pre></td></tr></table></figure>
+<p>这个公式比之前那个公式优美的地方在于2000年本身是闰年，算闰年的时候不必「除尽再减1」了。而且计算量也小。</p>
+<h2 id="用程序计算干支日">用程序计算干支日</h2><p>其实前面的公式那么复杂，又是平年闰年，又是调整系数的，只是因为人脑的计算力有限，无法直接算出两个日期之间相差多少天。如果用程序计算，两个日期之间的差值完全可以直接算出来，再加上基准日期干支，得到的数字除以60再取余，就是当前日期干支了。</p>
+<p>用Excel来尝试计算：</p>
+<p>在A1单元格里输入「2000/1/1」，在B1单元格里输入「1900/1/1」，C1单元格里输入公式<code>=A1-B1</code>，在A4单元格里输入公式<code>=MOD(C1+11,60)</code>，得出当日干支序号为<strong>56</strong>，即<strong>己未日</strong>。</p>
+<p>尴尬的事情发生了，当天明明是<strong>戊午日</strong>，干支序号是<strong>55</strong>。公式应该是没有问题的为什么结果差了一天？</p>
+<p>原来Excel当初为了兼容一个古老的BUG，将1900年也当成了闰年，导致计算日期差值的时候，用1900年3月之后的日期，减1900年2月底之前的日期，都会有1天的差值。</p>
+<p>明白了这个原因，只要重新设置一个起点就好了。1900年4月20日为葵亥日，干支序数为60，也可以理解为<strong>0</strong>。</p>
+<p>将B1单元格的日期改为「1900/4/20」，将A4单元格里的公式改为<code>=MOD(C1,60)</code>，即可得到正确的干支序号55，即戊午日。</p>
+<h2 id="干支序数">干支序数</h2><p>十天干：</p>
+<blockquote>
+<p>1 甲  2 乙  3 丙  4 丁  5 戊  6 己  7 庚  8 辛  9 壬  10 癸</p>
+</blockquote>
+<p>十二地支：</p>
+<blockquote>
+<p>1 子  2 丑  3 寅  4 卯  5 辰  6 巳 7 午  8 未  9 申  10 酉  11 戌  12 亥</p>
+</blockquote>
+<p>干支序数：</p>
+<blockquote>
+<p>01 甲子    11 甲戌    21 甲申    31 甲午    41 甲辰    51 甲寅<br>02 乙丑    12 乙亥    22 乙酉    32 乙未    42 乙巳    52 乙卯<br>03 丙寅    13 丙子    23 丙戌    33 丙申    43 丙午    53 丙辰<br>04 丁卯    14 丁丑    24 丁亥    34 丁酉    44 丁未    54 丁巳<br>05 戊辰    15 戊寅    25 戊子    35 戊戌    45 戊申    55 戊午<br>06 己巳    16 己卯    26 己丑    36 己亥    46 己酉    56 己未<br>07 庚午    17 庚辰    27 庚寅    37 庚子    47 庚戌    57 庚申<br>08 辛未    18 辛巳    28 辛卯    38 辛丑    48 辛亥    58 辛酉<br>09 壬申    19 壬午    29 壬辰    39 壬寅    49 壬子    59 壬戌<br>10 癸酉    20 癸未    30 癸巳    40 癸卯    50 癸丑    60 癸亥</p>
+</blockquote>
+<h2 id="月份调整系数">月份调整系数</h2><h3 id="平年月份调整系数：">平年月份调整系数：</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">月份</th>
+<th style="text-align:center">调整系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">3月</td>
+<td style="text-align:center">59</td>
+</tr>
+<tr>
+<td style="text-align:center">4月</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">5月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">7月</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">8月</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center">9月</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">10月</td>
+<td style="text-align:center">33</td>
+</tr>
+<tr>
+<td style="text-align:center">11月</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">12月</td>
+<td style="text-align:center">34</td>
+</tr>
+</tbody>
+</table>
+<h3 id="闰年月份调整系数：">闰年月份调整系数：</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">月份</th>
+<th style="text-align:center">调整系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">3月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">4月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">5月</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">6月</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center">7月</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">8月</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center">9月</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">10月</td>
+<td style="text-align:center">34</td>
+</tr>
+<tr>
+<td style="text-align:center">11月</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">12月</td>
+<td style="text-align:center">35</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考文献">参考文献</h2><ol>
+<li><a href="https://www.zhihu.com/question/31361968" target="_blank" rel="noopener">知乎：日干支究竟如何与公历日期相互转换？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/29993252" target="_blank" rel="noopener">知乎：也许是最冷的电脑冷知识：1900年闰年Bug</a></li>
+<li><a href="https://answers.microsoft.com/zh-hans/msoffice/forum/all/excel/ea06ca5b-ad8d-4cea-9ff0-5c93fb32b2a9?auth=1" target="_blank" rel="noopener">微软社区：Excel 公历1900年2月总天数的错误</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>之前那篇<a href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/">中国传统历法</a>发出后，有人问我关于干支日速算的问题。</p>
+<blockquote>
+<p>吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。</p>
+</blockquote>
+<p>在此统一做一个解答。</p>]]>
+    
+    </summary>
+    
+      <category term="文化" scheme="http://lvxu.site/tags/%E6%96%87%E5%8C%96/"/>
+    
+      <category term="历法" scheme="http://lvxu.site/tags/%E5%8E%86%E6%B3%95/"/>
+    
+      <category term="杂谈" scheme="http://lvxu.site/categories/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[中国传统历法]]></title>

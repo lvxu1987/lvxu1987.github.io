@@ -1,0 +1,643 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  
+    <title>中国传统历法-干支日速算问题 | 吕旭说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="吕旭">
+    
+
+    
+    <meta name="description" content="之前那篇中国传统历法发出后，有人问我关于干支日速算的问题。  吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。  在此统一做一个解答。">
+<meta name="keywords" content="文化,历法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国传统历法-干支日速算问题">
+<meta property="og:url" content="http://lvxu.site/2020/03/01/中国传统历法-干支日速算问题/index.html">
+<meta property="og:site_name" content="吕旭说">
+<meta property="og:description" content="之前那篇中国传统历法发出后，有人问我关于干支日速算的问题。  吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。  在此统一做一个解答。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-01T13:24:39.357Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="中国传统历法-干支日速算问题">
+<meta name="twitter:description" content="之前那篇中国传统历法发出后，有人问我关于干支日速算的问题。  吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。  在此统一做一个解答。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/apple_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="吕旭说" title="吕旭说"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="吕旭说">吕旭说</a></h1>
+				<h2 class="blog-motto">汽车、网络、职教和生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lvxu.site">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2020/03/01/中国传统历法-干支日速算问题/" title="中国传统历法-干支日速算问题" itemprop="url">中国传统历法-干支日速算问题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2020-03-01T13:24:39.000Z" itemprop="datePublished"> 发表于 2020-03-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#干支日速算口诀"><span class="toc-number">1.</span> <span class="toc-text">干支日速算口诀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#口诀的解释"><span class="toc-number">2.</span> <span class="toc-text">口诀的解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用程序计算干支日"><span class="toc-number">3.</span> <span class="toc-text">用程序计算干支日</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#干支序数"><span class="toc-number">4.</span> <span class="toc-text">干支序数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#月份调整系数"><span class="toc-number">5.</span> <span class="toc-text">月份调整系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#平年月份调整系数："><span class="toc-number">5.1.</span> <span class="toc-text">平年月份调整系数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闰年月份调整系数："><span class="toc-number">5.2.</span> <span class="toc-text">闰年月份调整系数：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-number">6.</span> <span class="toc-text">参考文献</span></a></li></ol>
+		
+		</div>
+		
+		<p>之前那篇<a href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/">中国传统历法</a>发出后，有人问我关于干支日速算的问题。</p>
+<blockquote>
+<p>吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。</p>
+</blockquote>
+<p>在此统一做一个解答。</p>
+<a id="more"></a>
+<h2 id="干支日速算口诀">干支日速算口诀</h2><p>网上流传的口诀是这样的：</p>
+<blockquote>
+<p>乘五除四九加日，<br>双月间隔三十天，<br>一二自加整少一，<br>三五七八十尾前。</p>
+</blockquote>
+<h2 id="口诀的解释">口诀的解释</h2><p>这个计算法，实际上就是找一个已知干支日的具体日期，然后算循环。</p>
+<ol>
+<li><p>1900年1月1日是甲戌日，干支序数为11（假设一个1月0日，干支为序号10，方便计算，这样1月X日的干支序号就是X+10）。</p>
+</li>
+<li><p>乘五除四是因为一年365天，一年干支差5天，算上闰年每4年多差一天。这样算下来，就是当年1月1日和1900年1月1日干支的差值。需要注意的是，闰年润在2月，闰年当年的1月1日并不差闰年当年那一天，所以如果恰好除尽的话应该再减1。</p>
+</li>
+<li><p>得到当年1月1日干支后，再算当前月1日和1月1日差几天。把当月之前的月份天数相加即可，如2月1日和1月1日差31天，4月1日和1月1日差（31＋28＋31）天，除60取余为30天。6月1日和1月1日差31＋28＋31＋30＋31＋30天，相当于差1天。这就是所谓调整系数。要注意闰年2月多一天，当年调整系数都不一样。</p>
+</li>
+</ol>
+<ol>
+<li>得到当月1日的干支数，加上当天天数，就是当天干支数了。</li>
+</ol>
+<p>我的公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10+（Y-1900）÷4❨取整，如除尽则再减1❩+（Y-1900）×5+月份调整系数+日期</span><br></pre></td></tr></table></figure>
+<p>得到的数字除60取余就是干支序号。</p>
+<p>其实就是<strong>(基准干支序数+闰年差值+基本年初差值+月初差值+日期)/60</strong> 再<strong>取余数</strong>。</p>
+<p>明白了这个道理，完全可以自己定义一个新的口诀，比如2000年1月1日是戊午日（干支序号55），以此为起点可以制定以下公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">54+（Y-2000）÷4❨取整❩+（Y-2000）×5+月份调整系数+日期</span><br></pre></td></tr></table></figure>
+<p>这个公式比之前那个公式优美的地方在于2000年本身是闰年，算闰年的时候不必「除尽再减1」了。而且计算量也小。</p>
+<h2 id="用程序计算干支日">用程序计算干支日</h2><p>其实前面的公式那么复杂，又是平年闰年，又是调整系数的，只是因为人脑的计算力有限，无法直接算出两个日期之间相差多少天。如果用程序计算，两个日期之间的差值完全可以直接算出来，再加上基准日期干支，得到的数字除以60再取余，就是当前日期干支了。</p>
+<p>用Excel来尝试计算：</p>
+<p>在A1单元格里输入「2000/1/1」，在B1单元格里输入「1900/1/1」，C1单元格里输入公式<code>=A1-B1</code>，在A4单元格里输入公式<code>=MOD(C1+11,60)</code>，得出当日干支序号为<strong>56</strong>，即<strong>己未日</strong>。</p>
+<p>尴尬的事情发生了，当天明明是<strong>戊午日</strong>，干支序号是<strong>55</strong>。公式应该是没有问题的为什么结果差了一天？</p>
+<p>原来Excel当初为了兼容一个古老的BUG，将1900年也当成了闰年，导致计算日期差值的时候，用1900年3月之后的日期，减1900年2月底之前的日期，都会有1天的差值。</p>
+<p>明白了这个原因，只要重新设置一个起点就好了。1900年4月20日为葵亥日，干支序数为60，也可以理解为<strong>0</strong>。</p>
+<p>将B1单元格的日期改为「1900/4/20」，将A4单元格里的公式改为<code>=MOD(C1,60)</code>，即可得到正确的干支序号55，即戊午日。</p>
+<h2 id="干支序数">干支序数</h2><p>十天干：</p>
+<blockquote>
+<p>1 甲  2 乙  3 丙  4 丁  5 戊  6 己  7 庚  8 辛  9 壬  10 癸</p>
+</blockquote>
+<p>十二地支：</p>
+<blockquote>
+<p>1 子  2 丑  3 寅  4 卯  5 辰  6 巳 7 午  8 未  9 申  10 酉  11 戌  12 亥</p>
+</blockquote>
+<p>干支序数：</p>
+<blockquote>
+<p>01 甲子    11 甲戌    21 甲申    31 甲午    41 甲辰    51 甲寅<br>02 乙丑    12 乙亥    22 乙酉    32 乙未    42 乙巳    52 乙卯<br>03 丙寅    13 丙子    23 丙戌    33 丙申    43 丙午    53 丙辰<br>04 丁卯    14 丁丑    24 丁亥    34 丁酉    44 丁未    54 丁巳<br>05 戊辰    15 戊寅    25 戊子    35 戊戌    45 戊申    55 戊午<br>06 己巳    16 己卯    26 己丑    36 己亥    46 己酉    56 己未<br>07 庚午    17 庚辰    27 庚寅    37 庚子    47 庚戌    57 庚申<br>08 辛未    18 辛巳    28 辛卯    38 辛丑    48 辛亥    58 辛酉<br>09 壬申    19 壬午    29 壬辰    39 壬寅    49 壬子    59 壬戌<br>10 癸酉    20 癸未    30 癸巳    40 癸卯    50 癸丑    60 癸亥</p>
+</blockquote>
+<h2 id="月份调整系数">月份调整系数</h2><h3 id="平年月份调整系数：">平年月份调整系数：</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">月份</th>
+<th style="text-align:center">调整系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">3月</td>
+<td style="text-align:center">59</td>
+</tr>
+<tr>
+<td style="text-align:center">4月</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">5月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">7月</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">8月</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center">9月</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">10月</td>
+<td style="text-align:center">33</td>
+</tr>
+<tr>
+<td style="text-align:center">11月</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">12月</td>
+<td style="text-align:center">34</td>
+</tr>
+</tbody>
+</table>
+<h3 id="闰年月份调整系数：">闰年月份调整系数：</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">月份</th>
+<th style="text-align:center">调整系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">3月</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">4月</td>
+<td style="text-align:center">31</td>
+</tr>
+<tr>
+<td style="text-align:center">5月</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">6月</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center">7月</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">8月</td>
+<td style="text-align:center">32</td>
+</tr>
+<tr>
+<td style="text-align:center">9月</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">10月</td>
+<td style="text-align:center">34</td>
+</tr>
+<tr>
+<td style="text-align:center">11月</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">12月</td>
+<td style="text-align:center">35</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考文献">参考文献</h2><ol>
+<li><a href="https://www.zhihu.com/question/31361968" target="_blank" rel="noopener">知乎：日干支究竟如何与公历日期相互转换？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/29993252" target="_blank" rel="noopener">知乎：也许是最冷的电脑冷知识：1900年闰年Bug</a></li>
+<li><a href="https://answers.microsoft.com/zh-hans/msoffice/forum/all/excel/ea06ca5b-ad8d-4cea-9ff0-5c93fb32b2a9?auth=1" target="_blank" rel="noopener">微软社区：Excel 公历1900年2月总天数的错误</a></li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/杂谈/">杂谈</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/文化/">文化</a><a href="/tags/历法/">历法</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lvxu.site/2020/03/01/中国传统历法-干支日速算问题/" data-title="中国传统历法-干支日速算问题 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/04/08/中国传统历法/"  title="中国传统历法">
+ <strong>下一篇：</strong><br/> 
+ <span>中国传统历法
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+<div id="Gitment_container">
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: 'lvxu1987',
+  repo: 'lvxu.site',
+  oauth: {
+    client_id:dac9155eb78fe699d034 '你的 client ID',
+    client_secret: 0de23fd133019006429a9713d4eb28181ad6248d'你的 client secret',
+  },
+})
+gitment.render('container')
+</script>
+</div>
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#干支日速算口诀"><span class="toc-number">1.</span> <span class="toc-text">干支日速算口诀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#口诀的解释"><span class="toc-number">2.</span> <span class="toc-text">口诀的解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用程序计算干支日"><span class="toc-number">3.</span> <span class="toc-text">用程序计算干支日</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#干支序数"><span class="toc-number">4.</span> <span class="toc-text">干支序数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#月份调整系数"><span class="toc-number">5.</span> <span class="toc-text">月份调整系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#平年月份调整系数："><span class="toc-number">5.1.</span> <span class="toc-text">平年月份调整系数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闰年月份调整系数："><span class="toc-number">5.2.</span> <span class="toc-text">闰年月份调整系数：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-number">6.</span> <span class="toc-text">参考文献</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/" title="网络">网络<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/文化/" title="文化">文化<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历法/" title="历法">历法<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jianshu.com/u/6152f9026a7e" target="_blank" title="我的简书主页">我的简书主页</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自从当了老师 <br/>
+			学习努力多了</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/lvxu1987" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/lvxu1987" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/lyuxu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:lvxu1987@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="http://lvxu.site/about" target="_blank" title="吕旭">吕旭</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+    
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15503066-3', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

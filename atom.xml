@@ -478,7 +478,7 @@
     <link href="http://lvxu.site/2015/03/26/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
     <id>http://lvxu.site/2015/03/26/新博客新开始/</id>
     <published>2015-03-26T06:37:14.000Z</published>
-    <updated>2020-03-01T15:11:45.838Z</updated>
+    <updated>2020-03-03T14:30:30.029Z</updated>
     <content type="html"><![CDATA[<h2 id="搭建博客的过程">搭建博客的过程</h2><p>之前一直是在新浪 SAE 平台上用 wordpress4SAE 搭建<a href="http://lvxu1987.sinaapp.com/" target="_blank" rel="noopener">我的博客</a>。虽然也听说过静态博客、 GitHub Pages 什么的，但是一直也没有动力去弄。</p>
 <p>最近，我以前用的域名 lyuxu.com 快到期了，我感觉 .com 域名不适合个人使用，就在 <a href="http://www.enom.com/" target="_blank" rel="noopener">eNom</a> 上另外注册了一个 .me 的域名，也就是现在这个 <a href="http://lvxu.me" target="_blank" rel="noopener">lvxu.me</a>。（现在嫌.me域名太贵，又换成<a href="http://lvxu.site">lvxu.site</a>了。）</p>
 <p>后来一想，域名都换了，干脆把后台程序也换了吧，就开始研究怎么在 GitHub 上搭建博客。</p>
@@ -520,6 +520,7 @@
 <li>原代码的第一行是 <code>&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;</code> ,如果你的页面已经有一个<code>div</code>的<code>id</code>是<code>container</code>的话，就容易冲突，可以将这一行修改为<code>&lt;div id=&quot;gitment_container&quot;&gt;&lt;/div&gt;</code>，并将倒数</li>
 </ol>
 <p>第3行改为<code>gitment.render(&#39;git-comments&#39;)</code>即可。</p>
+<p>另外还需要注意的是，如果你的Hexo里面有多个模版，请把不同模版的页面ID生成的方法改成相同的。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[分享一下搭建博客的心得体会和搭建过程，并对搭建过程中遇到的一些问题进行一下总结。]]>

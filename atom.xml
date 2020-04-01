@@ -523,7 +523,7 @@
     <link href="http://lvxu.site/2015/03/26/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
     <id>http://lvxu.site/2015/03/26/新博客新开始/</id>
     <published>2015-03-26T06:37:14.000Z</published>
-    <updated>2020-03-03T14:30:30.029Z</updated>
+    <updated>2020-04-01T13:43:45.603Z</updated>
     <content type="html"><![CDATA[<h2 id="搭建博客的过程">搭建博客的过程</h2><p>之前一直是在新浪 SAE 平台上用 wordpress4SAE 搭建<a href="http://lvxu1987.sinaapp.com/" target="_blank" rel="noopener">我的博客</a>。虽然也听说过静态博客、 GitHub Pages 什么的，但是一直也没有动力去弄。</p>
 <p>最近，我以前用的域名 lyuxu.com 快到期了，我感觉 .com 域名不适合个人使用，就在 <a href="http://www.enom.com/" target="_blank" rel="noopener">eNom</a> 上另外注册了一个 .me 的域名，也就是现在这个 <a href="http://lvxu.me" target="_blank" rel="noopener">lvxu.me</a>。（现在嫌.me域名太贵，又换成<a href="http://lvxu.site">lvxu.site</a>了。）</p>
 <p>后来一想，域名都换了，干脆把后台程序也换了吧，就开始研究怎么在 GitHub 上搭建博客。</p>
@@ -549,8 +549,8 @@
 <h3 id="添加微博秀">添加微博秀</h3><p>我使用的 Jacman 主题本身是支持微博秀的，但是主题生成的微博秀不好看，想要其他样式，需要自定义。</p>
 <p>首先打开新浪微博开放平台中的<a href="http://app.weibo.com/tool/weiboshow" target="_blank" rel="noopener">微博秀设置</a> 的页面，根据自己的喜好生成代码。</p>
 <p>比如我生成的代码是：</p>
-<pre><code>&lt;iframe <span class="variable">width=</span><span class="string">"100%"</span> <span class="variable">height=</span><span class="string">"550"</span> <span class="variable">class=</span><span class="string">"share_self"</span>  <span class="variable">frameborder=</span><span class="string">"0"</span> <span class="variable">scrolling=</span><span class="string">"no"</span> <span class="variable">src=</span><span class="string">"http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=550&amp;fansRow=1&amp;ptype=1&amp;speed=0&amp;skin=9&amp;isTitle=1&amp;noborder=1&amp;isWeibo=1&amp;isFans=0&amp;uid=1234567890&amp;verifier=abcdefgh&amp;colors=2CA6CB,ffffff,666666,0082cb,e6e6e6&amp;dpc=1"</span>&gt;&lt;/iframe&gt;
-</code></pre><p>然后在 <code>\hexo\themes\jacman\layout\_widget</code>  中新建名为 <code>weiboshow.ejs</code>的文件，添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe width=&quot;100%&quot; height=&quot;550&quot; class=&quot;share_self&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;  src=&quot;http://widget.weibo.com/weiboshow/index.php?  language=&amp;width=0&amp;height=550&amp;fansRow=1&amp;ptype=1&amp;speed=0&amp;skin=9&amp;isTitle=1&amp;noborder=1&amp;isWeibo=1&amp;isFans=0&amp;uid=1234567890&amp;verifier=abcdefgh&amp;colors=2CA6CB,ffffff,666666,0082cb,e6e6e6&amp;dpc=1&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>\hexo\themes\jacman\layout\_widget</code>  中新建名为 <code>weiboshow.ejs</code>的文件，添加如下代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"weiboshow"</span>&gt;</span><br><span class="line">  &lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">"asidetitle"</span>&gt;&lt;%= __(<span class="string">'weibo'</span>) %&gt;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    微博秀代码</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
 <p>但是为了代码美观，也方便自己万一要更换微博帐号，最好把 <code>uid=1234567890&amp;verifier=abcdefgh</code> 改成 <code>uid=&lt;%= theme.author.tsina %&gt;&amp;verifier=&lt;%- theme.author.weibo_verifier %&gt;</code> ，这样就可以在主题的配置文件中修改微博帐号了。</p>
 <p>最后记得重新配置 Jacman 主题的 <code>_config.yml</code> 文件</p>

@@ -81,6 +81,70 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2020/04/01/为Win10的UWP应用使用设置代理/" title="为Win10的UWP应用使用设置代理" itemprop="url">为Win10的UWP应用使用设置代理</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2020-04-01T12:51:00.000Z" itemprop="datePublished"> 发表于 2020-04-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+<p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
+<p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
+<h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2020/04/01/为Win10的UWP应用使用设置代理/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/UWP软件/">UWP软件</a><a href="/tags/代理/">代理</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2020/03/01/Keepass使用安全桌面登录系统白屏问题/" title="Keepass使用安全桌面登录系统白屏问题" itemprop="url">Keepass使用安全桌面登录系统白屏问题</a>
   </h1>
   <p class="article-author">By
@@ -359,72 +423,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/03/29/一个方便自己用hexo的批处理/" title="一个方便自己用hexo的批处理" itemprop="url">一个方便自己用hexo的批处理</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2015-03-29T06:05:15.000Z" itemprop="datePublished"> 发表于 2015-03-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>用 Hexo 老要在 Bash 里输入命令，挺麻烦的所以自己作了一个批处理文件，方便自己使用。</p>
-<p>为了弄出这个东西，也鼓捣了好一阵，看了好多批处理方面的文章，后来弄出来以后发现其他都能用，就是遇到 deploy 的时候，就不行了。后来想到可能是在 cmd 命令行里无法用 Git 的缘故，又研究了半天。</p>
-<p>后来又增加了新建文章、新建草稿，发布草稿的功能。</p>
-<p>其中发布草稿的功能颇费了一番心思。</p>
-<p>把批处理文件发出来，大家交流一下把，也请指正。</p>
-<h2 id="批处理文件">批处理文件</h2><p>批处理文件如下：</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/03/29/一个方便自己用hexo的批处理/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -451,7 +449,7 @@
 		  
 		
 		  
-			<li><a href="/categories/网络/" title="网络">网络<sup>4</sup></a></li>
+			<li><a href="/categories/网络/" title="网络">网络<sup>5</sup></a></li>
 		  
 		
 		</ul>
@@ -464,19 +462,19 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/网络/" title="网络">网络<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/文化/" title="文化">文化<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/网络/" title="网络">网络<sup>3</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/历法/" title="历法">历法<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -489,6 +487,14 @@
 		
 			
 				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UWP软件/" title="UWP软件">UWP软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/代理/" title="代理">代理<sup>1</sup></a></li>
 			
 		
 		</ul>

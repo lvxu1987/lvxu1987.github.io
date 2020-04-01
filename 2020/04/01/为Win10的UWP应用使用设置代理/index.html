@@ -4,25 +4,28 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   
-    <title>流氓软件快压 | 吕旭说</title>
+    <title>为Win10的UWP应用使用设置代理 | 吕旭说</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="吕旭">
     
 
     
-    <meta name="description" content="正文早就知道国内的软件很多都很没下限，但一直以为自己注意一点就好了，没想到我今天还是中枪了。 让我中枪的没节操软件叫快压。 我在网上下了一个后缀为 .zip 的压缩包，没想到，我用 7-zip 打开的时候，居然打不开，压缩包里只有一个 说明.txt 的文件，打开以后，里面是这么写的 123456789101112131415161718192021尊敬的用户：    您当前使用的压缩软件无法直接查">
-<meta name="keywords" content="流氓软件">
+    <meta name="description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
+<meta name="keywords" content="网络,UWP软件,代理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="流氓软件快压">
-<meta property="og:url" content="http://lvxu.site/2015/04/07/流氓软件快压/index.html">
+<meta property="og:title" content="为Win10的UWP应用使用设置代理">
+<meta property="og:url" content="http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/index.html">
 <meta property="og:site_name" content="吕旭说">
-<meta property="og:description" content="正文早就知道国内的软件很多都很没下限，但一直以为自己注意一点就好了，没想到我今天还是中枪了。 让我中枪的没节操软件叫快压。 我在网上下了一个后缀为 .zip 的压缩包，没想到，我用 7-zip 打开的时候，居然打不开，压缩包里只有一个 说明.txt 的文件，打开以后，里面是这么写的 123456789101112131415161718192021尊敬的用户：    您当前使用的压缩软件无法直接查">
+<meta property="og:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2015-12-15T13:19:05.000Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2020-04-01T13:02:01.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="流氓软件快压">
-<meta name="twitter:description" content="正文早就知道国内的软件很多都很没下限，但一直以为自己注意一点就好了，没想到我今天还是中枪了。 让我中枪的没节操软件叫快压。 我在网上下了一个后缀为 .zip 的压缩包，没想到，我用 7-zip 打开的时候，居然打不开，压缩包里只有一个 说明.txt 的文件，打开以后，里面是这么写的 123456789101112131415161718192021尊敬的用户：    您当前使用的压缩软件无法直接查">
+<meta name="twitter:title" content="为Win10的UWP应用使用设置代理">
+<meta name="twitter:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
     <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
@@ -81,14 +84,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/04/07/流氓软件快压/" title="流氓软件快压" itemprop="url">流氓软件快压</a>
+      <a href="/2020/04/01/为Win10的UWP应用使用设置代理/" title="为Win10的UWP应用使用设置代理" itemprop="url">为Win10的UWP应用使用设置代理</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
 		
   <p class="article-time">
-    <time datetime="2015-04-07T06:18:07.000Z" itemprop="datePublished"> 发表于 2015-04-07</time>
+    <time datetime="2020-04-01T12:51:00.000Z" itemprop="datePublished"> 发表于 2020-04-01</time>
     
   </p>
 </header>
@@ -97,26 +100,30 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正文"><span class="toc-number">1.</span> <span class="toc-text">正文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解除限制的方法"><span class="toc-number">1.</span> <span class="toc-text">解除限制的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：获取名称"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：获取名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解除限制"><span class="toc-number">1.2.</span> <span class="toc-text">解除限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置全局代理"><span class="toc-number">1.3.</span> <span class="toc-text">设置全局代理</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="正文">正文</h2><p>早就知道国内的软件很多都很没下限，但一直以为自己注意一点就好了，没想到我今天还是中枪了。</p>
-<p>让我中枪的没节操软件叫<strong>快压</strong>。</p>
-<p>我在网上下了一个后缀为 .zip 的压缩包，没想到，我用 7-zip 打开的时候，居然打不开，压缩包里只有一个 <code>说明.txt</code> 的文件，打开以后，里面是这么写的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">尊敬的用户：</span><br><span class="line">    您当前使用的压缩软件无法直接查看或解压这个压缩包，因其在打包过程中采用</span><br><span class="line">了快压的超高压缩技术。</span><br><span class="line"></span><br><span class="line">这里为您列出压缩包中的内容：</span><br><span class="line">1、山西省第九届职业院校技能大赛专栏</span><br><span class="line">2、山西省第九届职业院校技能大赛专栏\山西省2015高职产品造型设计与快速成型大赛竞赛规程.doc</span><br><span class="line">3、山西省第九届职业院校技能大赛专栏\山西省2015高职导游、酒店服务，现代物流技能大赛规程.doc</span><br><span class="line">4、山西省第九届职业院校技能大赛专栏\山西省2015高职电子产品设计及制作大赛竞赛规程.doc</span><br><span class="line">5、山西省第九届职业院校技能大赛专栏\山西省2015高职电子商务技能大赛赛项规程.doc</span><br><span class="line">……</span><br><span class="line"></span><br><span class="line">    如要使用压缩包的全部内容，请您使用以下链接下载并安装快压压缩软件。</span><br><span class="line">http://www.kuaizip.com/down/KuaiZip_installer.exe</span><br><span class="line"></span><br><span class="line">=======================================================================</span><br><span class="line">快压简介：快压（KuaiZip）是一款免费、方便、快速的压缩和解压缩利器，拥有</span><br><span class="line">一流的压缩技术，是国内第一款具备自主压缩格式的软件。快压自身的压缩格式KZ</span><br><span class="line">具有超大的压缩比和超快的压缩解压速度，兼容 RAR, ZIP 和 7Z 等40余种压缩文</span><br><span class="line">件。快压特有的虚拟化技术，还可挂载压缩包、光驱镜像和虚拟机。</span><br><span class="line">=======================================================================</span><br></pre></td></tr></table></figure>
-<p>什么快压的超高压缩技术，不就是 7z 改的么，恶心完用户，还要恶心用户的用户，用户的朋友，用户的同事。</p>
-<p>恶心到家了。</p>
-<p>幸好找到一个<strong>快压极限精简版</strong>，不用下那个流氓软件了。</p>
-<p>下载地址见参考资料，感谢 Jixun。</p>
-<p>其实用这种软件，不仅不方便别人，也是对自己资料的不负责任。假想有一天，快压倒闭了，老版本的快压万一不支持你的新版 Windows ，你要怎么取回你的资料，再专门装一个老版本的 Windows 专门解压你那一堆文件么。</p>
-<p>退出快压保平安，网上搜九评快压，有真相。</p>
-<h2 id="参考资料">参考资料</h2><ol>
-<li><p><a href="http://jixun.org/p/2106" target="_blank" rel="noopener">Jixun 的资源仓库：快压极限精简+</a></p>
-</li>
-<li><p><a href="http://www.zhihu.com/question/22244263" target="_blank" rel="noopener">知乎：如何不装『快压』解压快压的zip包？</a></p>
-</li>
-</ol>
+		<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+<p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
+<p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
+<h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
+<a id="more"></a>
+<h3 id="第一步：获取名称">第一步：获取名称</h3><p>按<code>Win</code>+<code>R</code>，在<code>打开(O)</code>后面输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\%username%\AppData\Local\Packages</span><br></pre></td></tr></table></figure>
+<p>打开后能看到的每一个文件夹就代表一个UWP程序包，文件夹的名称就是程序包的名称。</p>
+<p>例如：<code>Microsoft.Office.OneNote_8wekyb3d8bbwe</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Package列表"></p>
+<h3 id="解除限制">解除限制</h3><p>解除限制使用的是<code>CheckNetIsolation</code>命令。该命令的语法是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation LoopbackExempt [operation] [-n=] [-p=]</span><br><span class="line">   操作列表:</span><br><span class="line">       -a  -  向环回免除列表中添加 AppContainer 或程序包系列。</span><br><span class="line">       -d  -  从环回免除列表中删除 AppContainer 或程序包系列。</span><br><span class="line">       -c  -  清除环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line">       -s  -  显示环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line"></span><br><span class="line">   参数列表:</span><br><span class="line">       -n= - AppContainer 名称或程序包系列名称。</span><br><span class="line">       -p= - AppContainer 或程序包系列安全标识符(SID)。</span><br><span class="line">       -?  - 显示 LoopbackExempt 模块的此帮助消息。</span><br></pre></td></tr></table></figure>
+<p>以OneNote为例，在命令行里输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -n=&quot;Microsoft.Office.OneNote_8wekyb3d8bbwe&quot;</span><br></pre></td></tr></table></figure>
+<p>命令执行后，系统会提示<code>完成</code>，该UWP软件无法访问<code>localhost</code>的限制已经解除</p>
+<h3 id="设置全局代理">设置全局代理</h3><p>在<code>Proxifier</code>软件里配置全局代理。</p>
+<p>先在菜单栏的<code>Profile</code> / <code>Proxy Servers</code> 里设置你的代理地址。</p>
+<p>然后在<code>Profile</code> / <code>Proxification Rules</code> 里面进行配置，把你需要代理的软件配置一个规则。</p>
+<p>或者也可以直接把 <code>Default</code> 配置为走代理，然后在代理软件里通过PAC功能或者路由规则来配置走代理和直连。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="OneNote已经通过代理进行连接"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -130,7 +137,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/流氓软件/">流氓软件</a>
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/UWP软件/">UWP软件</a><a href="/tags/代理/">代理</a>
   </div>
 
 </div>
@@ -139,7 +146,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://lvxu.site/2015/04/07/流氓软件快压/" data-title="流氓软件快压 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  <div data-url="http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/" data-title="为Win10的UWP应用使用设置代理 | 吕旭说" data-tsina="1657002674" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -152,19 +159,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/04/08/中国传统历法/" title="中国传统历法">
-  <strong>上一篇：</strong><br/>
-  <span>
-  中国传统历法</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/03/29/一个方便自己用hexo的批处理/"  title="一个方便自己用hexo的批处理">
+<a href="/2020/03/01/Keepass使用安全桌面登录系统白屏问题/"  title="Keepass使用安全桌面登录系统白屏问题">
  <strong>下一篇：</strong><br/> 
- <span>一个方便自己用hexo的批处理
+ <span>Keepass使用安全桌面登录系统白屏问题
 </span>
 </a>
 </div>
@@ -178,7 +177,7 @@
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Tue Apr 07 2015 14:18:07 GMT+0800', // 可选。默认为 location.href
+  id: 'Wed Apr 01 2020 20:51:00 GMT+0800', // 可选。默认为 location.href
   owner: 'lvxu1987',
   repo: 'lvxu.site',
   oauth: {
@@ -195,7 +194,7 @@ gitment.render('git-comments')
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正文"><span class="toc-number">1.</span> <span class="toc-text">正文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解除限制的方法"><span class="toc-number">1.</span> <span class="toc-text">解除限制的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：获取名称"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：获取名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解除限制"><span class="toc-number">1.2.</span> <span class="toc-text">解除限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置全局代理"><span class="toc-number">1.3.</span> <span class="toc-text">设置全局代理</span></a></li></ol></li></ol>
  
   </div>
 

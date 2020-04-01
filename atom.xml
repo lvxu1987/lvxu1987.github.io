@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2020-03-01T15:20:23.449Z</updated>
+  <updated>2020-04-01T13:02:01.314Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -13,6 +13,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[为Win10的UWP应用使用设置代理]]></title>
+    <link href="http://lvxu.site/2020/04/01/%E4%B8%BAWin10%E7%9A%84UWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/"/>
+    <id>http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/</id>
+    <published>2020-04-01T12:51:00.000Z</published>
+    <updated>2020-04-01T13:02:01.314Z</updated>
+    <content type="html"><![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+<p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
+<p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
+<h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
+<a id="more"></a>
+<h3 id="第一步：获取名称">第一步：获取名称</h3><p>按<code>Win</code>+<code>R</code>，在<code>打开(O)</code>后面输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\%username%\AppData\Local\Packages</span><br></pre></td></tr></table></figure>
+<p>打开后能看到的每一个文件夹就代表一个UWP程序包，文件夹的名称就是程序包的名称。</p>
+<p>例如：<code>Microsoft.Office.OneNote_8wekyb3d8bbwe</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Package列表"></p>
+<h3 id="解除限制">解除限制</h3><p>解除限制使用的是<code>CheckNetIsolation</code>命令。该命令的语法是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation LoopbackExempt [operation] [-n=] [-p=]</span><br><span class="line">   操作列表:</span><br><span class="line">       -a  -  向环回免除列表中添加 AppContainer 或程序包系列。</span><br><span class="line">       -d  -  从环回免除列表中删除 AppContainer 或程序包系列。</span><br><span class="line">       -c  -  清除环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line">       -s  -  显示环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line"></span><br><span class="line">   参数列表:</span><br><span class="line">       -n= - AppContainer 名称或程序包系列名称。</span><br><span class="line">       -p= - AppContainer 或程序包系列安全标识符(SID)。</span><br><span class="line">       -?  - 显示 LoopbackExempt 模块的此帮助消息。</span><br></pre></td></tr></table></figure>
+<p>以OneNote为例，在命令行里输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -n=&quot;Microsoft.Office.OneNote_8wekyb3d8bbwe&quot;</span><br></pre></td></tr></table></figure>
+<p>命令执行后，系统会提示<code>完成</code>，该UWP软件无法访问<code>localhost</code>的限制已经解除</p>
+<h3 id="设置全局代理">设置全局代理</h3><p>在<code>Proxifier</code>软件里配置全局代理。</p>
+<p>先在菜单栏的<code>Profile</code> / <code>Proxy Servers</code> 里设置你的代理地址。</p>
+<p>然后在<code>Profile</code> / <code>Proxification Rules</code> 里面进行配置，把你需要代理的软件配置一个规则。</p>
+<p>或者也可以直接把 <code>Default</code> 配置为走代理，然后在代理软件里通过PAC功能或者路由规则来配置走代理和直连。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="OneNote已经通过代理进行连接"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+<p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
+<p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
+<h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>]]>
+    
+    </summary>
+    
+      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="UWP软件" scheme="http://lvxu.site/tags/UWP%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="代理" scheme="http://lvxu.site/tags/%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Keepass使用安全桌面登录系统白屏问题]]></title>
@@ -465,9 +510,9 @@
     
     </summary>
     
-      <category term="文化" scheme="http://lvxu.site/tags/%E6%96%87%E5%8C%96/"/>
-    
       <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="文化" scheme="http://lvxu.site/tags/%E6%96%87%E5%8C%96/"/>
     
       <category term="杂谈" scheme="http://lvxu.site/categories/%E6%9D%82%E8%B0%88/"/>
     

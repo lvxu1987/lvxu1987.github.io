@@ -94,7 +94,7 @@
 </header>
     <div class="article-content">
         
-        <p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+        <p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
 <p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
 <p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
 <h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>

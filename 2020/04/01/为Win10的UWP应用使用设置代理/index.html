@@ -11,20 +11,20 @@
     
 
     
-    <meta name="description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
+    <meta name="description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
 <meta name="keywords" content="网络,UWP软件,代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Win10的UWP应用使用设置代理">
 <meta property="og:url" content="http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/index.html">
 <meta property="og:site_name" content="吕旭说">
-<meta property="og:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
+<meta property="og:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2020-04-01T13:02:01.314Z">
+<meta property="og:updated_time" content="2020-04-02T04:34:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Win10的UWP应用使用设置代理">
-<meta name="twitter:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
+<meta name="twitter:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
@@ -104,7 +104,7 @@
 		
 		</div>
 		
-		<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+		<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
 <p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
 <p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
 <h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>

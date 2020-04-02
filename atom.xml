@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2020-04-01T13:02:01.314Z</updated>
+  <updated>2020-04-02T04:34:23.000Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://lvxu.site/2020/04/01/%E4%B8%BAWin10%E7%9A%84UWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/"/>
     <id>http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/</id>
     <published>2020-04-01T12:51:00.000Z</published>
-    <updated>2020-04-01T13:02:01.314Z</updated>
-    <content type="html"><![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+    <updated>2020-04-02T04:34:23.000Z</updated>
+    <content type="html"><![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
 <p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
 <p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
 <h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
@@ -42,7 +42,7 @@
 <p><img src="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="OneNote已经通过代理进行连接"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），及时使用的「小飞机」软件，UWP软件仍然无法得到加速。</p>
+    <![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
 <p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
 <p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
 <h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>]]>

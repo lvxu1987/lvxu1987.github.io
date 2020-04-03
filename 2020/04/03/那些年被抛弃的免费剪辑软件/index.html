@@ -4,28 +4,30 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   
-    <title>为Win10的UWP应用使用设置代理 | 吕旭说</title>
+    <title>那些年被抛弃的免费剪辑软件 | 吕旭说</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="吕旭">
     
 
     
-    <meta name="description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
-<meta name="keywords" content="网络,UWP软件,代理">
+    <meta name="description" content="最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。 简单研究了一下免费的剪辑软件，最后选择了Shutcut。 Shutcut的事情另外一篇文章里会说另外一篇文章里会说，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。">
+<meta name="keywords" content="网络,视频剪辑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为Win10的UWP应用使用设置代理">
-<meta property="og:url" content="http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/index.html">
+<meta property="og:title" content="那些年被抛弃的免费剪辑软件">
+<meta property="og:url" content="http://lvxu.site/2020/04/03/那些年被抛弃的免费剪辑软件/index.html">
 <meta property="og:site_name" content="吕旭说">
-<meta property="og:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
+<meta property="og:description" content="最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。 简单研究了一下免费的剪辑软件，最后选择了Shutcut。 Shutcut的事情另外一篇文章里会说另外一篇文章里会说，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2020-04-02T04:34:23.000Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-92d2b7ff2873ca53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-dd67bd25ada15005.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-9feded2e23b1f31c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-0a01894beb4e87c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2020-04-03T14:37:25.219Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="为Win10的UWP应用使用设置代理">
-<meta name="twitter:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="那些年被抛弃的免费剪辑软件">
+<meta name="twitter:description" content="最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。 简单研究了一下免费的剪辑软件，最后选择了Shutcut。 Shutcut的事情另外一篇文章里会说另外一篇文章里会说，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/49719-92d2b7ff2873ca53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
     <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
@@ -84,14 +86,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2020/04/01/为Win10的UWP应用使用设置代理/" title="为Win10的UWP应用使用设置代理" itemprop="url">为Win10的UWP应用使用设置代理</a>
+      <a href="/2020/04/03/那些年被抛弃的免费剪辑软件/" title="那些年被抛弃的免费剪辑软件" itemprop="url">那些年被抛弃的免费剪辑软件</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
 		
   <p class="article-time">
-    <time datetime="2020-04-01T12:51:00.000Z" itemprop="datePublished"> 发表于 2020-04-01</time>
+    <time datetime="2020-04-03T14:36:11.000Z" itemprop="datePublished"> 发表于 2020-04-03</time>
     
   </p>
 </header>
@@ -100,30 +102,23 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解除限制的方法"><span class="toc-number">1.</span> <span class="toc-text">解除限制的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：获取名称"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：获取名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解除限制"><span class="toc-number">1.2.</span> <span class="toc-text">解除限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置全局代理"><span class="toc-number">1.3.</span> <span class="toc-text">设置全局代理</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑王："><span class="toc-number">1.</span> <span class="toc-text">视频编辑王：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#爱剪辑"><span class="toc-number">2.</span> <span class="toc-text">爱剪辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑器"><span class="toc-number">3.</span> <span class="toc-text">视频编辑器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenShot"><span class="toc-number">4.</span> <span class="toc-text">OpenShot</span></a></li></ol>
 		
 		</div>
 		
-		<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
-<p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
-<p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
-<h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
+		<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
+<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。</p>
+<p>Shutcut的事情另外一篇文章里会说<a href="https://www.jianshu.com/p/f6ae0250b13c" target="_blank" rel="noopener">另外一篇文章里会说</a>，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。</p>
 <a id="more"></a>
-<h3 id="第一步：获取名称">第一步：获取名称</h3><p>按<code>Win</code>+<code>R</code>，在<code>打开(O)</code>后面输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\%username%\AppData\Local\Packages</span><br></pre></td></tr></table></figure>
-<p>打开后能看到的每一个文件夹就代表一个UWP程序包，文件夹的名称就是程序包的名称。</p>
-<p>例如：<code>Microsoft.Office.OneNote_8wekyb3d8bbwe</code></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Package列表"></p>
-<h3 id="解除限制">解除限制</h3><p>解除限制使用的是<code>CheckNetIsolation</code>命令。该命令的语法是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation LoopbackExempt [operation] [-n=] [-p=]</span><br><span class="line">   操作列表:</span><br><span class="line">       -a  -  向环回免除列表中添加 AppContainer 或程序包系列。</span><br><span class="line">       -d  -  从环回免除列表中删除 AppContainer 或程序包系列。</span><br><span class="line">       -c  -  清除环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line">       -s  -  显示环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line"></span><br><span class="line">   参数列表:</span><br><span class="line">       -n= - AppContainer 名称或程序包系列名称。</span><br><span class="line">       -p= - AppContainer 或程序包系列安全标识符(SID)。</span><br><span class="line">       -?  - 显示 LoopbackExempt 模块的此帮助消息。</span><br></pre></td></tr></table></figure>
-<p>以OneNote为例，在命令行里输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -n=&quot;Microsoft.Office.OneNote_8wekyb3d8bbwe&quot;</span><br></pre></td></tr></table></figure>
-<p>命令执行后，系统会提示<code>完成</code>，该UWP软件无法访问<code>localhost</code>的限制已经解除</p>
-<h3 id="设置全局代理">设置全局代理</h3><p>在<code>Proxifier</code>软件里配置全局代理。</p>
-<p>先在菜单栏的<code>Profile</code> / <code>Proxy Servers</code> 里设置你的代理地址。</p>
-<p>然后在<code>Profile</code> / <code>Proxification Rules</code> 里面进行配置，把你需要代理的软件配置一个规则。</p>
-<p>或者也可以直接把 <code>Default</code> 配置为走代理，然后在代理软件里通过PAC功能或者路由规则来配置走代理和直连。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="OneNote已经通过代理进行连接"></p>
+<h4 id="视频编辑王：">视频编辑王：</h4><p>没有找到怎么调整画中画的位置（也许是我不会用？），而且免费版不能导出1080P，导出后的视频也有水印。<br><img src="https://upload-images.jianshu.io/upload_images/49719-92d2b7ff2873ca53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="免费版无法导出1080P且有水印"></p>
+<h4 id="爱剪辑">爱剪辑</h4><p>爱剪辑导出的时候会强制添加片头片尾，所以在网上名气很大，尤其是在某个特定领域的视频。</p>
+<p>试了一下爱剪辑，发现这个软件都没有时间轴，其实就是一个加转场效果和背景音乐的工具。那我还不如直接用windows10自带的「视频编辑器」了。</p>
+<p>而且这个软件现在坑了，剪辑完了导出的时候问你要9.9。虽然钱不多吧，但是这样之前不说，剪辑完了要钱，就像是敲诈勒索一样，感觉像吃了一坨Shi。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-dd67bd25ada15005.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="爱剪辑要钱界面"></p>
+<h4 id="视频编辑器">视频编辑器</h4><p>视频编辑器是Windows10自带的视频编辑软件，可以连接视频，添加背景音乐，添加一些动作，功能过于简单。</p>
+<p>适合把照片导出成视频。实际上这个软件会自动把你电脑里相似的照片制作成视频，有点类似谷歌照片的功能。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-9feded2e23b1f31c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Windows10视频编辑器.png"></p>
+<h4 id="OpenShot">OpenShot</h4><p>在开源剪辑界名气也不小，不知道为什么，在我的Windows10系统上始终无法正常运行，下了32位版和64位版都不行，最后只能放弃了。<br><img src="https://upload-images.jianshu.io/upload_images/49719-0a01894beb4e87c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -137,7 +132,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/UWP软件/">UWP软件</a><a href="/tags/代理/">代理</a>
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/视频剪辑/">视频剪辑</a>
   </div>
 
 </div>
@@ -146,7 +141,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/" data-title="为Win10的UWP应用使用设置代理 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  <div data-url="http://lvxu.site/2020/04/03/那些年被抛弃的免费剪辑软件/" data-title="那些年被抛弃的免费剪辑软件 | 吕旭说" data-tsina="1657002674" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -160,18 +155,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2020/04/03/那些年被抛弃的免费剪辑软件/" title="那些年被抛弃的免费剪辑软件">
+ <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/" title="免费开源剪辑软件Shotcut推荐和使用教程">
   <strong>上一篇：</strong><br/>
   <span>
-  那些年被抛弃的免费剪辑软件</span>
+  免费开源剪辑软件Shotcut推荐和使用教程</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2020/03/01/Keepass使用安全桌面登录系统白屏问题/"  title="Keepass使用安全桌面登录系统白屏问题">
+<a href="/2020/04/01/为Win10的UWP应用使用设置代理/"  title="为Win10的UWP应用使用设置代理">
  <strong>下一篇：</strong><br/> 
- <span>Keepass使用安全桌面登录系统白屏问题
+ <span>为Win10的UWP应用使用设置代理
 </span>
 </a>
 </div>
@@ -185,7 +180,7 @@
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Wed Apr 01 2020 20:51:00 GMT+0800', // 可选。默认为 location.href
+  id: 'Fri Apr 03 2020 22:36:11 GMT+0800', // 可选。默认为 location.href
   owner: 'lvxu1987',
   repo: 'lvxu.site',
   oauth: {
@@ -202,7 +197,7 @@ gitment.render('git-comments')
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解除限制的方法"><span class="toc-number">1.</span> <span class="toc-text">解除限制的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：获取名称"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：获取名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解除限制"><span class="toc-number">1.2.</span> <span class="toc-text">解除限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置全局代理"><span class="toc-number">1.3.</span> <span class="toc-text">设置全局代理</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑王："><span class="toc-number">1.</span> <span class="toc-text">视频编辑王：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#爱剪辑"><span class="toc-number">2.</span> <span class="toc-text">爱剪辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑器"><span class="toc-number">3.</span> <span class="toc-text">视频编辑器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenShot"><span class="toc-number">4.</span> <span class="toc-text">OpenShot</span></a></li></ol>
  
   </div>
 

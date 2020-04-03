@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2020-04-02T04:34:23.000Z</updated>
+  <updated>2020-04-03T14:41:19.668Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -13,6 +13,123 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[免费开源剪辑软件Shotcut推荐和使用教程]]></title>
+    <link href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>http://lvxu.site/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/</id>
+    <published>2020-04-03T14:40:11.000Z</published>
+    <updated>2020-04-03T14:41:19.668Z</updated>
+    <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
+<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-c9cde800af774a25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Shotcut软件的界面.png"></p>
+<p>下面大概说一下这个软件怎么使用。</p>
+<h2 id="导入素材，建立时间线">导入素材，建立时间线</h2><ol>
+<li><p>将需要剪辑的素材拖动到「播放列表」区域，将素材导入到软件。</p>
+</li>
+<li><p>点击时间线下面的「三横线符号」，打开附加操作菜单，在里面选择添加视频轨道，根据需要可以再添加音频轨道或多个视频轨道。</p>
+</li>
+</ol>
+<a id="more"></a>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-6e9c1416aa769851.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Shotcut剪辑-添加视频轨道.png"></p>
+<ol>
+<li>将素材拖动到对应的轨道上。如果需要素材先后播放，就拖动到同一个轨道上，如果需要视频以画中画的形式叠加播放，就拖动到不同轨道上。</li>
+</ol>
+<h2 id="音频视频对齐">音频视频对齐</h2><p>教学视频往往会同时录制多个视频，比如一个是电脑录屏，一个是教师出境。</p>
+<p>剪辑时如果两个视频没有对齐的话，教师的口型就对不上声音，或者PPT翻页和声音不一致。</p>
+<p>Shotcut这个软件的一个好处是每个视频轨道都可以显示音频波形，通过对比音频波形可以很方便的对齐视频。视频对齐后，将其中一条的音轨关掉，保留收音效果较好的那一条视频的音轨。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-2cd6341efd6c23bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="音频对齐.png"></p>
+<h2 id="调整画中画位置">调整画中画位置</h2><h3 id="改变上层视频的位置和大小">改变上层视频的位置和大小</h3><p>导入两个视频时，视频都会居中布置，如果需要调整上层视频的位置的话，需要在<strong>「时间线」</strong>里面选中上层视频，然后在<strong>「滤镜」</strong>中选择<strong>「位置与尺寸」</strong>，就可以调整上层视频的位置了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-3800e1ab46359915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="调整画中画位置.png"></p>
+<p>实际上，不光上层视频可以调整位置，下层视频也可以调整位置，从而做出两个视频并列的效果。</p>
+<h3 id="上层视频位置和大小的变换">上层视频位置和大小的变换</h3><p>有时在教学视频里面，上层视频（比较教师出境视频）的大小和位置是需要变化的，比如说PPT首页的时候，教师出境视频比较大，内页的时候，出境视频会比较小。</p>
+<p>这种情况，首先需要对视频进行切割。选中需要切割的视频，将播放点的竖线拖动到你要切割的位置。在时间线上面的工具栏选择<strong>「于播放点处切割」</strong>，选中的视频就可以被切割为2个视频，可以单独设置滤镜，选择<strong>「位置和尺寸」</strong>滤镜，就可以重新设置上层视频的位置和尺寸了。</p>
+<p>这里有一个小技巧，通过音频波形，可以迅速的找到PPT的翻页点，因为翻页点上基本不说话。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-4b17501392284cec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="切割视频.png"></p>
+<p>因为上层视频发生了变化，为了不显得太突兀，可以增加一个淡入淡出的效果。</p>
+<p>在前一段视频上增加一个<strong>视频淡出</strong>滤镜，在后一段视频上增加一个<strong>视频淡入</strong>滤镜。完成后时间轴上会出现两个半透明的三角形。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-2b83869cbc60b29c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="淡入淡出.png"></p>
+<h2 id="显示字幕、文字">显示字幕、文字</h2><p>首先在视频轨道上方再增加一个新轨道。</p>
+<p>然后在工具栏的<strong>「打开其他」</strong>里面选择<strong>「文本」</strong>，在打开的对话框里输入你要显示的文本内容。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-e0831c89225c031d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="插入文本.png"></p>
+<p>输入文本后点OK，在预览框里会显示文本的内容，将其拖动到新增加的轨道上。注意拖动的时候不要点中间那个点，要按住文本框的其他位置拖动。否则的话不会把文本框拖动到时间线上，而是会把文本框在画面上移动位置。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-489412aff51fe6c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="插入文本效果.png"></p>
+<p>将文本拖动到轨道上之后，就可以在滤镜里设置文本的字体、颜色等。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-cdef91e96341d586.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="拖动文本效果.png"></p>
+<h2 id="设置转场动画">设置转场动画</h2><p>如果在要把两个视频相连的话，可能需要设置转场动画。</p>
+<p>将一个轨道上的两个视频重叠，重叠的部分就会变成紫色的沙漏形状。右键点击这个沙漏，选择<strong>「属性」</strong>，就可以设置转场动画了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-96f911d9e8ea49eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="转场动画.png"></p>
+<h2 id="视频输出">视频输出</h2><p>最后就是进行视频输出了，也就是将剪辑好的视频按照一定的格式保存到本地。</p>
+<p>Shutcut没有按照素材来源自动选择参数的功能（还是说我没发现？），需要手动选择参数。</p>
+<p>在工具栏上选择<strong>「输出」</strong>功能（图标是一个光盘💿），打开输出界面。来源选择<strong>时间线</strong>，硬件编码器推荐不要勾选。勾选了硬件编码器的话，如果你的显卡支持硬件编码，导出会比较快，但是视频质量低于不使用硬件编码。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-ed23a4a2fa304ed3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输出.png"></p>
+<p>左边的列表是常见的视频编码和参数选择，如果对编码器比较懂的话，还可以点<strong>高级</strong>自己设置。如果对视频编码不太懂的话，这里推荐几个选项。</p>
+<ol>
+<li><p>内建里面的「H.264 High Profile」，这个导出以后是「.mp4」格式，兼容性较好。</p>
+</li>
+<li><p>内建里面的「HEVC Main Profile」，这个导出以后也是「.MP4」文件。HEVC也叫H.265，压缩率比H.264高一些，但是个别老一点的设备可能不兼容。</p>
+</li>
+</ol>
+<p>选择格式之后，点击<strong>「输出文件」</strong>，选择保存位置。</p>
+<p>确定后，在界面最右边的任务里面会显示进度，泡杯茶耐心等待吧。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-42dba97cbefde807.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="漫长的进度条.png"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
+<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-c9cde800af774a25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Shotcut软件的界面.png"></p>
+<p>下面大概说一下这个软件怎么使用。</p>
+<h2 id="导入素材，建立时间线">导入素材，建立时间线</h2><ol>
+<li><p>将需要剪辑的素材拖动到「播放列表」区域，将素材导入到软件。</p>
+</li>
+<li><p>点击时间线下面的「三横线符号」，打开附加操作菜单，在里面选择添加视频轨道，根据需要可以再添加音频轨道或多个视频轨道。</p>
+</li>
+</ol>]]>
+    
+    </summary>
+    
+      <category term="视频剪辑" scheme="http://lvxu.site/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"/>
+    
+      <category term="Shotcut" scheme="http://lvxu.site/tags/Shotcut/"/>
+    
+      <category term="网络,教学" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C-%E6%95%99%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[那些年被抛弃的免费剪辑软件]]></title>
+    <link href="http://lvxu.site/2020/04/03/%E9%82%A3%E4%BA%9B%E5%B9%B4%E8%A2%AB%E6%8A%9B%E5%BC%83%E7%9A%84%E5%85%8D%E8%B4%B9%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://lvxu.site/2020/04/03/那些年被抛弃的免费剪辑软件/</id>
+    <published>2020-04-03T14:36:11.000Z</published>
+    <updated>2020-04-03T14:37:25.219Z</updated>
+    <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
+<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。</p>
+<p>Shutcut的事情另外一篇文章里会说<a href="https://www.jianshu.com/p/f6ae0250b13c" target="_blank" rel="noopener">另外一篇文章里会说</a>，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。</p>
+<a id="more"></a>
+<h4 id="视频编辑王：">视频编辑王：</h4><p>没有找到怎么调整画中画的位置（也许是我不会用？），而且免费版不能导出1080P，导出后的视频也有水印。<br><img src="https://upload-images.jianshu.io/upload_images/49719-92d2b7ff2873ca53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="免费版无法导出1080P且有水印"></p>
+<h4 id="爱剪辑">爱剪辑</h4><p>爱剪辑导出的时候会强制添加片头片尾，所以在网上名气很大，尤其是在某个特定领域的视频。</p>
+<p>试了一下爱剪辑，发现这个软件都没有时间轴，其实就是一个加转场效果和背景音乐的工具。那我还不如直接用windows10自带的「视频编辑器」了。</p>
+<p>而且这个软件现在坑了，剪辑完了导出的时候问你要9.9。虽然钱不多吧，但是这样之前不说，剪辑完了要钱，就像是敲诈勒索一样，感觉像吃了一坨Shi。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-dd67bd25ada15005.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="爱剪辑要钱界面"></p>
+<h4 id="视频编辑器">视频编辑器</h4><p>视频编辑器是Windows10自带的视频编辑软件，可以连接视频，添加背景音乐，添加一些动作，功能过于简单。</p>
+<p>适合把照片导出成视频。实际上这个软件会自动把你电脑里相似的照片制作成视频，有点类似谷歌照片的功能。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-9feded2e23b1f31c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Windows10视频编辑器.png"></p>
+<h4 id="OpenShot">OpenShot</h4><p>在开源剪辑界名气也不小，不知道为什么，在我的Windows10系统上始终无法正常运行，下了32位版和64位版都不行，最后只能放弃了。<br><img src="https://upload-images.jianshu.io/upload_images/49719-0a01894beb4e87c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
+<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。</p>
+<p>Shutcut的事情另外一篇文章里会说<a href="https://www.jianshu.com/p/f6ae0250b13c" target="_blank" rel="noopener">另外一篇文章里会说</a>，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。</p>]]>
+    
+    </summary>
+    
+      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="视频剪辑" scheme="http://lvxu.site/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"/>
+    
+      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[为Win10的UWP应用使用设置代理]]></title>

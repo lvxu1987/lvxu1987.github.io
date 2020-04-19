@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2020-04-19T04:16:10.336Z</updated>
+  <updated>2020-04-19T04:23:21.735Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -19,13 +19,12 @@
     <link href="http://lvxu.site/2020/04/19/%E5%90%AF%E5%8A%A8V2Ray%E6%97%B6%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/"/>
     <id>http://lvxu.site/2020/04/19/启动V2Ray时提示端口被占用/</id>
     <published>2020-04-19T04:16:10.000Z</published>
-    <updated>2020-04-19T04:16:10.336Z</updated>
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
+    <updated>2020-04-19T04:23:21.735Z</updated>
+    <content type="html"><![CDATA[<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
 <p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/49719-d2b143e3ef9a8f04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误提示"></p>
 <p>查了一下，是端口被占用的原因。</p>
-<!--more-->
+<a id="more"></a>
 <h2 id="软件端口冲突问题">软件端口冲突问题</h2><p>网上查询了一下，有可能是软件端口冲突，需要看看是哪个软件占用了该端口。打开<code>CMD</code>命令行，在里面输入：<code>netstat -ano | findstr &quot;1081&quot;</code>，但是系统没有任何输出。难道是我的命令输错了么？尝试另一个端口，发现是有输出的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.18363.778]</span><br><span class="line">(c) 2019 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;netstat -ano | findstr &quot;1081&quot;</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;netstat -ano | findstr &quot;9091&quot;</span><br><span class="line">  TCP    0.0.0.0:9091           0.0.0.0:0              LISTENING       13008</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;tasklist | findstr &quot;13008&quot;</span><br><span class="line">transmission-qt.exe          13008 Console                    2     65,132 K</span><br></pre></td></tr></table></figure></p>
 <p>而且使用<code>tasklist | findstr &quot;13008&quot;</code>命令，还能看到占用了13008端口的软件是我的BT下载软件Transmission。</p>
 <p>至此说明问题并非软件端口冲突导致的。</p>
@@ -57,9 +56,11 @@
 <p>至此，真机、虚拟机都可以正常上网，V2RayN也可以正常使用。故障完全排除。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<a id="more"></a>
-<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
-<p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</]]>
+    <![CDATA[<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
+<p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-d2b143e3ef9a8f04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误提示"></p>
+<p>查了一下，是端口被占用的原因。</p>]]>
+    
     </summary>
     
       <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
@@ -75,7 +76,7 @@
     <link href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://lvxu.site/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/</id>
     <published>2020-04-03T14:40:11.000Z</published>
-    <updated>2020-04-03T14:41:19.668Z</updated>
+    <updated>2020-04-19T04:25:40.564Z</updated>
     <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
 <p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/49719-c9cde800af774a25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Shotcut软件的界面.png"></p>
@@ -148,7 +149,7 @@
     
       <category term="Shotcut" scheme="http://lvxu.site/tags/Shotcut/"/>
     
-      <category term="网络,教学" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C-%E6%95%99%E5%AD%A6/"/>
+      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   

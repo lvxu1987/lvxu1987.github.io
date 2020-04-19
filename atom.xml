@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2020-04-19T04:23:21.735Z</updated>
+  <updated>2020-04-19T04:41:26.433Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lvxu.site/2020/04/19/%E5%90%AF%E5%8A%A8V2Ray%E6%97%B6%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/"/>
     <id>http://lvxu.site/2020/04/19/启动V2Ray时提示端口被占用/</id>
     <published>2020-04-19T04:16:10.000Z</published>
-    <updated>2020-04-19T04:23:21.735Z</updated>
+    <updated>2020-04-19T04:41:26.433Z</updated>
     <content type="html"><![CDATA[<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
 <p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/49719-d2b143e3ef9a8f04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误提示"></p>
@@ -29,7 +29,7 @@
 <p>而且使用<code>tasklist | findstr &quot;13008&quot;</code>命令，还能看到占用了13008端口的软件是我的BT下载软件Transmission。</p>
 <p>至此说明问题并非软件端口冲突导致的。</p>
 <p>又在网上搜索，发现<a href="https://github.com/shadowsocks/shadowsocks-windows/issues/1188" target="_blank" rel="noopener">有人说是因为TCP/IP协议或Winsock损坏</a>。</p>
-<h3 id="TCP/IP协议或Winsock损坏问题">TCP/IP协议或Winsock损坏问题</h3><p>按照网上的说法，以管理员身份启动命令提示符，然后执行：</p>
+<h2 id="TCP/IP协议或Winsock损坏问题">TCP/IP协议或Winsock损坏问题</h2><p>按照网上的说法，以管理员身份启动命令提示符，然后执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netsh interface ipv4 reset</span><br><span class="line">netsh interface ipv6 reset</span><br><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
 <p>三条命令执行完毕后，重新启动计算机。发现故障依旧。</p>
 <p>突然想到我之前安装了<code>Hyper-V</code>，会不会端口被系统保留了？</p>
@@ -46,7 +46,7 @@
 <p>再次执行<code>netsh int ipv4 add excludedportrange protocol=tcp startport=1080 numberofports=4</code>命令后，系统已将1080-1083这4个端口保留为用户使用。</p>
 <p>尝试启动V2RayN软件，故障已排除。</p>
 <p>接下来，就是执行<code>dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All</code>命令并重启计算机，再次启用Hyper-V功能。</p>
-<h3 id="重新启用Hyper-V以后电脑无法联网">重新启用Hyper-V以后电脑无法联网</h3><p>重启之后，发现电脑竟然无法联网了。打开<strong>更改适配器设置</strong>的界面，发现原先里面的Hyper-V的<strong>vEthernet虚拟交换机</strong>不见了。</p>
+<h2 id="重新启用Hyper-V以后电脑无法联网">重新启用Hyper-V以后电脑无法联网</h2><p>重启之后，发现电脑竟然无法联网了。打开<strong>更改适配器设置</strong>的界面，发现原先里面的Hyper-V的<strong>vEthernet虚拟交换机</strong>不见了。</p>
 <p>我之前安装Hyper-V以后，配置了一个外部虚拟交换机，该虚拟交换机通过物理网卡获得IP地址，真机和虚拟机相当于都连接在了这个虚拟交换机上，虚拟机也可以通过这个虚拟交换机获得外部网络的IP地址。</p>
 <p>现在这个虚拟交换机不见了，真机自然也就断网了。</p>
 <p>找到问题的原因，解决办法就很明确了，重新建立一个虚拟交换机就好了。不过事情就是这样，总是不会顺利，在Hyper-V里面竟然无法重新建立新的外部虚拟交换机，Hyper-V提示物理网卡已经被占用了。可是我的虚拟交换机已经不见了啊？</p>

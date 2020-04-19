@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-d2b143e3ef9a8f04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-47a77bb62356b580.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2020-04-19T04:23:21.735Z">
+<meta property="og:updated_time" content="2020-04-19T04:41:26.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="启动V2Ray时提示端口被占用">
 <meta name="twitter:description" content="昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。 Privoxy Error✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)  查了一下，是端口被占用的原因。">
@@ -100,7 +100,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件端口冲突问题"><span class="toc-number">1.</span> <span class="toc-text">软件端口冲突问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP/IP协议或Winsock损坏问题"><span class="toc-number">1.1.</span> <span class="toc-text">TCP/IP协议或Winsock损坏问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统保留端口"><span class="toc-number">2.</span> <span class="toc-text">系统保留端口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#重新启用Hyper-V以后电脑无法联网"><span class="toc-number">2.1.</span> <span class="toc-text">重新启用Hyper-V以后电脑无法联网</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件端口冲突问题"><span class="toc-number">1.</span> <span class="toc-text">软件端口冲突问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP/IP协议或Winsock损坏问题"><span class="toc-number">2.</span> <span class="toc-text">TCP/IP协议或Winsock损坏问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统保留端口"><span class="toc-number">3.</span> <span class="toc-text">系统保留端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新启用Hyper-V以后电脑无法联网"><span class="toc-number">4.</span> <span class="toc-text">重新启用Hyper-V以后电脑无法联网</span></a></li></ol>
 		
 		</div>
 		
@@ -113,7 +113,7 @@
 <p>而且使用<code>tasklist | findstr &quot;13008&quot;</code>命令，还能看到占用了13008端口的软件是我的BT下载软件Transmission。</p>
 <p>至此说明问题并非软件端口冲突导致的。</p>
 <p>又在网上搜索，发现<a href="https://github.com/shadowsocks/shadowsocks-windows/issues/1188" target="_blank" rel="noopener">有人说是因为TCP/IP协议或Winsock损坏</a>。</p>
-<h3 id="TCP/IP协议或Winsock损坏问题">TCP/IP协议或Winsock损坏问题</h3><p>按照网上的说法，以管理员身份启动命令提示符，然后执行：</p>
+<h2 id="TCP/IP协议或Winsock损坏问题">TCP/IP协议或Winsock损坏问题</h2><p>按照网上的说法，以管理员身份启动命令提示符，然后执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netsh interface ipv4 reset</span><br><span class="line">netsh interface ipv6 reset</span><br><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
 <p>三条命令执行完毕后，重新启动计算机。发现故障依旧。</p>
 <p>突然想到我之前安装了<code>Hyper-V</code>，会不会端口被系统保留了？</p>
@@ -130,7 +130,7 @@
 <p>再次执行<code>netsh int ipv4 add excludedportrange protocol=tcp startport=1080 numberofports=4</code>命令后，系统已将1080-1083这4个端口保留为用户使用。</p>
 <p>尝试启动V2RayN软件，故障已排除。</p>
 <p>接下来，就是执行<code>dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All</code>命令并重启计算机，再次启用Hyper-V功能。</p>
-<h3 id="重新启用Hyper-V以后电脑无法联网">重新启用Hyper-V以后电脑无法联网</h3><p>重启之后，发现电脑竟然无法联网了。打开<strong>更改适配器设置</strong>的界面，发现原先里面的Hyper-V的<strong>vEthernet虚拟交换机</strong>不见了。</p>
+<h2 id="重新启用Hyper-V以后电脑无法联网">重新启用Hyper-V以后电脑无法联网</h2><p>重启之后，发现电脑竟然无法联网了。打开<strong>更改适配器设置</strong>的界面，发现原先里面的Hyper-V的<strong>vEthernet虚拟交换机</strong>不见了。</p>
 <p>我之前安装Hyper-V以后，配置了一个外部虚拟交换机，该虚拟交换机通过物理网卡获得IP地址，真机和虚拟机相当于都连接在了这个虚拟交换机上，虚拟机也可以通过这个虚拟交换机获得外部网络的IP地址。</p>
 <p>现在这个虚拟交换机不见了，真机自然也就断网了。</p>
 <p>找到问题的原因，解决办法就很明确了，重新建立一个虚拟交换机就好了。不过事情就是这样，总是不会顺利，在Hyper-V里面竟然无法重新建立新的外部虚拟交换机，Hyper-V提示物理网卡已经被占用了。可是我的虚拟交换机已经不见了啊？</p>
@@ -208,7 +208,7 @@ gitment.render('git-comments')
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件端口冲突问题"><span class="toc-number">1.</span> <span class="toc-text">软件端口冲突问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP/IP协议或Winsock损坏问题"><span class="toc-number">1.1.</span> <span class="toc-text">TCP/IP协议或Winsock损坏问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统保留端口"><span class="toc-number">2.</span> <span class="toc-text">系统保留端口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#重新启用Hyper-V以后电脑无法联网"><span class="toc-number">2.1.</span> <span class="toc-text">重新启用Hyper-V以后电脑无法联网</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件端口冲突问题"><span class="toc-number">1.</span> <span class="toc-text">软件端口冲突问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP/IP协议或Winsock损坏问题"><span class="toc-number">2.</span> <span class="toc-text">TCP/IP协议或Winsock损坏问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统保留端口"><span class="toc-number">3.</span> <span class="toc-text">系统保留端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新启用Hyper-V以后电脑无法联网"><span class="toc-number">4.</span> <span class="toc-text">重新启用Hyper-V以后电脑无法联网</span></a></li></ol>
  
   </div>
 

@@ -19,13 +19,13 @@
 <meta property="og:site_name" content="吕旭说">
 <meta property="og:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2020-04-02T04:34:23.000Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png">
+<meta property="og:updated_time" content="2020-04-24T04:19:17.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Win10的UWP应用使用设置代理">
 <meta name="twitter:description" content="Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问localhost ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。 网上有很多解决此类问题的方法，要不就是使用 Fiddler 软件进行设置，要不就是使用CheckNetIsolation命令来解除限制，但是需要通过注册表来获取应用的SID，都">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png">
 
     
     <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
@@ -113,7 +113,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\%username%\AppData\Local\Packages</span><br></pre></td></tr></table></figure>
 <p>打开后能看到的每一个文件夹就代表一个UWP程序包，文件夹的名称就是程序包的名称。</p>
 <p>例如：<code>Microsoft.Office.OneNote_8wekyb3d8bbwe</code></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Package列表"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-ebf5ce7e7d91510c.png" alt="Package列表"></p>
 <h3 id="解除限制">解除限制</h3><p>解除限制使用的是<code>CheckNetIsolation</code>命令。该命令的语法是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CheckNetIsolation LoopbackExempt [operation] [-n=] [-p=]</span><br><span class="line">   操作列表:</span><br><span class="line">       -a  -  向环回免除列表中添加 AppContainer 或程序包系列。</span><br><span class="line">       -d  -  从环回免除列表中删除 AppContainer 或程序包系列。</span><br><span class="line">       -c  -  清除环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line">       -s  -  显示环回免除的 AppContainer 和程序包系列的列表。</span><br><span class="line"></span><br><span class="line">   参数列表:</span><br><span class="line">       -n= - AppContainer 名称或程序包系列名称。</span><br><span class="line">       -p= - AppContainer 或程序包系列安全标识符(SID)。</span><br><span class="line">       -?  - 显示 LoopbackExempt 模块的此帮助消息。</span><br></pre></td></tr></table></figure>
 <p>以OneNote为例，在命令行里输入：</p>
@@ -123,7 +123,7 @@
 <p>先在菜单栏的<code>Profile</code> / <code>Proxy Servers</code> 里设置你的代理地址。</p>
 <p>然后在<code>Profile</code> / <code>Proxification Rules</code> 里面进行配置，把你需要代理的软件配置一个规则。</p>
 <p>或者也可以直接把 <code>Default</code> 配置为走代理，然后在代理软件里通过PAC功能或者路由规则来配置走代理和直连。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="OneNote已经通过代理进行连接"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/49719-c1c352f9444c0688.png" alt="OneNote已经通过代理进行连接"></p>
   
 	</div>
 		<footer class="article-footer clearfix">

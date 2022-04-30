@@ -3,12 +3,39 @@
     <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.9.0"> 
-<meta charset="utf-8"> 
-<title>宝马汽车后轮四轮定位中间值计算工具网页版</title> 
-<meta name="description" content="一个用于调整宝马品牌汽车后桥四轮定位时，替代作图法的简便工具">
-<meta name="author" content="吕旭：me@lvxu.site">
+	<meta charset="utf-8"> 
+	<title>宝马汽车后轮四轮定位中间值计算工具网页版</title> 
+	<meta name="description" content="一个用于调整宝马品牌汽车后桥四轮定位时，替代作图法的简便工具">
+	<meta name="author" content="吕旭：me@lvxu.site">
+  <style>
+    body{margin: 0;}
+    .kongjian{
+             width:5%;
+             height:26px;
+             border: 1.5px solid;
+             border-radius: 3px;
+             margin-right: 5px;
+             float:right;
+             background-color:transparent;
+             color:#9E9E9E;
+                  }
+	select,input{font-size:1em;}
+  </style>
 </meta charset="utf-8"></head>
 <body>
+
+<!--在body标签开始加入网站标题和控件按钮-->
+<button class="kongjian" onclick="return ExecuteFun(this)">全屏</button>
+<button class="kongjian" id="pingkuan" onclick="pingkuan();">屏宽</button>
+<button class="kongjian" onclick="bg();">背景</button>
+<button class="kongjian" id="ziti" style="width:50px;" onclick="ziti();">字体</button>
+<button class="kongjian" onclick="jiacu()"><b>B</b></button>
+<button class="kongjian" onclick="zitibianxiao()">A-</button>
+<button class="kongjian" onclick="zitibianda()">A+</button>
+<hr style="margin: 3px;">
+
+<!--加id="content"。控制字体大小，粗细，宋楷黑体和屏幕宽度-->
+<div id="content" ;text-align:center;>
 	<h1>宝马汽车后轮四轮定位<br>中间值计算工具网页版</h1>
 	
 	<!--，
@@ -23,7 +50,7 @@
 	G16：8系双门轿跑
 	)
 		--> 
-	<div style="border: 2px dashed #ccc;width:320px;text-align:center;">
+	<div style="border: 2px dashed #ccc;text-align:center;">
 		<h3>选择车型</h3>
 		<select name="选择车型" autofocus>
 			<option value="G12、G38">G12、G38、G31</option>
@@ -48,12 +75,12 @@
 	标准值输入框
 	和亨特相关的计算项目会根据上面的设备选项自动出现或消失
 	--> 
-    <div style="border: 2px dashed #ccc;width:320px;text-align:center;">
+    <div style="border: 2px dashed #ccc;text-align:center;">
 		<h3>输入标准值</h3>
 
 		<div id="外倾标准值上下限" class="亨特定位仪显示">
 		<label for="外倾标准值上限">外倾标准值上限：-</label>  
-        <input type="number" id="外倾标准值上限度" name="外倾标准值上限度" value="1" min="0" max="3">°  
+        <input type="number" id="外倾标准值上限度" name="外倾标准值上限度" value="1" min="0" max="3" fontsize="inherit">°  
         <input type="number" id="外倾标准值上限分" name="外倾标准值上限分" min="0" max="59" value="30"> '<br>
 		<label for="外倾标准值下限">外倾标准值下限：-</label>  
         <input type="number" id="外倾标准值下限度" name="外倾标准值下限度" value="1" min="0" max="3">°  
@@ -78,7 +105,7 @@
 	</div>
 
 	<!--实际值输入框--> 
-    <div style="border: 2px dashed #ccc;width:320px;text-align:center;">
+    <div style="border: 2px dashed #ccc;text-align:center;">
 		<h3>输入实际值</h3>
 	    <label for="外倾实际值">外倾实际值：-</label>  
         <input type="number" id="外倾实际值度" name="外倾实际值度" value="1" min="0" max="3">° 
@@ -92,7 +119,7 @@
 	</div>	
 	
 	<!--中间值计算结果--> 
-    <div style="border: 2px dashed #ccc;width:320px;text-align:center;">
+    <div style="border: 2px dashed #ccc;text-align:center;">
 		<h3>中间值计算结果</h3>
         <p id="中间值1外倾折合分"></p>
 		<p id="中间值1外倾"></p>
@@ -123,6 +150,7 @@
 		<br>
 		有任何问题，可以<a href="mailto:xu.lv@best.bmw.com.cn" target="_top">发送邮件</a>给我
 	</div>		
+</div>
 
 	<script>
 	function 计算中间值() {
@@ -348,6 +376,168 @@
 	}	
 	</script>
 
+<!--在body标签结束前引入js-->
+<script>
+//阅读控件(字体大小，字体粗细，字体family，背景颜色，全屏缩屏)
+//字体大小
+if(!localStorage.zitidaxiao)
+{localStorage.zitidaxiao="20";
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';}
+else
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';    
+function zitibianda(){
+localStorage.zitidaxiao++;
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';
+}
+function zitibianxiao(){
+localStorage.zitidaxiao--;
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';
+}
+
+
+//字体粗细
+if(localStorage.jiacu)
+document.getElementById("content").style.fontWeight=localStorage.jiacu;
+function jiacu(){
+if(document.getElementById("content").style.fontWeight!="611")
+{document.getElementById("content").style.fontWeight="611";
+localStorage.jiacu="611";}
+else
+{document.getElementById("content").style.fontWeight="normal";
+localStorage.jiacu="normal";}
+}
+
+//字体family，字体family按键自适应
+if(!localStorage.ziti)
+{localStorage.ziti="SimSun";
+localStorage.zitiname="宋体";
+document.getElementById("content").style.fontFamily=localStorage.ziti;
+document.getElementById("ziti").innerHTML=localStorage.zitiname;}
+else
+{document.getElementById("content").style.fontFamily=localStorage.ziti;
+document.getElementById("ziti").innerHTML=localStorage.zitiname;}
+function ziti(){
+if(localStorage.ziti=="SimSun")
+{localStorage.ziti="SimHei";
+localStorage.zitiname="黑体"}
+else if(localStorage.ziti=="SimHei")
+{localStorage.zitiname="楷体";
+localStorage.ziti="KaiTi";}
+else
+{localStorage.zitiname="宋体";
+localStorage.ziti="SimSun";}
+document.getElementById("content").style.fontFamily=localStorage.ziti;
+document.getElementById("ziti").innerHTML=localStorage.zitiname;
+}
+    if(document.body.scrollWidth < 650){
+      document.getElementById('ziti').style.display = 'none';
+    }
+
+//背景颜色
+if (!localStorage.bg)
+{localStorage.bg="#18222d";
+localStorage.content="#adadad";
+document.body.style.backgroundColor=localStorage.bg;
+document.getElementById("content").style.color=localStorage.content;}
+else
+{document.body.style.backgroundColor=localStorage.bg;
+document.getElementById("content").style.color= localStorage.content;}
+function bg(){
+if(localStorage.bg=="#ffffff")
+localStorage.bg="#f6f1e7";
+else if(localStorage.bg=="#f6f1e7")
+localStorage.bg="#dadada";
+else if(localStorage.bg=="#dadada")
+localStorage.bg="#dae9da";
+else if(localStorage.bg=="#dae9da")
+localStorage.bg="#ebcece";
+else if(localStorage.bg=="#ebcece")
+{localStorage.bg="#18222d";
+localStorage.content= "#adadad";
+document.getElementById("content").style.color= localStorage.content;}
+else if(localStorage.bg=="#18222d")
+{localStorage.bg="#ebddae";
+localStorage.content= "";
+document.getElementById("content").style.color=localStorage.content;}
+else if(localStorage.bg=="#ebddae")
+localStorage.bg="#dfecf0";
+else
+localStorage.bg="#ffffff";
+document.body.style.backgroundColor=localStorage.bg;
+}
+
+//屏宽
+if (!localStorage.pingkuan){
+     localStorage.pingkuan="700px";
+     document.getElementById("content").style.maxWidth=localStorage.pingkuan;
+    }
+    else {     document.getElementById("content").style.maxWidth=localStorage.pingkuan;}
+
+function pingkuan(){
+if(localStorage.pingkuan=="700px")
+	localStorage.pingkuan="800px";
+else if(localStorage.pingkuan=="800px")
+	localStorage.pingkuan="900px";
+else if(localStorage.pingkuan=="900px")
+		localStorage.pingkuan="1000px";
+else if(localStorage.pingkuan=="1000px")
+		localStorage.pingkuan="1100px";
+else if(localStorage.pingkuan=="1100px")
+		localStorage.pingkuan="1200px";
+	else if(localStorage.pingkuan=="1200px")
+		localStorage.pingkuan="1300px";
+else if(localStorage.pingkuan=="1300px")
+		localStorage.pingkuan="100%";
+else if(localStorage.pingkuan=="100%")
+		localStorage.pingkuan="600px";
+else if(localStorage.pingkuan=="600px")
+		localStorage.pingkuan="700px";
+   document.getElementById("content").style.maxWidth=localStorage.pingkuan;
+}
+    if(document.body.scrollWidth < 600){
+      document.getElementById('pingkuan').style.display = 'none';
+    }
+
+//全屏
+     function ExecuteFun(a) {
+        var full = a.innerHTML == '全屏';
+        full ? fullscreen() : exitfullscreen();
+        a.innerHTML = full ? '缩屏' : '全屏';
+        return false;
+    }
+
+function fullscreen() {
+  var el = document.documentElement,
+    rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen,
+    wscript;
+  if(typeof rfs != "undefined" && rfs) {
+    rfs.call(el);
+    return;
+  }
+  if(typeof window.ActiveXObject != "undefined") {
+    wscript = new ActiveXObject("WScript.Shell");
+    if(wscript) {
+      wscript.SendKeys("{F11}");
+    }
+  }
+}
+
+function exitfullscreen() {
+  var el = document,
+    cfs = el.cancelFullScreen || el.webkitCancelFullScreen || el.mozCancelFullScreen || el.exitFullScreen,
+    wscript;
+  if (typeof cfs != "undefined" && cfs) {
+   cfs.call(el);
+   return;
+  }
+  if (typeof window.ActiveXObject != "undefined") {
+    wscript = new ActiveXObject("WScript.Shell");
+    if (wscript != null) {
+      wscript.SendKeys("{F11}");
+    }
+ }
+}
+</script>
 	
 </body>
 </html>

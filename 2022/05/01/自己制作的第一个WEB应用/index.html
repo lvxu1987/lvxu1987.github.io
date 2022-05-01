@@ -1,0 +1,549 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  
+    <title>自己制作的第一个WEB应用 | 吕旭说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="吕旭">
+    
+
+    
+    <meta name="description" content="自己制作了一个用于宝马品牌汽车后桥四轮定位调整中间值计算的工具。">
+<meta name="keywords" content="汽车维修,四轮定位,网页应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自己制作的第一个WEB应用">
+<meta property="og:url" content="http://lvxu.site/2022/05/01/自己制作的第一个WEB应用/index.html">
+<meta property="og:site_name" content="吕旭说">
+<meta property="og:description" content="自己制作了一个用于宝马品牌汽车后桥四轮定位调整中间值计算的工具。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2022-05-01T02:37:04.690Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自己制作的第一个WEB应用">
+<meta name="twitter:description" content="自己制作了一个用于宝马品牌汽车后桥四轮定位调整中间值计算的工具。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/apple_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="吕旭说" title="吕旭说"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="吕旭说">吕旭说</a></h1>
+				<h2 class="blog-motto">汽车、网络、职教和生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lvxu.site">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/05/01/自己制作的第一个WEB应用/" title="自己制作的第一个WEB应用" itemprop="url">自己制作的第一个WEB应用</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-01T02:34:32.000Z" itemprop="datePublished"> 发表于 2022-05-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#应用的作用"><span class="toc-number">1.</span> <span class="toc-text">应用的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面开发"><span class="toc-number">2.</span> <span class="toc-text">页面开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源代码"><span class="toc-number">3.</span> <span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+		
+		</div>
+		
+		<p>前两天自己完成了第一个HTML5+JavaScript的Web应用，发文纪念一下。</p>
+<h2 id="应用的作用">应用的作用</h2><p>很多使用多连杆后桥的汽车，由于配置或预留了后桥转向功能，因此后桥的前束控制臂无法用于四轮定位参数的调整。此时，后桥的两个调整螺栓调整时，会使得前束和外倾同时变化，导致不太容易调整。</p>
+<p>传统上，需要在一张特定的坐标图上根据当前的四轮定位外倾值、前束值和目标外倾值、前束值根据规定的斜率规律进行绘图，找到一个中间值。这样就能分两步，先调整到中间值，再调整到目标值，实现两步调整。如果不这样的话可能会导致反复调整，效率较低。</p>
+<p>我之前是做了一个EXCEL文档，用数学方式代替作图，实现输入数据自动计算中间值和调整顺序。但是在手机上，这个文档需要用WPS手机版打开，不太方便，因此萌生了用网页实现这个功能的想法。</p>
+<h2 id="页面开发">页面开发</h2><p>基本思路就是HTML5搭建页面框架，用JavaScript进行计算。</p>
+<a id="more"></a>
+<p>当然，实际开发中也遇到了很多困难，其中，最大的困难就是，我特么根本不懂HTML5和JavaScript啊😭。</p>
+<p>没关系，边学边练么，咱就是做职教的，深知这个道理，从应用中学习是最快的。</p>
+<p>先从找教程开始，一个叫<a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程 </a>的网站给了我很大的帮助。这个网站不仅有从零基础开始的教程，还用在线编辑代码，实时显示的功能，给了我很大的帮助。从HTML页面的组成，<code>input</code>的使用，<code>JavaScript</code>中<code>document.getElementById</code>和<code>innerHTML</code>还有<code>document.getElementById(&quot;&quot;).value</code>的用法，通过这个网页的编辑，我也学到了很多。</p>
+<p>由于变量太多，为了怕乱了，我所有的变量都使用了中文。</p>
+<p>功能实现后，为了更好看，能调整字体大小，我又找了一个现成的轮子<a href="https://github.com/MathGod/web-reading-settings-plugin" target="_blank" rel="noopener">MathGod/web-reading-settings-plugin: html5小说网站阅读设置控件插件</a>。使用了之后，页面文字都能调整大小了，我又发现input输入框并没有根据页面文字大小一同变大，一直是默认尺寸。经过搜索，发现需要在<code>&lt;head&gt;</code>里的<code>&lt;style&gt;</code>里加入一句<code>select,input{font-size:1em;}</code>就可以了。</p>
+<p>最终的源代码见：<a href="https://github.com/lvxu1987/BMW_SLDW/" target="_blank" rel="noopener">https://github.com/lvxu1987/BMW_SLDW/</a></p>
+<p>成品网页地址为：<a href="https://lvxu.site/BMW_SLDW/">https://lvxu.site/BMW_SLDW/</a></p>
+<h2 id="源代码">源代码</h2><p>源代码如下。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>宝马汽车后轮四轮定位中间值计算工具网页版<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"一个用于调整宝马品牌汽车后桥四轮定位时，替代作图法的简便工具"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"吕旭：me@lvxu.site"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    body&#123;margin: 0 ; height: 100%&#125;</span><br><span class="line">    .kongjian&#123;</span><br><span class="line">             width:5%;</span><br><span class="line">             height:50px;</span><br><span class="line">             border: 1.5px solid;</span><br><span class="line">             border-radius: 3px;</span><br><span class="line">             margin: 0px;</span><br><span class="line">             float:right;</span><br><span class="line">             background-color:transparent;</span><br><span class="line">             color:#9E9E9E;</span><br><span class="line">                  &#125;</span><br><span class="line">	select,input&#123;font-size:1em;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--在body标签开始加入网站标题和控件按钮--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">onclick</span>=<span class="string">"return ExecuteFun(this)"</span> &gt;</span>全屏<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">id</span>=<span class="string">"pingkuan"</span>  <span class="attr">onclick</span>=<span class="string">"pingkuan();"</span> &gt;</span>屏宽<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">onclick</span>=<span class="string">"bg();"</span>&gt;</span>背景<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">id</span>=<span class="string">"ziti"</span> <span class="attr">onclick</span>=<span class="string">"ziti();"</span> &gt;</span>字体<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">onclick</span>=<span class="string">"jiacu()"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>B<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">onclick</span>=<span class="string">"zitibianxiao()"</span>&gt;</span>A-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"kongjian"</span> <span class="attr">onclick</span>=<span class="string">"zitibianda()"</span>&gt;</span>A+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">style</span>=<span class="string">"margin: 30px;&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string"></span></span></span><br><span class="line"><span class="tag"><span class="string">&lt;!--加id="</span><span class="attr">content</span>"。控制字体大小，粗细，宋楷黑体和屏幕宽度<span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>;<span class="attr">style</span>=<span class="string">"margin: 0 auto;"</span>;<span class="attr">text-align:center</span>;&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">H1</span>&gt;</span>宝马汽车后轮四轮定位<span class="tag">&lt;/<span class="name">br</span>&gt;</span>中间值计算工具网页版<span class="tag">&lt;/<span class="name">H1</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!--，</span></span><br><span class="line"><span class="comment">	车型选择框</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	G12：7系；G38：5系；G31：5系旅行车</span></span><br><span class="line"><span class="comment">	G05：X5；G06：X6；G07：X7</span></span><br><span class="line"><span class="comment">	F02：老款7系；F18：老款5系</span></span><br><span class="line"><span class="comment">	F11：5系旅行车；F07：5系GT</span></span><br><span class="line"><span class="comment">	G32：6系</span></span><br><span class="line"><span class="comment">	G14：8系敞篷；G15：8系轿跑</span></span><br><span class="line"><span class="comment">	G16：8系双门轿跑</span></span><br><span class="line"><span class="comment">	)</span></span><br><span class="line"><span class="comment">		--&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"border: 2px dashed #ccc;text-align:center;"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">H3</span>&gt;</span>选择车型<span class="tag">&lt;/<span class="name">H3</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"选择车型"</span> <span class="attr">autofocus</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"G12、G38"</span>&gt;</span>G12、G38、G31<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"G05、G06、G07"</span>&gt;</span>G05、G06、G07<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"F02、F18"</span>&gt;</span>F02、F18<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"F11、F07"</span>&gt;</span>F11、F07<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"G32"</span>&gt;</span>G32<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"G14、G15"</span>&gt;</span>G14、G15<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"G16"</span>&gt;</span>G16<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"Kc值"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"Kd值"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">H3</span>&gt;</span>选择四轮定位仪设备<span class="tag">&lt;/<span class="name">H3</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">onchange</span>=<span class="string">"判断设备型号()"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"四轮定位仪设备"</span> <span class="attr">id</span>=<span class="string">"四轮定位仪设备"</span> <span class="attr">value</span>=<span class="string">"亨特"</span>&gt;</span>亨特</span><br><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"四轮定位仪设备"</span> <span class="attr">id</span>=<span class="string">"四轮定位仪设备"</span> <span class="attr">value</span>=<span class="string">"百思巴特"</span>&gt;</span>百斯巴特</span><br><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>（务必先选择车型和设备）<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">	标准值输入框</span></span><br><span class="line"><span class="comment">	和亨特相关的计算项目会根据上面的设备选项自动出现或消失</span></span><br><span class="line"><span class="comment">	--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"border: 2px dashed #ccc;text-align:center;"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">H3</span>&gt;</span>输入标准值<span class="tag">&lt;/<span class="name">H3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"外倾标准值上下限"</span>  <span class="attr">class</span>=<span class="string">"亨特定位仪显示"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"外倾标准值上限"</span>&gt;</span>外倾标准值上限：-<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾标准值上限度"</span> <span class="attr">name</span>=<span class="string">"外倾标准值上限度"</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"3"</span> <span class="attr">fontsize</span>=<span class="string">"inherit"</span>&gt;</span>°  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾标准值上限分"</span> <span class="attr">name</span>=<span class="string">"外倾标准值上限分"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"59"</span> <span class="attr">value</span>=<span class="string">"30"</span> /&gt;</span> '<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"外倾标准值下限"</span>&gt;</span>外倾标准值下限：-<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾标准值下限度"</span> <span class="attr">name</span>=<span class="string">"外倾标准值下限度"</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"3"</span> &gt;</span>°  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾标准值下限分"</span> <span class="attr">name</span>=<span class="string">"外倾标准值下限分"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"59"</span> <span class="attr">value</span>=<span class="string">"30"</span> /&gt;</span> '<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">	   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	   <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"外倾标准值"</span>&gt;</span>外倾标准值：-<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾标准值度"</span> <span class="attr">name</span>=<span class="string">"外倾标准值度"</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"3"</span> <span class="attr">class</span>=<span class="string">"亨特定位仪锁死"</span> &gt;</span>°  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾标准值分"</span> <span class="attr">name</span>=<span class="string">"外倾标准值分"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"59"</span> <span class="attr">value</span>=<span class="string">"30"</span> <span class="attr">class</span>=<span class="string">"亨特定位仪锁死"</span> /&gt;</span> '</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"外倾标准值折合分"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span>	</span><br><span class="line"></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"前束标准值分上下限"</span>   <span class="attr">class</span>=<span class="string">"亨特定位仪显示"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"前束标准值分上限"</span>&gt;</span>前束标准值上限(分)：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"前束标准值分上限"</span> <span class="attr">name</span>=<span class="string">"前束标准值分上限"</span> <span class="attr">value</span>=<span class="string">"8"</span> <span class="attr">min</span>=<span class="string">"-100"</span> <span class="attr">max</span>=<span class="string">"100"</span> /&gt;</span>  ′<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"前束标准值分下限"</span>&gt;</span>前束标准值下限(分)：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"前束标准值分下限"</span> <span class="attr">name</span>=<span class="string">"前束标准值分下限"</span> <span class="attr">value</span>=<span class="string">"8"</span> <span class="attr">min</span>=<span class="string">"-100"</span> <span class="attr">max</span>=<span class="string">"100"</span> /&gt;</span>  ′</span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"前束标准值分"</span>&gt;</span>前束标准值分：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"前束标准值分"</span> <span class="attr">name</span>=<span class="string">"前束标准值分"</span> <span class="attr">value</span>=<span class="string">"8"</span> <span class="attr">min</span>=<span class="string">"-100"</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">class</span>=<span class="string">"亨特定位仪锁死"</span> /&gt;</span>  ′</span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>/&gt;</span> </span><br><span class="line">		（注意：如前束为负值需要输入“-”）</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">&lt;!--实际值输入框--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"border: 2px dashed #ccc;text-align:center;"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">H3</span>&gt;</span>输入实际值<span class="tag">&lt;/<span class="name">H3</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"外倾实际值"</span>&gt;</span>外倾实际值：-<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾实际值度"</span> <span class="attr">name</span>=<span class="string">"外倾实际值度"</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"3"</span>/&gt;</span>° </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"外倾实际值分"</span> <span class="attr">name</span>=<span class="string">"外倾实际值分"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"59"</span> <span class="attr">value</span>=<span class="string">"12"</span> /&gt;</span> ′</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"外倾实际值折合分"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span>	</span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"前束实际值分"</span>&gt;</span>前束实际值分：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">id</span>=<span class="string">"前束实际值分"</span> <span class="attr">name</span>=<span class="string">"前束实际值分"</span> <span class="attr">value</span>=<span class="string">"-10"</span> <span class="attr">min</span>=<span class="string">"-100"</span> <span class="attr">max</span>=<span class="string">"100"</span> /&gt;</span> ′  </span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>/&gt;</span> </span><br><span class="line">		（注意：如前束为负值需要输入“-”）</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span>	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!--中间值计算结果--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"border: 2px dashed #ccc;text-align:center;"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">H3</span>&gt;</span>中间值计算结果<span class="tag">&lt;/<span class="name">H3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值1外倾折合分"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值1外倾"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值1前束"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值2外倾折合分"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值2外倾"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值2前束"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值1距实际值距离"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值2距实际值距离"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值外倾"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"中间值前束"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"先调整臂说明"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span>	</span><br><span class="line">	<span class="comment">&lt;!--按钮--&gt;</span> 	</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"计算中间值"</span> <span class="attr">onclick</span>=<span class="string">"计算中间值()"</span> <span class="attr">value</span>=<span class="string">"计算中间值"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"清除数据"</span> <span class="attr">onclick</span>=<span class="string">"清除数据()"</span> <span class="attr">value</span>=<span class="string">"清除数据"</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!--说明--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">H3</span>&gt;</span>操作提示<span class="tag">&lt;/<span class="name">H3</span>&gt;</span></span><br><span class="line">        1.所有上部横摆臂有调整螺丝的车型需要画图调整后桥；<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		2.先在顶端选择<span class="tag">&lt;<span class="name">strong</span>&gt;</span>车型<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>和<span class="tag">&lt;<span class="name">strong</span>&gt;</span>四轮定位仪设备<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>；<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		3.填写标准值和实际值（注意前束正负号）；<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		4.系统自动计算中间值和对应的调整臂；<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		5.调整中间值对应臂的调整螺栓，只看前束，将前束值从实际值调整为中间值（外倾值也自动调整到中间值）；<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		6.调整另一个臂的调整螺栓，只看前束，将前束值从中间值调整为标准值（外倾值也自动调整到标准值）；<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		7.如外倾没有自动调整到正确，检查参数输入是否正确，底盘杆件有无变形。<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">		有任何问题，可以<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"mailto:xu.lv@best.bmw.com.cn"</span> <span class="attr">target</span>=<span class="string">"_top"</span>&gt;</span>发送邮件<span class="tag">&lt;/<span class="name">a</span>&gt;</span>给我</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span>		</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">	function 计算中间值() &#123;</span><br><span class="line">		// 计算前先调用函数清除之前的输出结果</span><br><span class="line">			清除输出结果();</span><br><span class="line">		</span><br><span class="line">		// 计算亨特标准值</span><br><span class="line">			var 四轮定位仪设备 =  document.getElementsByName("四轮定位仪设备");</span><br><span class="line">			if (四轮定位仪设备[0].checked == true)&#123;  //如果第一个选项被选中（即设备是亨特的）</span><br><span class="line">				</span><br><span class="line">				// 外倾标准值折合分计算</span><br><span class="line">					var 外倾标准值上限度 = Number(document.getElementById("外倾标准值上限度").value);</span><br><span class="line">					var 外倾标准值上限分 = Number(document.getElementById("外倾标准值上限分").value);</span><br><span class="line">					var 外倾标准值上限折合分 = -(外倾标准值上限度*60+外倾标准值上限分);</span><br><span class="line">			</span><br><span class="line">					var 外倾标准值下限度 = Number(document.getElementById("外倾标准值下限度").value);</span><br><span class="line">					var 外倾标准值下限分 = Number(document.getElementById("外倾标准值下限分").value);</span><br><span class="line">					var 外倾标准值下限折合分 = -(外倾标准值下限度*60+外倾标准值下限分)</span><br><span class="line">		</span><br><span class="line">					var 亨特外倾标准值折合分 = (外倾标准值上限折合分+外倾标准值下限折合分)/2;</span><br><span class="line">					亨特外倾标准值折合分 = Math.round(亨特外倾标准值折合分); //小数取整</span><br><span class="line">					//alert(亨特外倾标准值折合分); //检测数值用。</span><br><span class="line">				// 将算出的外倾值输出到外倾标准值的表格里</span><br><span class="line">					document.getElementById("外倾标准值度").value = -Math.ceil(亨特外倾标准值折合分/60);//外倾折合分÷60，得数向上取整。  后面显示中间值外倾时，正负号是在公式里带出来的，这里的度数就是负值。这里的负号是写在外面的，所以需要再另写一个负号，负负得正，产生一个正数填在外倾标准值的输入框里。</span><br><span class="line">					document.getElementById("外倾标准值分").value = Math.abs(亨特外倾标准值折合分%60);//外倾折合分除60取余数再取绝对值。</span><br><span class="line"></span><br><span class="line">				// 计算前束标准值</span><br><span class="line">					var 前束标准值分上限 = Number(document.getElementById("前束标准值分上限").value);</span><br><span class="line">					var 前束标准值分下限 = Number(document.getElementById("前束标准值分下限").value);</span><br><span class="line">					var 亨特前束标准值分 = (前束标准值分上限+前束标准值分下限)/2</span><br><span class="line">					document.getElementById("前束标准值分").value = 亨特前束标准值分;</span><br><span class="line">				// 将算出的前束值填入前束标准值分的表格里</span><br><span class="line">				</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		// 计算和输出外倾标准值折算为分之后的值</span><br><span class="line">			var 外倾标准值度 = Number(document.getElementById("外倾标准值度").value);</span><br><span class="line">			var 外倾标准值分 = Number(document.getElementById("外倾标准值分").value);</span><br><span class="line">			var 外倾标准值折合分 = -(外倾标准值度*60+外倾标准值分)</span><br><span class="line">			//document.getElementById("外倾标准值折合分").innerHTML = "外倾标准值折合为分：" + 外倾标准值折合分 + "'";</span><br><span class="line">		</span><br><span class="line">		// 计算和输出外倾实际值折算为分之后的值</span><br><span class="line">			var 外倾实际值度 = Number(document.getElementById("外倾实际值度").value);</span><br><span class="line">			var 外倾实际值分 = Number(document.getElementById("外倾实际值分").value);</span><br><span class="line">			var 外倾实际值折合分 = -(外倾实际值度*60+外倾实际值分)</span><br><span class="line">			//document.getElementById("外倾实际值折合分").innerHTML = "外倾实际值折合为分：" + 外倾实际值折合分 + "'";</span><br><span class="line">		</span><br><span class="line">		// 前束取值</span><br><span class="line">			var 前束标准值分 = Number(document.getElementById("前束标准值分").value);</span><br><span class="line">			var 前束实际值分 = Number(document.getElementById("前束实际值分").value);</span><br><span class="line">		// Kc和Kd取值</span><br><span class="line">			var 斜率 =  document.getElementsByName("选择车型");</span><br><span class="line">			var Kc = -0.75   // Kc（横向摆臂/上部横摆臂调整螺栓斜率）</span><br><span class="line">			var Kd = 1.03   //Kd(下臂/外倾控制臂螺栓调整斜率</span><br><span class="line">			</span><br><span class="line">			switch(斜率[0].value)&#123;   // 根据车型为Kc和Kd赋值</span><br><span class="line">				case "G12、G38" : </span><br><span class="line">					Kc = -0.75;</span><br><span class="line">					Kd = 1.03</span><br><span class="line">					break;</span><br><span class="line">				case "G05、G06、G07" : </span><br><span class="line">					Kc = -0.82;</span><br><span class="line">					Kd = 1.01</span><br><span class="line">					break;</span><br><span class="line">				case "F02、F18" : </span><br><span class="line">					Kc = -0.659;</span><br><span class="line">					Kd = 1.316</span><br><span class="line">					break;</span><br><span class="line">				case "F11、F07" : </span><br><span class="line">					Kc = -0.568;</span><br><span class="line">					Kd = 1.607</span><br><span class="line">					break;</span><br><span class="line">				case "G32" : </span><br><span class="line">					Kc = -0.85;</span><br><span class="line">					Kd = 1.05</span><br><span class="line">					break;</span><br><span class="line">				case "G14、G15" : </span><br><span class="line">					Kc = -0.83;</span><br><span class="line">					Kd = 1.06</span><br><span class="line">					break;	</span><br><span class="line">				case "G16" : </span><br><span class="line">					Kc = -0.82;</span><br><span class="line">					Kd = 0.96</span><br><span class="line">					break;					</span><br><span class="line">				&#125;</span><br><span class="line">		</span><br><span class="line">			//document.getElementById("Kc值").innerHTML = "上臂斜率为：" + Kc;</span><br><span class="line">			//document.getElementById("Kd值").innerHTML = "下臂斜率为：" + Kd;</span><br><span class="line">		</span><br><span class="line">			// 中间值1为先调整下臂，中间值2为先调整上臂。</span><br><span class="line">		</span><br><span class="line">		// 中间值1外倾计算</span><br><span class="line">			var 中间值1外倾折合分 = ((Kc*外倾标准值折合分-前束标准值分)-(Kd*外倾实际值折合分-前束实际值分))/(Kc-Kd);</span><br><span class="line">			中间值1外倾折合分 = Math.round(中间值1外倾折合分);</span><br><span class="line"><span class="xml">			//document.getElementById("中间值1外倾折合分").innerHTML = "中间值1外倾折合分为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值1外倾折合分 + "'";</span></span><br><span class="line">		</span><br><span class="line">			var 中间值1外倾度 = Math.ceil(中间值1外倾折合分/60) ; //外倾折合分÷60，得数向上取整。</span><br><span class="line">			var 中间值1外倾分 = Math.abs(中间值1外倾折合分%60);  //外倾折合分除60取余数再取绝对值。</span><br><span class="line"><span class="xml">			//document.getElementById("中间值1外倾").innerHTML = "中间值1外倾为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值1外倾度 + "°" + 中间值1外倾分 + "'";		</span></span><br><span class="line">		</span><br><span class="line">			// 中间值1前束计算</span><br><span class="line">			var 中间值1前束 = (Kc*Kd*(外倾实际值折合分-外倾标准值折合分)+Kd*前束标准值分-Kc*前束实际值分)/(Kd-Kc);</span><br><span class="line">		</span><br><span class="line">			中间值1前束 = Math.round(中间值1前束);</span><br><span class="line"><span class="xml">			//document.getElementById("中间值1前束").innerHTML = "中间值1前束：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值1前束 + "'";</span></span><br><span class="line"></span><br><span class="line">			// 中间值2外倾计算</span><br><span class="line">			var 中间值2外倾折合分 = ((Kc*外倾实际值折合分-前束实际值分)-(Kd*外倾标准值折合分-前束标准值分))/(Kc-Kd);</span><br><span class="line">		</span><br><span class="line">			中间值2外倾折合分 = Math.round(中间值2外倾折合分); //小数取整</span><br><span class="line"><span class="xml">			//document.getElementById("中间值2外倾折合分").innerHTML = "中间值2外倾折合分为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值2外倾折合分 + "'";</span></span><br><span class="line">		</span><br><span class="line">			var 中间值2外倾度 = Math.ceil(中间值2外倾折合分/60) ; //外倾折合分÷60，得数向上取整。</span><br><span class="line">			var 中间值2外倾分 = Math.abs(中间值2外倾折合分%60);  //外倾折合分除60取余数再取绝对值。</span><br><span class="line"><span class="xml">			//document.getElementById("中间值2外倾").innerHTML = "中间值2外倾为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值2外倾度 + "°" + 中间值2外倾分 + "'";		</span></span><br><span class="line"></span><br><span class="line">		// 中间值2前束计算</span><br><span class="line">			var 中间值2前束 = (Kc*Kd*(外倾标准值折合分-外倾实际值折合分)+Kd*前束实际值分-Kc*前束标准值分)/(Kd-Kc);</span><br><span class="line">		</span><br><span class="line">			中间值2前束 = Math.round(中间值2前束);</span><br><span class="line"><span class="xml">			//document.getElementById("中间值2前束").innerHTML = "中间值2前束：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值2前束 + "'";</span></span><br><span class="line">	</span><br><span class="line">		// 中间值1和中间值2比较</span><br><span class="line">			var 中间值1距实际值距离 = Math.sqrt(Math.pow((中间值1外倾折合分-外倾实际值折合分),2)+Math.pow((中间值1前束-前束实际值分),2))</span><br><span class="line">			var 中间值2距实际值距离 = Math.sqrt(Math.pow((中间值2外倾折合分-外倾实际值折合分),2)+Math.pow((中间值2前束-前束实际值分),2))</span><br><span class="line"><span class="xml">			//document.getElementById("中间值1距实际值距离").innerHTML = "中间值1距实际值：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值1距实际值距离;   </span></span><br><span class="line"><span class="xml">			//document.getElementById("中间值2距实际值距离").innerHTML = "中间值2距实际值：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值2距实际值距离;</span></span><br><span class="line">		</span><br><span class="line">			if (中间值1距实际值距离 == 0) &#123;</span><br><span class="line"><span class="xml">				document.getElementById("先调整臂说明").innerHTML = "中间值恰好等于当前值，<span class="tag">&lt;<span class="name">strong</span>&gt;</span>直接调整上部横摆臂<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>即可调整到标准值。" ;</span></span><br><span class="line">			&#125; else if (中间值2距实际值距离 == 0) &#123;</span><br><span class="line"><span class="xml">				document.getElementById("先调整臂说明").innerHTML = "中间值恰好等于当前值，<span class="tag">&lt;<span class="name">strong</span>&gt;</span>直接调整下臂（外倾控制臂）<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>即可调整到标准值。" ;				</span></span><br><span class="line">			&#125; else if (中间值1距实际值距离 &lt; 中间值2距实际值距离) &#123;</span><br><span class="line"><span class="xml">				document.getElementById("中间值外倾").innerHTML = "中间值外倾为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值1外倾度 + "°" + 中间值1外倾分 + "'";</span></span><br><span class="line"><span class="xml">				document.getElementById("中间值前束").innerHTML = "中间值前束为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值1前束 + "'";</span></span><br><span class="line"><span class="xml">				document.getElementById("先调整臂说明").innerHTML = "①先调整<span class="tag">&lt;<span class="name">strong</span>&gt;</span>下臂（外倾控制臂）<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>调整螺栓，至四轮定位仪显示实际值等于中间值<span class="tag">&lt;/<span class="name">br</span>&gt;</span>②再调整先调整<span class="tag">&lt;<span class="name">strong</span>&gt;</span>上部横摆臂<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>螺栓螺栓，至四轮定位仪显示实际值等于标准值<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" ;</span></span><br><span class="line">			&#125; else if(中间值1距实际值距离 &gt; 中间值2距实际值距离) &#123;</span><br><span class="line"><span class="xml">				document.getElementById("中间值外倾").innerHTML = "中间值外倾为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值2外倾度 + "°" + 中间值2外倾分 + "'";</span></span><br><span class="line"><span class="xml">				document.getElementById("中间值前束").innerHTML = "中间值前束为：<span class="tag">&lt;/<span class="name">br</span>&gt;</span>" + 中间值2前束 + "'";</span></span><br><span class="line"><span class="xml">				document.getElementById("先调整臂说明").innerHTML = "①先调整<span class="tag">&lt;<span class="name">strong</span>&gt;</span>上部横摆臂<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>螺栓螺栓，至四轮定位仪显示实际值等于中间值<span class="tag">&lt;/<span class="name">br</span>&gt;</span>②再调整<span class="tag">&lt;<span class="name">strong</span>&gt;</span>下臂（外倾控制臂）<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>调整螺栓，至四轮定位仪显示实际值等于标准值 " ;</span></span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	function 清除数据()&#123;</span><br><span class="line">		清除输出结果();</span><br><span class="line">		清除输入数据();</span><br><span class="line">		//判断设备型号();</span><br><span class="line">	&#125;</span><br><span class="line">	function 清除输出结果()&#123;</span><br><span class="line">		// 清除所有的输出结果</span><br><span class="line">			document.getElementById("中间值1外倾折合分").innerHTML = ""</span><br><span class="line">			document.getElementById("中间值1外倾").innerHTML = ""	</span><br><span class="line">			document.getElementById("中间值1前束").innerHTML = ""		</span><br><span class="line">			document.getElementById("中间值2外倾折合分").innerHTML = ""		</span><br><span class="line">			document.getElementById("中间值2前束").innerHTML = ""		</span><br><span class="line">			document.getElementById("中间值1距实际值距离").innerHTML = ""		</span><br><span class="line">			document.getElementById("中间值2距实际值距离").innerHTML = ""		</span><br><span class="line">			document.getElementById("中间值外倾").innerHTML = ""		</span><br><span class="line">			document.getElementById("中间值前束").innerHTML = ""		</span><br><span class="line">			document.getElementById("先调整臂说明").innerHTML = ""		</span><br><span class="line">			document.getElementById("外倾实际值折合分").innerHTML = ""		</span><br><span class="line">			document.getElementById("Kc值").innerHTML = ""		</span><br><span class="line">			document.getElementById("Kd值").innerHTML = ""	</span><br><span class="line">	&#125;</span><br><span class="line">	function 清除输入数据()&#123;</span><br><span class="line">		// 清除输入数据</span><br><span class="line">			document.getElementById("外倾标准值度").value = "";</span><br><span class="line">			document.getElementById("外倾标准值分").value = "";</span><br><span class="line">			document.getElementById("前束标准值分").value = "";</span><br><span class="line">			document.getElementById("外倾实际值度").value = "";</span><br><span class="line">			document.getElementById("外倾实际值分").value = "";</span><br><span class="line">			document.getElementById("前束实际值分").value = "";</span><br><span class="line">			document.getElementById("外倾标准值上限度").value = "";</span><br><span class="line">			document.getElementById("外倾标准值上限分").value = "";</span><br><span class="line">			document.getElementById("前束标准值分上限").value = "";</span><br><span class="line">			document.getElementById("前束标准值分下限").value = "";</span><br><span class="line">	&#125;	</span><br><span class="line">	</span><br><span class="line">	function 判断设备型号() &#123;</span><br><span class="line">		var 四轮定位仪设备 =  document.getElementsByName("四轮定位仪设备");</span><br><span class="line">		</span><br><span class="line">		// alert(四轮定位仪设备[0].value);  // alert是弹框，可以用来查找BUG。 //radio的[0][1]是选项的顺序，用value来获得值，获得的值和选项将没有关系。</span><br><span class="line">		//alert(四轮定位仪设备[0].checked);</span><br><span class="line">		//alert(四轮定位仪设备[1].checked);	</span><br><span class="line">		if (四轮定位仪设备[0].checked == true)&#123;  //如果第一个选项被选中</span><br><span class="line">			//alert("选了亨特");</span><br><span class="line">			显示亨特相关选项();</span><br><span class="line">		&#125; else if (四轮定位仪设备[1].checked == true) &#123;</span><br><span class="line">			//alert("选了百斯巴特");</span><br><span class="line">			隐藏亨特相关选项();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">	function 显示亨特相关选项() &#123;</span><br><span class="line">	    //显示所有div中classclass="亨特定位仪显示"的项目</span><br><span class="line">		var 亨特相关显示内容 = document.getElementsByClassName("亨特定位仪显示"); </span><br><span class="line">		var i;</span><br><span class="line">		for (i=0;i&lt;亨特相关显示内容.length;i++)&#123;</span><br><span class="line">			亨特相关显示内容[i].style.display="block";</span><br><span class="line">		&#125;	</span><br><span class="line">		//锁定所有input中class="亨特定位仪锁死"的项目为不可编辑状态，同时将相关input的值清空</span><br><span class="line">		var 亨特定位仪锁死项目 = document.getElementsByClassName("亨特定位仪锁死"); </span><br><span class="line">		var i;</span><br><span class="line">		for (i=0;i&lt;亨特定位仪锁死项目.length;i++)&#123;</span><br><span class="line">			亨特定位仪锁死项目[i].disabled="true";</span><br><span class="line">			亨特定位仪锁死项目[i].value=""</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	function 隐藏亨特相关选项() &#123;</span><br><span class="line">	    //隐藏所有div中classclass="亨特定位仪显示"的项目</span><br><span class="line">		var 亨特相关显示内容 = document.getElementsByClassName("亨特定位仪显示"); </span><br><span class="line">		var i;</span><br><span class="line">		for (i=0;i&lt;亨特相关显示内容.length;i++)&#123;</span><br><span class="line">			亨特相关显示内容[i].style.display="none";</span><br><span class="line">		&#125;	</span><br><span class="line">		//解锁所有input中class="亨特定位仪锁死"的项目为可以编辑状态</span><br><span class="line">		var 亨特定位仪锁死项目 = document.getElementsByClassName("亨特定位仪锁死"); </span><br><span class="line">		var i;</span><br><span class="line">		for (i=0;i&lt;亨特定位仪锁死项目.length;i++)&#123;</span><br><span class="line">			亨特定位仪锁死项目[i].disabled="";</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--在body标签结束前引入js--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"read.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考资料">参考资料</h2><ol>
+<li><a href="https://www.runoob.com/html/html5-intro.html" target="_blank" rel="noopener">HTML5 教程 | 菜鸟教程 (runoob.com)</a></li>
+<li><a href="https://github.com/MathGod/web-reading-settings-plugin" target="_blank" rel="noopener">MathGod/web-reading-settings-plugin: html5小说网站阅读设置控件插件。</a></li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>►<a class="article-category-link" href="/categories/网络/汽车/">汽车</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/汽车维修/">汽车维修</a><a href="/tags/四轮定位/">四轮定位</a><a href="/tags/网页应用/">网页应用</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lvxu.site/2022/05/01/自己制作的第一个WEB应用/" data-title="自己制作的第一个WEB应用 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2020/04/19/启动V2Ray时提示端口被占用/"  title="启动V2Ray时提示端口被占用">
+ <strong>下一篇：</strong><br/> 
+ <span>启动V2Ray时提示端口被占用
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+<div id="git-comments"></div>
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: 'Sun May 01 2022 10:34:32 GMT+0800', // 可选。默认为 location.href
+  owner: 'lvxu1987',
+  repo: 'lvxu.site',
+  oauth: {
+    client_id: 'dac9155eb78fe699d034',
+    client_secret: '0de23fd133019006429a9713d4eb28181ad6248d',
+  },
+})
+gitment.render('git-comments')
+</script>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#应用的作用"><span class="toc-number">1.</span> <span class="toc-text">应用的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面开发"><span class="toc-number">2.</span> <span class="toc-text">页面开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源代码"><span class="toc-number">3.</span> <span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/汽车/" title="汽车">汽车<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/" title="网络">网络<sup>9</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/文化/" title="文化">文化<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历法/" title="历法">历法<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/视频剪辑/" title="视频剪辑">视频剪辑<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Keepass/" title="Keepass">Keepass<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UWP软件/" title="UWP软件">UWP软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/代理/" title="代理">代理<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shotcut/" title="Shotcut">Shotcut<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/端口占用/" title="端口占用">端口占用<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/汽车维修/" title="汽车维修">汽车维修<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/四轮定位/" title="四轮定位">四轮定位<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网页应用/" title="网页应用">网页应用<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://www.zhihu.com/people/lyuxu/" target="_blank" title="我的知乎个人页">我的知乎个人页</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jianshu.com/u/6152f9026a7e" target="_blank" title="我的简书主页">我的简书主页</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="reward">
+  <p class="asidetitle">感谢支持</p>
+  <div>
+    <img src="//ae01.alicdn.com/kf/U772b0d98acab4a729bde683a76a9c8929.jpg" width="100%">
+  </div>
+  <div>
+    <img src="//ae01.alicdn.com/kf/Uc087c8890bc646d691b8f32ec68d59f5E.png" width="100%">
+  </div>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自从当了老师 <br/>
+			学习努力多了</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/lvxu1987" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/lvxu1987" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/lyuxu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:lvxu1987@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2022 
+		
+		<a href="http://lvxu.site/about" target="_blank" title="吕旭">吕旭</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+    
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://qr.liantu.com/api.php?&w=260&el=l&text=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15503066-3', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

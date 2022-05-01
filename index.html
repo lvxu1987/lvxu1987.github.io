@@ -81,6 +81,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2022/05/01/自己制作的第一个WEB应用/" title="自己制作的第一个WEB应用" itemprop="url">自己制作的第一个WEB应用</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-01T02:34:32.000Z" itemprop="datePublished"> 发表于 2022-05-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>前两天自己完成了第一个HTML5+JavaScript的Web应用，发文纪念一下。</p>
+<h2 id="应用的作用">应用的作用</h2><p>很多使用多连杆后桥的汽车，由于配置或预留了后桥转向功能，因此后桥的前束控制臂无法用于四轮定位参数的调整。此时，后桥的两个调整螺栓调整时，会使得前束和外倾同时变化，导致不太容易调整。</p>
+<p>传统上，需要在一张特定的坐标图上根据当前的四轮定位外倾值、前束值和目标外倾值、前束值根据规定的斜率规律进行绘图，找到一个中间值。这样就能分两步，先调整到中间值，再调整到目标值，实现两步调整。如果不这样的话可能会导致反复调整，效率较低。</p>
+<p>我之前是做了一个EXCEL文档，用数学方式代替作图，实现输入数据自动计算中间值和调整顺序。但是在手机上，这个文档需要用WPS手机版打开，不太方便，因此萌生了用网页实现这个功能的想法。</p>
+<h2 id="页面开发">页面开发</h2><p>基本思路就是HTML5搭建页面框架，用JavaScript进行计算。</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2022/05/01/自己制作的第一个WEB应用/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>►<a class="article-category-link" href="/categories/网络/汽车/">汽车</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/汽车维修/">汽车维修</a><a href="/tags/四轮定位/">四轮定位</a><a href="/tags/网页应用/">网页应用</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2020/04/19/启动V2Ray时提示端口被占用/" title="启动V2Ray时提示端口被占用" itemprop="url">启动V2Ray时提示端口被占用</a>
   </h1>
   <p class="article-author">By
@@ -336,73 +401,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2020/03/01/Keepass使用安全桌面登录系统白屏问题/" title="Keepass使用安全桌面登录系统白屏问题" itemprop="url">Keepass使用安全桌面登录系统白屏问题</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2020-03-01T15:15:11.000Z" itemprop="datePublished"> 发表于 2020-03-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。</p>
-<p>该问题在v1909系统中仍然存在。</p>
-<h2 id="解决方案">解决方案</h2><h3 id="卸载KB4515384">卸载KB4515384</h3><p>V2EX网友反应，卸载更新KB4515384可以解决（<a href="https://www.v2ex.com/t/601017" target="_blank" rel="noopener">Keepass 用户请谨慎安装 KB4515384</a>），但是笔者不建议这样做。卸载系统更新可能带来无法预料的安全问题。</p>
-<h3 id="停用_Keepass_的安全登录功能">停用 Keepass 的安全登录功能</h3><p>除了卸载更新之外，停用Keepass的「在安全桌面输入管理密钥」功能也可以解决白屏问题。</p>
-<p>但是麻烦在于，此时无法进入 Keepass 的更改设置。为了解决这一矛盾，做如下操作可以在不打开软件的情况下修改该项配置。</p>
-<p>打开文件夹<code>C:\Users\[UserName]\AppData\Roaming\KeePass</code>，用文本编辑软件打开文件<code>KeePass.config.xml</code>，并在其中找到<code>&lt;MasterKeyOnSecureDesktop&gt;true&lt;/MasterKeyOnSecureDesktop</code>，将其中的<code>true</code>改为<code>false</code>并保存。</p>
-<p>再打开Keepass，「在安全桌面输入管理密钥」功能已经关闭。</p>
-<p>还是希望微软或者Keepass尽快修正这个问题吧。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/Keepass/">Keepass</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -429,7 +427,11 @@
 		  
 		
 		  
-			<li><a href="/categories/网络/" title="网络">网络<sup>8</sup></a></li>
+			<li><a href="/categories/网络/汽车/" title="汽车">汽车<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/" title="网络">网络<sup>9</sup></a></li>
 		  
 		
 		</ul>
@@ -474,10 +476,6 @@
 			
 		
 			
-				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Shotcut/" title="Shotcut">Shotcut<sup>1</sup></a></li>
 			
 		
@@ -487,6 +485,22 @@
 		
 			
 				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/汽车维修/" title="汽车维修">汽车维修<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/四轮定位/" title="四轮定位">四轮定位<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网页应用/" title="网页应用">网页应用<sup>1</sup></a></li>
 			
 		
 		</ul>

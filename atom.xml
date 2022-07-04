@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2022-05-01T02:37:04.690Z</updated>
+  <updated>2022-07-04T08:36:04.508Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -15,11 +15,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[注册一个微软365的E5帐号]]></title>
+    <link href="http://lvxu.site/2022/05/09/%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E5%BE%AE%E8%BD%AF365%E7%9A%84E5%E5%B8%90%E5%8F%B7/"/>
+    <id>http://lvxu.site/2022/05/09/注册一个微软365的E5帐号/</id>
+    <published>2022-05-09T12:53:34.000Z</published>
+    <updated>2022-07-04T08:36:04.508Z</updated>
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>虽然我已经有了一个Microsoft 365 的个人帐号，但是365个人帐号的Onedrive只有1G的容量，而E5开发帐号的Onedrive可以达到5T的容量，况且可以白嫖，拿来备份一下电影、视频什么的最合适不过了。</p>
+<p>激活E5的方法，网上已经的教程很多了，我就不重复一遍了。我是参考<a href="https://www.mspace.cc/archives/479?msclkid=004df6f9cf6a11eca00578af8b60c507" target="_blank" rel="noopener">2022 免费申请永久正版 Office E5 开发者订阅+ 5T 不限速网盘教程 (mspace.cc)</a>操作的，大家也可以参考。</p>
+<p>下面把我在操作中遇到的问题说一下。</p>
+<h2 id="手机收不到激活码">手机收不到激活码</h2><p>注册的过程中，有一步是要输入手机号接收验证码，但是我始终无法收到验证码。网上搜了一下，都说是接收验证码使用了Google的服务，需要解决访问海外网站的问题。但是我通过技术手段操作后，Google等网站已经可以打开，但是仍然收不到验证码。</p>
+<p>后来发现，把中文页面换成英文页面就可以收到验证码了。也就是把<a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a>中间的<code>zh-cn</code>改成<code>en-us</code>就可以了，即访问<a href="https://developer.microsoft.com/en-us/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/en-us/microsoft-365/profile</a></p>
+<!--more-->
+<h2 id="涉及到的一些网站">涉及到的一些网站</h2><ol>
+<li><a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">仪表板 - Microsoft 365 开发人员中心</a> ：用于注册，及查看剩余天数。</li>
+<li><a href="https://admin.onedrive.com/?v=StorageSettings" target="_blank" rel="noopener">SharePoint 管理中心</a>：可以设置Onedrive容量。</li>
+<li><a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 admin center</a>：管理用户</li>
+<li><a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener">Microsoft Azure</a> ：注册应用、API等，用于访问微软的API以延长续订。</li>
+<li><a href="https://e5.qyi.io/" target="_blank" rel="noopener">E5续订 (qyi.io)</a>  ：一个访问outlook API 以续订E5的网站。</li>
+<li><a href="https://e5renew.com/" target="_blank" rel="noopener">E5 Renew Plus 官方网站</a> ： 一个续订E5的桌面版软件。</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<a id="more"></a>
+<p>虽然我已经有了一个Microsoft 365 的个人帐号，但是365个人帐号的Onedrive只有1G的容量，而E5开发帐号的Onedrive可以达到5T的容量，况且可以白嫖，拿来备份一下电影、视频什么的最合适不过了。</p>
+<p>激活]]>
+    </summary>
+    
+      <category term="Onedrive" scheme="http://lvxu.site/tags/Onedrive/"/>
+    
+      <category term="Microsoft 365" scheme="http://lvxu.site/tags/Microsoft-365/"/>
+    
+      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[一个网页乱码问题]]></title>
+    <link href="http://lvxu.site/2022/05/09/%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://lvxu.site/2022/05/09/一个网页乱码问题/</id>
+    <published>2022-05-09T12:29:52.000Z</published>
+    <updated>2022-05-09T12:32:02.446Z</updated>
+    <content type="html"><![CDATA[<p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Github上一切正常。但是这个页面要给别人用，考虑到访问速度，就用Gitee的导入功能，从Github复制了一份到Gitee上。</p>
+<p>没想到在Github上一切正常的网页，在Gitee上就成了乱码。</p>
+<p>在网上搜了一下，都说是中文编码的问题，如果网页HTML文件的编码和文件中<code>&lt;meta charset=&quot;&quot;&gt;</code>里面不一致的话，就会有这种情况。比如网页HTML文件的编码是GBK（在Windows下，ANSI即为GBK），而文件中将编码规定为UTF-8（<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>），则中文会呈现为乱码。</p>
+<p>而我这个显然不是这种情况。我的HTML文件是用notepad++编写的，一开始就是UTF-8编码格式，况且网页在Github Page里面显示是正常的。同时，我点右键打开乱码网页的源代码，发现源代码就是乱码的。</p>
+<p>我又考虑到，是否是换行码的问题。我尝试将HTML文档的Windows换行符<code>CR</code> <code>LF</code>改成了Unix换行符 <code>LF</code>，重新上传，没有解决问题。</p>
+<p>最后，我尝试在windows下，先用系统自带的<strong>记事本</strong>将HTML的编码转为ANSI，再重新保存为UTF-8，发现页面里多出来几个「?」，删除这几个问号后，再上传，问题解决。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Gith]]>
+    </summary>
+    
+      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="乱码" scheme="http://lvxu.site/tags/%E4%B9%B1%E7%A0%81/"/>
+    
+      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[自己制作的第一个WEB应用]]></title>
     <link href="http://lvxu.site/2022/05/01/%E8%87%AA%E5%B7%B1%E5%88%B6%E4%BD%9C%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAWEB%E5%BA%94%E7%94%A8/"/>
     <id>http://lvxu.site/2022/05/01/自己制作的第一个WEB应用/</id>
     <published>2022-05-01T02:34:32.000Z</published>
-    <updated>2022-05-01T02:37:04.690Z</updated>
+    <updated>2022-05-01T02:37:04.000Z</updated>
     <content type="html"><![CDATA[<p>前两天自己完成了第一个HTML5+JavaScript的Web应用，发文纪念一下。</p>
 <h2 id="应用的作用">应用的作用</h2><p>很多使用多连杆后桥的汽车，由于配置或预留了后桥转向功能，因此后桥的前束控制臂无法用于四轮定位参数的调整。此时，后桥的两个调整螺栓调整时，会使得前束和外倾同时变化，导致不太容易调整。</p>
 <p>传统上，需要在一张特定的坐标图上根据当前的四轮定位外倾值、前束值和目标外倾值、前束值根据规定的斜率规律进行绘图，找到一个中间值。这样就能分两步，先调整到中间值，再调整到目标值，实现两步调整。如果不这样的话可能会导致反复调整，效率较低。</p>
@@ -62,7 +123,7 @@
     <link href="http://lvxu.site/2020/04/19/%E5%90%AF%E5%8A%A8V2Ray%E6%97%B6%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/"/>
     <id>http://lvxu.site/2020/04/19/启动V2Ray时提示端口被占用/</id>
     <published>2020-04-19T04:16:10.000Z</published>
-    <updated>2020-04-24T06:19:28.300Z</updated>
+    <updated>2020-04-24T06:19:28.000Z</updated>
     <content type="html"><![CDATA[<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
 <p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
 <p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-d2b143e3ef9a8f04.png" alt="错误提示"></p>
@@ -119,7 +180,7 @@
     <link href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://lvxu.site/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/</id>
     <published>2020-04-03T14:40:11.000Z</published>
-    <updated>2020-04-24T06:18:56.940Z</updated>
+    <updated>2020-04-24T06:18:56.000Z</updated>
     <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
 <p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
 <p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-c9cde800af774a25.png" alt="Shotcut软件的界面.png"></p>
@@ -201,7 +262,7 @@
     <link href="http://lvxu.site/2020/04/03/%E9%82%A3%E4%BA%9B%E5%B9%B4%E8%A2%AB%E6%8A%9B%E5%BC%83%E7%9A%84%E5%85%8D%E8%B4%B9%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6/"/>
     <id>http://lvxu.site/2020/04/03/那些年被抛弃的免费剪辑软件/</id>
     <published>2020-04-03T14:36:11.000Z</published>
-    <updated>2020-04-24T06:17:02.263Z</updated>
+    <updated>2020-04-24T06:17:02.000Z</updated>
     <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
 <p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。</p>
 <p>Shutcut的事情另外一篇文章里会说<a href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">另外一篇文章里会说</a>，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。</p>
@@ -236,8 +297,8 @@
     <link href="http://lvxu.site/2020/04/01/%E4%B8%BAWin10%E7%9A%84UWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/"/>
     <id>http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/</id>
     <published>2020-04-01T12:51:00.000Z</published>
-    <updated>2020-04-24T06:11:43.542Z</updated>
-    <content type="html"><![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
+    <updated>2022-07-04T08:28:08.243Z</updated>
+    <content type="html"><![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ）。</p>
 <p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
 <p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
 <h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
@@ -259,7 +320,7 @@
 <p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-c1c352f9444c0688.png" alt="OneNote已经通过代理进行连接"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
+    <![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ）。</p>
 <p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
 <p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
 <h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>]]>
@@ -281,7 +342,7 @@
     <link href="http://lvxu.site/2020/03/01/Keepass%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%A1%8C%E9%9D%A2%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F%E7%99%BD%E5%B1%8F%E9%97%AE%E9%A2%98/"/>
     <id>http://lvxu.site/2020/03/01/Keepass使用安全桌面登录系统白屏问题/</id>
     <published>2020-03-01T15:15:11.000Z</published>
-    <updated>2020-03-01T15:20:23.449Z</updated>
+    <updated>2020-03-01T15:20:23.000Z</updated>
     <content type="html"><![CDATA[<h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。</p>
 <p>该问题在v1909系统中仍然存在。</p>
 <h2 id="解决方案">解决方案</h2><h3 id="卸载KB4515384">卸载KB4515384</h3><p>V2EX网友反应，卸载更新KB4515384可以解决（<a href="https://www.v2ex.com/t/601017" target="_blank" rel="noopener">Keepass 用户请谨慎安装 KB4515384</a>），但是笔者不建议这样做。卸载系统更新可能带来无法预料的安全问题。</p>
@@ -308,7 +369,7 @@
     <link href="http://lvxu.site/2020/03/01/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95-%E5%B9%B2%E6%94%AF%E6%97%A5%E9%80%9F%E7%AE%97%E9%97%AE%E9%A2%98/"/>
     <id>http://lvxu.site/2020/03/01/中国传统历法-干支日速算问题/</id>
     <published>2020-03-01T13:24:39.000Z</published>
-    <updated>2020-03-01T13:30:48.423Z</updated>
+    <updated>2020-03-01T13:30:48.000Z</updated>
     <content type="html"><![CDATA[<p>之前那篇<a href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/">中国传统历法</a>发出后，有人问我关于干支日速算的问题。</p>
 <blockquote>
 <p>吕老师您好！看了您的一篇历法文章 …… 我正在研究干支记日，想请教现在流行的口诀（乘五除四九加日……）为什么要事先用年数减去1900呢。</p>
@@ -502,7 +563,7 @@
     <link href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/"/>
     <id>http://lvxu.site/2015/04/08/中国传统历法/</id>
     <published>2015-04-08T03:30:22.000Z</published>
-    <updated>2020-04-24T06:26:51.199Z</updated>
+    <updated>2020-04-24T06:26:51.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>本文原本发表在<a href="http://lvxu1987.sinaapp.com/archives/120" target="_blank" rel="noopener">笔者之前的博客</a> 和百度汉服吧上，近日得闲，把原文用 Markdown 重写，重新发表在现在的博客上。文章在本博客重新发布时，笔者年纪长了两岁，心态也有所变化，因此观点上，遣词造句上，都有所更改之处</p>
 <p>因原文写于 2012 年春节前夕，因此，文中所说「今年」如无另行说明，都是指 2012 年。</p>
@@ -740,7 +801,7 @@
     <link href="http://lvxu.site/2015/03/26/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
     <id>http://lvxu.site/2015/03/26/新博客新开始/</id>
     <published>2015-03-26T06:37:14.000Z</published>
-    <updated>2020-04-01T13:43:45.603Z</updated>
+    <updated>2020-04-01T13:43:45.000Z</updated>
     <content type="html"><![CDATA[<h2 id="搭建博客的过程">搭建博客的过程</h2><p>之前一直是在新浪 SAE 平台上用 wordpress4SAE 搭建<a href="http://lvxu1987.sinaapp.com/" target="_blank" rel="noopener">我的博客</a>。虽然也听说过静态博客、 GitHub Pages 什么的，但是一直也没有动力去弄。</p>
 <p>最近，我以前用的域名 lyuxu.com 快到期了，我感觉 .com 域名不适合个人使用，就在 <a href="http://www.enom.com/" target="_blank" rel="noopener">eNom</a> 上另外注册了一个 .me 的域名，也就是现在这个 <a href="http://lvxu.me" target="_blank" rel="noopener">lvxu.me</a>。（现在嫌.me域名太贵，又换成<a href="http://lvxu.site">lvxu.site</a>了。）</p>
 <p>后来一想，域名都换了，干脆把后台程序也换了吧，就开始研究怎么在 GitHub 上搭建博客。</p>

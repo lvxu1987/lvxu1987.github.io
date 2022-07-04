@@ -1,0 +1,699 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  
+    <title>吕旭说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="吕旭">
+    
+
+    
+    <meta name="description" content="吕旭的个人博客，写一些工作内外感兴趣的东西">
+<meta property="og:type" content="website">
+<meta property="og:title" content="吕旭说">
+<meta property="og:url" content="http://lvxu.site/index.html">
+<meta property="og:site_name" content="吕旭说">
+<meta property="og:description" content="吕旭的个人博客，写一些工作内外感兴趣的东西">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="吕旭说">
+<meta name="twitter:description" content="吕旭的个人博客，写一些工作内外感兴趣的东西">
+
+    
+    <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/apple_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="吕旭说" title="吕旭说"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="吕旭说">吕旭说</a></h1>
+				<h2 class="blog-motto">汽车、网络、职教和生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lvxu.site">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/05/09/注册一个微软365的E5帐号/" title="注册一个微软365的E5帐号" itemprop="url">注册一个微软365的E5帐号</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-09T12:53:34.000Z" itemprop="datePublished"> 发表于 2022-05-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <a id="more"></a>
+<p>虽然我已经有了一个Microsoft 365 的个人帐号，但是365个人帐号的Onedrive只有1G的容量，而E5开发帐号的Onedrive可以达到5T的容量，况且可以白嫖，拿来备份一下电影、视频什么的最合适不过了。</p>
+<p>激活E5的方法，网上已经的教程很多了，我就不重复一遍了。我是参考<a href="https://www.mspace.cc/archives/479?msclkid=004df6f9cf6a11eca00578af8b60c507" target="_blank" rel="noopener">2022 免费申请永久正版 Office E5 开发者订阅+ 5T 不限速网盘教程 (mspace.cc)</a>操作的，大家也可以参考。</p>
+<p>下面把我在操作中遇到的问题说一下。</p>
+<h2 id="手机收不到激活码">手机收不到激活码</h2><p>注册的过程中，有一步是要输入手机号接收验证码，但是我始终无法收到验证码。网上搜了一下，都说是接收验证码使用了Google的服务，需要科学上网。我挂上代理之后，Google等网站已经可以打开，但是仍然收不到验证码。</p>
+<p>后来发现，把中文页面换成英文页面就可以收到验证码了。也就是把<a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a>中间的<code>zh-cn</code>改成<code>en-us</code>就可以了，即访问<a href="https://developer.microsoft.com/en-us/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/en-us/microsoft-365/profile</a></p>
+<!--more-->
+<h2 id="涉及到的一些网站">涉及到的一些网站</h2><ol>
+<li><a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">仪表板 - Microsoft 365 开发人员中心</a> ：用于注册，及查看剩余天数。</li>
+<li><a href="https://admin.onedrive.com/?v=StorageSettings" target="_blank" rel="noopener">SharePoint 管理中心</a>：可以设置Onedrive容量。</li>
+<li><a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 admin center</a>：管理用户</li>
+<li><a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener">Microsoft Azure</a> ：注册应用、API等，用于访问微软的API以延长续订。</li>
+<li><a href="https://e5.qyi.io/" target="_blank" rel="noopener">E5续订 (qyi.io)</a>  ：一个访问outlook API 以续订E5的网站。</li>
+<li><a href="https://e5renew.com/" target="_blank" rel="noopener">E5 Renew Plus 官方网站</a> ： 一个续订E5的桌面版软件。</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Onedrive/">Onedrive</a><a href="/tags/Microsoft-365/">Microsoft 365</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/05/09/一个网页乱码问题/" title="一个网页乱码问题" itemprop="url">一个网页乱码问题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-09T12:29:52.000Z" itemprop="datePublished"> 发表于 2022-05-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Github上一切正常。但是这个页面要给别人用，考虑到访问速度，就用Gitee的导入功能，从Github复制了一份到Gitee上。</p>
+<p>没想到在Github上一切正常的网页，在Gitee上就成了乱码。</p>
+<p>在网上搜了一下，都说是中文编码的问题，如果网页HTML文件的编码和文件中<code>&lt;meta charset=&quot;&quot;&gt;</code>里面不一致的话，就会有这种情况。比如网页HTML文件的编码是GBK（在Windows下，ANSI即为GBK），而文件中将编码规定为UTF-8（<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>），则中文会呈现为乱码。</p>
+<p>而我这个显然不是这种情况。我的HTML文件是用notepad++编写的，一开始就是UTF-8编码格式，况且网页在Github Page里面显示是正常的。同时，我点右键打开乱码网页的源代码，发现源代码就是乱码的。</p>
+<p>我又考虑到，是否是换行码的问题。我尝试将HTML文档的Windows换行符<code>CR</code> <code>LF</code>改成了Unix换行符 <code>LF</code>，重新上传，没有解决问题。</p>
+<p>最后，我尝试在windows下，先用系统自带的<strong>记事本</strong>将HTML的编码转为ANSI，再重新保存为UTF-8，发现页面里多出来几个「?」，删除这几个问号后，再上传，问题解决。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/乱码/">乱码</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/05/01/自己制作的第一个WEB应用/" title="自己制作的第一个WEB应用" itemprop="url">自己制作的第一个WEB应用</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-01T02:34:32.000Z" itemprop="datePublished"> 发表于 2022-05-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>前两天自己完成了第一个HTML5+JavaScript的Web应用，发文纪念一下。</p>
+<h2 id="应用的作用">应用的作用</h2><p>很多使用多连杆后桥的汽车，由于配置或预留了后桥转向功能，因此后桥的前束控制臂无法用于四轮定位参数的调整。此时，后桥的两个调整螺栓调整时，会使得前束和外倾同时变化，导致不太容易调整。</p>
+<p>传统上，需要在一张特定的坐标图上根据当前的四轮定位外倾值、前束值和目标外倾值、前束值根据规定的斜率规律进行绘图，找到一个中间值。这样就能分两步，先调整到中间值，再调整到目标值，实现两步调整。如果不这样的话可能会导致反复调整，效率较低。</p>
+<p>我之前是做了一个EXCEL文档，用数学方式代替作图，实现输入数据自动计算中间值和调整顺序。但是在手机上，这个文档需要用WPS手机版打开，不太方便，因此萌生了用网页实现这个功能的想法。</p>
+<h2 id="页面开发">页面开发</h2><p>基本思路就是HTML5搭建页面框架，用JavaScript进行计算。</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2022/05/01/自己制作的第一个WEB应用/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>►<a class="article-category-link" href="/categories/网络/汽车/">汽车</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/汽车维修/">汽车维修</a><a href="/tags/四轮定位/">四轮定位</a><a href="/tags/网页应用/">网页应用</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2020/04/19/启动V2Ray时提示端口被占用/" title="启动V2Ray时提示端口被占用" itemprop="url">启动V2Ray时提示端口被占用</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2020-04-19T04:16:10.000Z" itemprop="datePublished"> 发表于 2020-04-19</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
+<p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
+<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-d2b143e3ef9a8f04.png" alt="错误提示"></p>
+<p>查了一下，是端口被占用的原因。</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2020/04/19/启动V2Ray时提示端口被占用/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/端口占用/">端口占用</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/" title="免费开源剪辑软件Shotcut推荐和使用教程" itemprop="url">免费开源剪辑软件Shotcut推荐和使用教程</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2020-04-03T14:40:11.000Z" itemprop="datePublished"> 发表于 2020-04-03</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
+<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
+<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-c9cde800af774a25.png" alt="Shotcut软件的界面.png"></p>
+<p>下面大概说一下这个软件怎么使用。</p>
+<h2 id="导入素材，建立时间线">导入素材，建立时间线</h2><ol>
+<li><p>将需要剪辑的素材拖动到「播放列表」区域，将素材导入到软件。</p>
+</li>
+<li><p>点击时间线下面的「三横线符号」，打开附加操作菜单，在里面选择添加视频轨道，根据需要可以再添加音频轨道或多个视频轨道。</p>
+</li>
+</ol>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/视频剪辑/">视频剪辑</a><a href="/tags/Shotcut/">Shotcut</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+
+  <nav id="page-nav" class="clearfix">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+  </nav>
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/汽车/" title="汽车">汽车<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网络/" title="网络">网络<sup>11</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/网络/" title="网络">网络<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/文化/" title="文化">文化<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/历法/" title="历法">历法<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/视频剪辑/" title="视频剪辑">视频剪辑<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Keepass/" title="Keepass">Keepass<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/乱码/" title="乱码">乱码<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UWP软件/" title="UWP软件">UWP软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/代理/" title="代理">代理<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/端口占用/" title="端口占用">端口占用<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shotcut/" title="Shotcut">Shotcut<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Onedrive/" title="Onedrive">Onedrive<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Microsoft-365/" title="Microsoft 365">Microsoft 365<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/汽车维修/" title="汽车维修">汽车维修<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/四轮定位/" title="四轮定位">四轮定位<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网页应用/" title="网页应用">网页应用<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://www.zhihu.com/people/lyuxu/" target="_blank" title="我的知乎个人页">我的知乎个人页</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://space.bilibili.com/492401873" target="_blank" title="我的B站主页">我的B站主页</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://github.com/lvxu1987" target="_blank" title="我的Github">我的Github</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自从当了老师 <br/>
+			学习努力多了</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/lvxu1987" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/lvxu1987" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/lyuxu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:lvxu1987@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2022 
+		
+		<a href="http://lvxu.site/about" target="_blank" title="吕旭">吕旭</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15503066-3', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>

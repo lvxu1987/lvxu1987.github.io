@@ -81,6 +81,145 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2022/05/09/注册一个微软365的E5帐号/" title="注册一个微软365的E5帐号" itemprop="url">注册一个微软365的E5帐号</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-09T12:53:34.000Z" itemprop="datePublished"> 发表于 2022-05-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <a id="more"></a>
+<p>虽然我已经有了一个Microsoft 365 的个人帐号，但是365个人帐号的Onedrive只有1G的容量，而E5开发帐号的Onedrive可以达到5T的容量，况且可以白嫖，拿来备份一下电影、视频什么的最合适不过了。</p>
+<p>激活E5的方法，网上已经的教程很多了，我就不重复一遍了。我是参考<a href="https://www.mspace.cc/archives/479?msclkid=004df6f9cf6a11eca00578af8b60c507" target="_blank" rel="noopener">2022 免费申请永久正版 Office E5 开发者订阅+ 5T 不限速网盘教程 (mspace.cc)</a>操作的，大家也可以参考。</p>
+<p>下面把我在操作中遇到的问题说一下。</p>
+<h2 id="手机收不到激活码">手机收不到激活码</h2><p>注册的过程中，有一步是要输入手机号接收验证码，但是我始终无法收到验证码。网上搜了一下，都说是接收验证码使用了Google的服务，需要解决访问海外网站的问题。但是我通过技术手段操作后，Google等网站已经可以打开，但是仍然收不到验证码。</p>
+<p>后来发现，把中文页面换成英文页面就可以收到验证码了。也就是把<a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a>中间的<code>zh-cn</code>改成<code>en-us</code>就可以了，即访问<a href="https://developer.microsoft.com/en-us/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/en-us/microsoft-365/profile</a></p>
+<!--more-->
+<h2 id="涉及到的一些网站">涉及到的一些网站</h2><ol>
+<li><a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">仪表板 - Microsoft 365 开发人员中心</a> ：用于注册，及查看剩余天数。</li>
+<li><a href="https://admin.onedrive.com/?v=StorageSettings" target="_blank" rel="noopener">SharePoint 管理中心</a>：可以设置Onedrive容量。</li>
+<li><a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 admin center</a>：管理用户</li>
+<li><a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener">Microsoft Azure</a> ：注册应用、API等，用于访问微软的API以延长续订。</li>
+<li><a href="https://e5.qyi.io/" target="_blank" rel="noopener">E5续订 (qyi.io)</a>  ：一个访问outlook API 以续订E5的网站。</li>
+<li><a href="https://e5renew.com/" target="_blank" rel="noopener">E5 Renew Plus 官方网站</a> ： 一个续订E5的桌面版软件。</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Onedrive/">Onedrive</a><a href="/tags/Microsoft-365/">Microsoft 365</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/05/09/一个网页乱码问题/" title="一个网页乱码问题" itemprop="url">一个网页乱码问题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-05-09T12:29:52.000Z" itemprop="datePublished"> 发表于 2022-05-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Github上一切正常。但是这个页面要给别人用，考虑到访问速度，就用Gitee的导入功能，从Github复制了一份到Gitee上。</p>
+<p>没想到在Github上一切正常的网页，在Gitee上就成了乱码。</p>
+<p>在网上搜了一下，都说是中文编码的问题，如果网页HTML文件的编码和文件中<code>&lt;meta charset=&quot;&quot;&gt;</code>里面不一致的话，就会有这种情况。比如网页HTML文件的编码是GBK（在Windows下，ANSI即为GBK），而文件中将编码规定为UTF-8（<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>），则中文会呈现为乱码。</p>
+<p>而我这个显然不是这种情况。我的HTML文件是用notepad++编写的，一开始就是UTF-8编码格式，况且网页在Github Page里面显示是正常的。同时，我点右键打开乱码网页的源代码，发现源代码就是乱码的。</p>
+<p>我又考虑到，是否是换行码的问题。我尝试将HTML文档的Windows换行符<code>CR</code> <code>LF</code>改成了Unix换行符 <code>LF</code>，重新上传，没有解决问题。</p>
+<p>最后，我尝试在windows下，先用系统自带的<strong>记事本</strong>将HTML的编码转为ANSI，再重新保存为UTF-8，发现页面里多出来几个「?」，删除这几个问号后，再上传，问题解决。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/乱码/">乱码</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2022/05/01/自己制作的第一个WEB应用/" title="自己制作的第一个WEB应用" itemprop="url">自己制作的第一个WEB应用</a>
   </h1>
   <p class="article-author">By
@@ -274,133 +413,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2020/04/03/那些年被抛弃的免费剪辑软件/" title="那些年被抛弃的免费剪辑软件" itemprop="url">那些年被抛弃的免费剪辑软件</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2020-04-03T14:36:11.000Z" itemprop="datePublished"> 发表于 2020-04-03</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
-<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。</p>
-<p>Shutcut的事情另外一篇文章里会说<a href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">另外一篇文章里会说</a>，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2020/04/03/那些年被抛弃的免费剪辑软件/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/视频剪辑/">视频剪辑</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2020/04/01/为Win10的UWP应用使用设置代理/" title="为Win10的UWP应用使用设置代理" itemprop="url">为Win10的UWP应用使用设置代理</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://lvxu.site/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2020-04-01T12:51:00.000Z" itemprop="datePublished"> 发表于 2020-04-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ），即使使用了「小飞机」软件，UWP软件仍然无法得到加速。</p>
-<p>网上有很多解决此类问题的方法，要不就是使用 <code>Fiddler</code> 软件进行设置，要不就是使用<code>CheckNetIsolation</code>命令来解除限制，但是需要通过注册表来获取应用的SID，都比较麻烦。</p>
-<p>其实有一个办法，不需要下载软件，也不需要打开注册表。</p>
-<h2 id="解除限制的方法">解除限制的方法</h2><p>先获取需要走代理的APP的<strong>程序包名称</strong>。然后使用<code>CheckNetIsolation</code>命令解除该APP的 网络隔离。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2020/04/01/为Win10的UWP应用使用设置代理/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/UWP软件/">UWP软件</a><a href="/tags/代理/">代理</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -431,7 +443,7 @@
 		  
 		
 		  
-			<li><a href="/categories/网络/" title="网络">网络<sup>9</sup></a></li>
+			<li><a href="/categories/网络/" title="网络">网络<sup>11</sup></a></li>
 		  
 		
 		</ul>
@@ -444,7 +456,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/网络/" title="网络">网络<sup>6</sup></a></li>
+				<li><a href="/tags/网络/" title="网络">网络<sup>7</sup></a></li>
 			
 		
 			
@@ -452,11 +464,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/历法/" title="历法">历法<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/历法/" title="历法">历法<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -464,7 +476,7 @@
 			
 		
 			
-				<li><a href="/tags/Keepass/" title="Keepass">Keepass<sup>1</sup></a></li>
+				<li><a href="/tags/乱码/" title="乱码">乱码<sup>1</sup></a></li>
 			
 		
 			
@@ -484,11 +496,23 @@
 			
 		
 			
-				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+				<li><a href="/tags/Keepass/" title="Keepass">Keepass<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Onedrive/" title="Onedrive">Onedrive<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Microsoft-365/" title="Microsoft 365">Microsoft 365<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
 			
 		
 			

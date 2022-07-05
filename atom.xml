@@ -4,7 +4,7 @@
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lvxu.site/"/>
-  <updated>2022-07-04T08:36:04.508Z</updated>
+  <updated>2022-07-05T07:52:39.323Z</updated>
   <id>http://lvxu.site/</id>
   
   <author>
@@ -19,13 +19,13 @@
     <link href="http://lvxu.site/2022/05/09/%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E5%BE%AE%E8%BD%AF365%E7%9A%84E5%E5%B8%90%E5%8F%B7/"/>
     <id>http://lvxu.site/2022/05/09/注册一个微软365的E5帐号/</id>
     <published>2022-05-09T12:53:34.000Z</published>
-    <updated>2022-07-04T08:36:04.508Z</updated>
+    <updated>2022-07-05T07:52:39.323Z</updated>
     <content type="html"><![CDATA[<a id="more"></a>
 <p>虽然我已经有了一个Microsoft 365 的个人帐号，但是365个人帐号的Onedrive只有1G的容量，而E5开发帐号的Onedrive可以达到5T的容量，况且可以白嫖，拿来备份一下电影、视频什么的最合适不过了。</p>
 <p>激活E5的方法，网上已经的教程很多了，我就不重复一遍了。我是参考<a href="https://www.mspace.cc/archives/479?msclkid=004df6f9cf6a11eca00578af8b60c507" target="_blank" rel="noopener">2022 免费申请永久正版 Office E5 开发者订阅+ 5T 不限速网盘教程 (mspace.cc)</a>操作的，大家也可以参考。</p>
 <p>下面把我在操作中遇到的问题说一下。</p>
-<h2 id="手机收不到激活码">手机收不到激活码</h2><p>注册的过程中，有一步是要输入手机号接收验证码，但是我始终无法收到验证码。网上搜了一下，都说是接收验证码使用了Google的服务，需要解决访问海外网站的问题。但是我通过技术手段操作后，Google等网站已经可以打开，但是仍然收不到验证码。</p>
-<p>后来发现，把中文页面换成英文页面就可以收到验证码了。也就是把<a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a>中间的<code>zh-cn</code>改成<code>en-us</code>就可以了，即访问<a href="https://developer.microsoft.com/en-us/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/en-us/microsoft-365/profile</a></p>
+<h2 id="手机收不到激活码">手机收不到激活码</h2><p>注册的过程中，有一步是要输入手机号接收验证码，但是我始终无法收到验证码。网上搜了一下，都说是接收验证码使用了Google的服务，需要解决访问海外网站的问题。</p>
+<p>我在实践中发现，除了需要能访问谷歌的服务之外，还需要把中文页面换成英文页面，才能收到验证码。也就是把<a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a>中间的<code>zh-cn</code>改成<code>en-us</code>就可以了，即访问<a href="https://developer.microsoft.com/en-us/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/en-us/microsoft-365/profile</a></p>
 <!--more-->
 <h2 id="涉及到的一些网站">涉及到的一些网站</h2><ol>
 <li><a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">仪表板 - Microsoft 365 开发人员中心</a> ：用于注册，及查看剩余天数。</li>
@@ -115,63 +115,6 @@
       <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
     
       <category term="汽车" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/%E6%B1%BD%E8%BD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[启动V2Ray时提示端口被占用]]></title>
-    <link href="http://lvxu.site/2020/04/19/%E5%90%AF%E5%8A%A8V2Ray%E6%97%B6%E6%8F%90%E7%A4%BA%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8/"/>
-    <id>http://lvxu.site/2020/04/19/启动V2Ray时提示端口被占用/</id>
-    <published>2020-04-19T04:16:10.000Z</published>
-    <updated>2020-04-24T06:19:28.000Z</updated>
-    <content type="html"><![CDATA[<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
-<p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-d2b143e3ef9a8f04.png" alt="错误提示"></p>
-<p>查了一下，是端口被占用的原因。</p>
-<a id="more"></a>
-<h2 id="软件端口冲突问题">软件端口冲突问题</h2><p>网上查询了一下，有可能是软件端口冲突，需要看看是哪个软件占用了该端口。打开<code>CMD</code>命令行，在里面输入：<code>netstat -ano | findstr &quot;1081&quot;</code>，但是系统没有任何输出。难道是我的命令输错了么？尝试另一个端口，发现是有输出的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.18363.778]</span><br><span class="line">(c) 2019 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;netstat -ano | findstr &quot;1081&quot;</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;netstat -ano | findstr &quot;9091&quot;</span><br><span class="line">  TCP    0.0.0.0:9091           0.0.0.0:0              LISTENING       13008</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;tasklist | findstr &quot;13008&quot;</span><br><span class="line">transmission-qt.exe          13008 Console                    2     65,132 K</span><br></pre></td></tr></table></figure></p>
-<p>而且使用<code>tasklist | findstr &quot;13008&quot;</code>命令，还能看到占用了13008端口的软件是我的BT下载软件Transmission。</p>
-<p>至此说明问题并非软件端口冲突导致的。</p>
-<p>又在网上搜索，发现<a href="https://github.com/shadowsocks/shadowsocks-windows/issues/1188" target="_blank" rel="noopener">有人说是因为TCP/IP协议或Winsock损坏</a>。</p>
-<h2 id="TCP/IP协议或Winsock损坏问题">TCP/IP协议或Winsock损坏问题</h2><p>按照网上的说法，以管理员身份启动命令提示符，然后执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netsh interface ipv4 reset</span><br><span class="line">netsh interface ipv6 reset</span><br><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
-<p>三条命令执行完毕后，重新启动计算机。发现故障依旧。</p>
-<p>突然想到我之前安装了<code>Hyper-V</code>，会不会端口被系统保留了？</p>
-<h2 id="系统保留端口">系统保留端口</h2><p>打开命令提示符，输入<code>netsh interface ipv4 show excludedportrange protocol=tcp</code>，发现1080和1081端口果然被保留了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.18363.778]</span><br><span class="line">(c) 2019 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\username&gt;netsh interface ipv4 show excludedportrange protocol=tcp</span><br><span class="line"></span><br><span class="line">协议 tcp 端口排除范围</span><br><span class="line"></span><br><span class="line">开始端口    结束端口</span><br><span class="line">----------    --------</span><br><span class="line">      1069        1168</span><br><span class="line">      1169        1268</span><br><span class="line">      1269        1368</span><br><span class="line">      5357        5357</span><br><span class="line">     50000       50059     *</span><br><span class="line"></span><br><span class="line">* - 管理的端口排除。</span><br></pre></td></tr></table></figure>
-<p>尝试退出关闭Hyper-V管理器后，输入<code>netsh int ipv4 add excludedportrange protocol=tcp startport=&lt;起始端口&gt; numberofports=&lt;端口保留数量&gt;</code>这个命令来让用户保留相关的端口。</p>
-<p>用管理员权限打开命令提示符，尝试之后却发现系统提示错误。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.18363.778]</span><br><span class="line">(c) 2019 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Windows\system32&gt;netsh int ipv4 add excludedportrange protocol=tcp startport=1080 numberofports=4</span><br><span class="line">另一个程序正在使用此文件，进程无法访问。</span><br></pre></td></tr></table></figure>
-<p>原来简单的关闭Hyper-V管理器并不能让Hyper-V退出运行，必须禁用这个功能才行。</p>
-<p>在命令提示符里输入<code>dism.exe /Online /Disable-Feature:Microsoft-Hyper-V</code>,系统出现如下提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\system32&gt;dism.exe /Online /Disable-Feature:Microsoft-Hyper-V</span><br><span class="line"></span><br><span class="line">部署映像服务和管理工具</span><br><span class="line">版本: 10.0.18362.1</span><br><span class="line"></span><br><span class="line">映像版本: 10.0.18363.778</span><br><span class="line"></span><br><span class="line">禁用一个或多个功能</span><br><span class="line">[==========================100.0%==========================]</span><br><span class="line">操作成功完成。</span><br><span class="line">重新启动 Windows 以完成该操作。</span><br><span class="line">是否立即重新启动计算机? (Y/N)</span><br></pre></td></tr></table></figure>
-<p>重新启动后，再执行<code>netsh interface ipv4 show excludedportrange protocol=tcp</code>命令，发现系统已经不再保留1081端口了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\system32&gt;netsh interface ipv4 show excludedportrange protocol=tcp</span><br><span class="line"></span><br><span class="line">协议 tcp 端口排除范围</span><br><span class="line"></span><br><span class="line">开始端口    结束端口</span><br><span class="line">----------    --------</span><br><span class="line">      5357        5357</span><br><span class="line"></span><br><span class="line">* - 管理的端口排除。</span><br></pre></td></tr></table></figure>
-<p>再次执行<code>netsh int ipv4 add excludedportrange protocol=tcp startport=1080 numberofports=4</code>命令后，系统已将1080-1083这4个端口保留为用户使用。</p>
-<p>尝试启动V2RayN软件，故障已排除。</p>
-<p>接下来，就是执行<code>dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All</code>命令并重启计算机，再次启用Hyper-V功能。</p>
-<h2 id="重新启用Hyper-V以后电脑无法联网">重新启用Hyper-V以后电脑无法联网</h2><p>重启之后，发现电脑竟然无法联网了。打开<strong>更改适配器设置</strong>的界面，发现原先里面的Hyper-V的<strong>vEthernet虚拟交换机</strong>不见了。</p>
-<p>我之前安装Hyper-V以后，配置了一个外部虚拟交换机，该虚拟交换机通过物理网卡获得IP地址，真机和虚拟机相当于都连接在了这个虚拟交换机上，虚拟机也可以通过这个虚拟交换机获得外部网络的IP地址。</p>
-<p>现在这个虚拟交换机不见了，真机自然也就断网了。</p>
-<p>找到问题的原因，解决办法就很明确了，重新建立一个虚拟交换机就好了。不过事情就是这样，总是不会顺利，在Hyper-V里面竟然无法重新建立新的外部虚拟交换机，Hyper-V提示物理网卡已经被占用了。可是我的虚拟交换机已经不见了啊？</p>
-<p>查看物理网卡的属性，发现<strong>Hyper-V可扩展的虚拟交换机</strong>为被选中的状态，将其取消选中就可以取消占用了。</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-47a77bb62356b580.png" alt="物理网卡的属性"></p>
-<p>再次尝试新建外部虚拟交换机，已经可以重建了。</p>
-<p>至此，真机、虚拟机都可以正常上网，V2RayN也可以正常使用。故障完全排除。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>昨天启动我电脑上的V2RayN软件时，无法正常启动，弹出以下错误提示。</p>
-<p>Privoxy Error<br>✖Fatal Error: can’t bind to 0.0.0.0:1081:(error number 0)</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-d2b143e3ef9a8f04.png" alt="错误提示"></p>
-<p>查了一下，是端口被占用的原因。</p>]]>
-    
-    </summary>
-    
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="端口占用" scheme="http://lvxu.site/tags/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/"/>
-    
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   

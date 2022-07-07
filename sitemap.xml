@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lvxublog.com/about/index.html</loc>
+    <lastmod>2022-07-07T03:52:53.948Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lvxublog.com/404.html</loc>
+    <lastmod>2022-07-07T03:51:51.561Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lvxublog.com/2022/05/09/%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E5%BE%AE%E8%BD%AF365%E7%9A%84E5%E5%B8%90%E5%8F%B7/</loc>
     <lastmod>2022-07-05T07:52:39.323Z</lastmod>
   </url>
@@ -14,11 +24,6 @@
   <url>
     <loc>https://lvxublog.com/2022/05/09/%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2022-05-09T12:32:02.446Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lvxublog.com/about/index.html</loc>
-    <lastmod>2022-05-01T02:46:48.000Z</lastmod>
   </url>
   
   <url>
@@ -44,11 +49,6 @@
   <url>
     <loc>https://lvxublog.com/2015/03/26/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B/</loc>
     <lastmod>2020-04-01T13:43:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lvxublog.com/404.html</loc>
-    <lastmod>2020-03-01T15:49:38.000Z</lastmod>
   </url>
   
   <url>

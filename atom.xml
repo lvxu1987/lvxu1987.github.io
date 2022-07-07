@@ -3,21 +3,21 @@
   <title><![CDATA[吕旭说]]></title>
   <subtitle><![CDATA[汽车、网络、职教和生活]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://lvxu.site/"/>
+  <link href="https://lvxublog.com/"/>
   <updated>2022-07-05T07:52:39.323Z</updated>
-  <id>http://lvxu.site/</id>
+  <id>https://lvxublog.com/</id>
   
   <author>
     <name><![CDATA[吕旭]]></name>
-    <email><![CDATA[lvxu1987@gmail.com]]></email>
+    <email><![CDATA[me@lvxu.site]]></email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title><![CDATA[注册一个微软365的E5帐号]]></title>
-    <link href="http://lvxu.site/2022/05/09/%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E5%BE%AE%E8%BD%AF365%E7%9A%84E5%E5%B8%90%E5%8F%B7/"/>
-    <id>http://lvxu.site/2022/05/09/注册一个微软365的E5帐号/</id>
+    <link href="https://lvxublog.com/2022/05/09/%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E5%BE%AE%E8%BD%AF365%E7%9A%84E5%E5%B8%90%E5%8F%B7/"/>
+    <id>https://lvxublog.com/2022/05/09/注册一个微软365的E5帐号/</id>
     <published>2022-05-09T12:53:34.000Z</published>
     <updated>2022-07-05T07:52:39.323Z</updated>
     <content type="html"><![CDATA[<a id="more"></a>
@@ -42,18 +42,18 @@
 <p>激活]]>
     </summary>
     
-      <category term="Onedrive" scheme="http://lvxu.site/tags/Onedrive/"/>
+      <category term="Onedrive" scheme="https://lvxublog.com/tags/Onedrive/"/>
     
-      <category term="Microsoft 365" scheme="http://lvxu.site/tags/Microsoft-365/"/>
+      <category term="Microsoft 365" scheme="https://lvxublog.com/tags/Microsoft-365/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[一个网页乱码问题]]></title>
-    <link href="http://lvxu.site/2022/05/09/%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
-    <id>http://lvxu.site/2022/05/09/一个网页乱码问题/</id>
+    <link href="https://lvxublog.com/2022/05/09/%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+    <id>https://lvxublog.com/2022/05/09/一个网页乱码问题/</id>
     <published>2022-05-09T12:29:52.000Z</published>
     <updated>2022-05-09T12:32:02.446Z</updated>
     <content type="html"><![CDATA[<p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Github上一切正常。但是这个页面要给别人用，考虑到访问速度，就用Gitee的导入功能，从Github复制了一份到Gitee上。</p>
@@ -67,18 +67,18 @@
     <![CDATA[<p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Gith]]>
     </summary>
     
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="乱码" scheme="http://lvxu.site/tags/%E4%B9%B1%E7%A0%81/"/>
+      <category term="乱码" scheme="https://lvxublog.com/tags/%E4%B9%B1%E7%A0%81/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[自己制作的第一个WEB应用]]></title>
-    <link href="http://lvxu.site/2022/05/01/%E8%87%AA%E5%B7%B1%E5%88%B6%E4%BD%9C%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAWEB%E5%BA%94%E7%94%A8/"/>
-    <id>http://lvxu.site/2022/05/01/自己制作的第一个WEB应用/</id>
+    <link href="https://lvxublog.com/2022/05/01/%E8%87%AA%E5%B7%B1%E5%88%B6%E4%BD%9C%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAWEB%E5%BA%94%E7%94%A8/"/>
+    <id>https://lvxublog.com/2022/05/01/自己制作的第一个WEB应用/</id>
     <published>2022-05-01T02:34:32.000Z</published>
     <updated>2022-05-01T02:37:04.000Z</updated>
     <content type="html"><![CDATA[<p>前两天自己完成了第一个HTML5+JavaScript的Web应用，发文纪念一下。</p>
@@ -106,22 +106,22 @@
     
     </summary>
     
-      <category term="汽车维修" scheme="http://lvxu.site/tags/%E6%B1%BD%E8%BD%A6%E7%BB%B4%E4%BF%AE/"/>
+      <category term="汽车维修" scheme="https://lvxublog.com/tags/%E6%B1%BD%E8%BD%A6%E7%BB%B4%E4%BF%AE/"/>
     
-      <category term="四轮定位" scheme="http://lvxu.site/tags/%E5%9B%9B%E8%BD%AE%E5%AE%9A%E4%BD%8D/"/>
+      <category term="四轮定位" scheme="https://lvxublog.com/tags/%E5%9B%9B%E8%BD%AE%E5%AE%9A%E4%BD%8D/"/>
     
-      <category term="网页应用" scheme="http://lvxu.site/tags/%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8/"/>
+      <category term="网页应用" scheme="https://lvxublog.com/tags/%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="汽车" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/%E6%B1%BD%E8%BD%A6/"/>
+      <category term="汽车" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/%E6%B1%BD%E8%BD%A6/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[免费开源剪辑软件Shotcut推荐和使用教程]]></title>
-    <link href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-    <id>http://lvxu.site/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/</id>
+    <link href="https://lvxublog.com/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>https://lvxublog.com/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/</id>
     <published>2020-04-03T14:40:11.000Z</published>
     <updated>2020-04-24T06:18:56.000Z</updated>
     <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
@@ -192,18 +192,18 @@
     
     </summary>
     
-      <category term="视频剪辑" scheme="http://lvxu.site/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"/>
+      <category term="视频剪辑" scheme="https://lvxublog.com/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"/>
     
-      <category term="Shotcut" scheme="http://lvxu.site/tags/Shotcut/"/>
+      <category term="Shotcut" scheme="https://lvxublog.com/tags/Shotcut/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[那些年被抛弃的免费剪辑软件]]></title>
-    <link href="http://lvxu.site/2020/04/03/%E9%82%A3%E4%BA%9B%E5%B9%B4%E8%A2%AB%E6%8A%9B%E5%BC%83%E7%9A%84%E5%85%8D%E8%B4%B9%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6/"/>
-    <id>http://lvxu.site/2020/04/03/那些年被抛弃的免费剪辑软件/</id>
+    <link href="https://lvxublog.com/2020/04/03/%E9%82%A3%E4%BA%9B%E5%B9%B4%E8%A2%AB%E6%8A%9B%E5%BC%83%E7%9A%84%E5%85%8D%E8%B4%B9%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://lvxublog.com/2020/04/03/那些年被抛弃的免费剪辑软件/</id>
     <published>2020-04-03T14:36:11.000Z</published>
     <updated>2020-04-24T06:17:02.000Z</updated>
     <content type="html"><![CDATA[<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
@@ -227,18 +227,18 @@
     
     </summary>
     
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="视频剪辑" scheme="http://lvxu.site/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"/>
+      <category term="视频剪辑" scheme="https://lvxublog.com/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[为Win10的UWP应用使用设置代理]]></title>
-    <link href="http://lvxu.site/2020/04/01/%E4%B8%BAWin10%E7%9A%84UWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/"/>
-    <id>http://lvxu.site/2020/04/01/为Win10的UWP应用使用设置代理/</id>
+    <link href="https://lvxublog.com/2020/04/01/%E4%B8%BAWin10%E7%9A%84UWP%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/"/>
+    <id>https://lvxublog.com/2020/04/01/为Win10的UWP应用使用设置代理/</id>
     <published>2020-04-01T12:51:00.000Z</published>
     <updated>2022-07-04T08:28:08.243Z</updated>
     <content type="html"><![CDATA[<p>Win 10 的 UWP应用（应用商店下载的APP，如OneDrive、我的世界基岩版等），默认是不走代理的（沙盒的网络隔离特性：禁止APP访问<code>localhost</code> ）。</p>
@@ -270,20 +270,20 @@
     
     </summary>
     
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="UWP软件" scheme="http://lvxu.site/tags/UWP%E8%BD%AF%E4%BB%B6/"/>
+      <category term="UWP软件" scheme="https://lvxublog.com/tags/UWP%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="代理" scheme="http://lvxu.site/tags/%E4%BB%A3%E7%90%86/"/>
+      <category term="代理" scheme="https://lvxublog.com/tags/%E4%BB%A3%E7%90%86/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Keepass使用安全桌面登录系统白屏问题]]></title>
-    <link href="http://lvxu.site/2020/03/01/Keepass%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%A1%8C%E9%9D%A2%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F%E7%99%BD%E5%B1%8F%E9%97%AE%E9%A2%98/"/>
-    <id>http://lvxu.site/2020/03/01/Keepass使用安全桌面登录系统白屏问题/</id>
+    <link href="https://lvxublog.com/2020/03/01/Keepass%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%A1%8C%E9%9D%A2%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F%E7%99%BD%E5%B1%8F%E9%97%AE%E9%A2%98/"/>
+    <id>https://lvxublog.com/2020/03/01/Keepass使用安全桌面登录系统白屏问题/</id>
     <published>2020-03-01T15:15:11.000Z</published>
     <updated>2020-03-01T15:20:23.000Z</updated>
     <content type="html"><![CDATA[<h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系统的主题，可能是白色或者黄色等颜色）和你的鼠标。此时即使打开任务管理器再关闭Keepass或重启Explorer都无法解决。</p>
@@ -299,18 +299,18 @@
     <![CDATA[<h2 id="问题的起因">问题的起因</h2><p>Windows 10 Version 1903 以上，安装了更新KB4515384的系统，如果在使用Keepass时打开了「在安全桌面输入管理密钥」的话，启动Keepass，做任何操作，都会使电脑屏幕显示纯色背景（取决于你系]]>
     </summary>
     
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="Keepass" scheme="http://lvxu.site/tags/Keepass/"/>
+      <category term="Keepass" scheme="https://lvxublog.com/tags/Keepass/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[中国传统历法-干支日速算问题]]></title>
-    <link href="http://lvxu.site/2020/03/01/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95-%E5%B9%B2%E6%94%AF%E6%97%A5%E9%80%9F%E7%AE%97%E9%97%AE%E9%A2%98/"/>
-    <id>http://lvxu.site/2020/03/01/中国传统历法-干支日速算问题/</id>
+    <link href="https://lvxublog.com/2020/03/01/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95-%E5%B9%B2%E6%94%AF%E6%97%A5%E9%80%9F%E7%AE%97%E9%97%AE%E9%A2%98/"/>
+    <id>https://lvxublog.com/2020/03/01/中国传统历法-干支日速算问题/</id>
     <published>2020-03-01T13:24:39.000Z</published>
     <updated>2020-03-01T13:30:48.000Z</updated>
     <content type="html"><![CDATA[<p>之前那篇<a href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/">中国传统历法</a>发出后，有人问我关于干支日速算的问题。</p>
@@ -493,18 +493,18 @@
     
     </summary>
     
-      <category term="文化" scheme="http://lvxu.site/tags/%E6%96%87%E5%8C%96/"/>
+      <category term="文化" scheme="https://lvxublog.com/tags/%E6%96%87%E5%8C%96/"/>
     
-      <category term="历法" scheme="http://lvxu.site/tags/%E5%8E%86%E6%B3%95/"/>
+      <category term="历法" scheme="https://lvxublog.com/tags/%E5%8E%86%E6%B3%95/"/>
     
-      <category term="杂谈" scheme="http://lvxu.site/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://lvxublog.com/categories/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[中国传统历法]]></title>
-    <link href="http://lvxu.site/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/"/>
-    <id>http://lvxu.site/2015/04/08/中国传统历法/</id>
+    <link href="https://lvxublog.com/2015/04/08/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E5%8E%86%E6%B3%95/"/>
+    <id>https://lvxublog.com/2015/04/08/中国传统历法/</id>
     <published>2015-04-08T03:30:22.000Z</published>
     <updated>2020-04-24T06:26:51.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -625,18 +625,18 @@
     
     </summary>
     
-      <category term="文化" scheme="http://lvxu.site/tags/%E6%96%87%E5%8C%96/"/>
+      <category term="文化" scheme="https://lvxublog.com/tags/%E6%96%87%E5%8C%96/"/>
     
-      <category term="历法" scheme="http://lvxu.site/tags/%E5%8E%86%E6%B3%95/"/>
+      <category term="历法" scheme="https://lvxublog.com/tags/%E5%8E%86%E6%B3%95/"/>
     
-      <category term="杂谈" scheme="http://lvxu.site/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://lvxublog.com/categories/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[流氓软件快压]]></title>
-    <link href="http://lvxu.site/2015/04/07/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6%E5%BF%AB%E5%8E%8B/"/>
-    <id>http://lvxu.site/2015/04/07/流氓软件快压/</id>
+    <link href="https://lvxublog.com/2015/04/07/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6%E5%BF%AB%E5%8E%8B/"/>
+    <id>https://lvxublog.com/2015/04/07/流氓软件快压/</id>
     <published>2015-04-07T06:18:07.000Z</published>
     <updated>2015-12-15T13:19:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="正文">正文</h2><p>早就知道国内的软件很多都很没下限，但一直以为自己注意一点就好了，没想到我今天还是中枪了。</p>
@@ -662,16 +662,16 @@
 <p>我在网上下了一个后缀为 .zip 的压缩包，没想到，我]]>
     </summary>
     
-      <category term="流氓软件" scheme="http://lvxu.site/tags/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6/"/>
+      <category term="流氓软件" scheme="https://lvxublog.com/tags/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[一个方便自己用hexo的批处理]]></title>
-    <link href="http://lvxu.site/2015/03/29/%E4%B8%80%E4%B8%AA%E6%96%B9%E4%BE%BF%E8%87%AA%E5%B7%B1%E7%94%A8hexo%E7%9A%84%E6%89%B9%E5%A4%84%E7%90%86/"/>
-    <id>http://lvxu.site/2015/03/29/一个方便自己用hexo的批处理/</id>
+    <link href="https://lvxublog.com/2015/03/29/%E4%B8%80%E4%B8%AA%E6%96%B9%E4%BE%BF%E8%87%AA%E5%B7%B1%E7%94%A8hexo%E7%9A%84%E6%89%B9%E5%A4%84%E7%90%86/"/>
+    <id>https://lvxublog.com/2015/03/29/一个方便自己用hexo的批处理/</id>
     <published>2015-03-29T06:05:15.000Z</published>
     <updated>2015-12-15T13:19:05.000Z</updated>
     <content type="html"><![CDATA[<p>用 Hexo 老要在 Bash 里输入命令，挺麻烦的所以自己作了一个批处理文件，方便自己使用。</p>
@@ -698,18 +698,18 @@
     
     </summary>
     
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="hexo" scheme="http://lvxu.site/tags/hexo/"/>
+      <category term="hexo" scheme="https://lvxublog.com/tags/hexo/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[「请稍候」与「请稍后」]]></title>
-    <link href="http://lvxu.site/2015/03/28/%E3%80%8C%E8%AF%B7%E7%A8%8D%E5%80%99%E3%80%8D%E4%B8%8E%E3%80%8C%E8%AF%B7%E7%A8%8D%E5%90%8E%E3%80%8D/"/>
-    <id>http://lvxu.site/2015/03/28/「请稍候」与「请稍后」/</id>
+    <link href="https://lvxublog.com/2015/03/28/%E3%80%8C%E8%AF%B7%E7%A8%8D%E5%80%99%E3%80%8D%E4%B8%8E%E3%80%8C%E8%AF%B7%E7%A8%8D%E5%90%8E%E3%80%8D/"/>
+    <id>https://lvxublog.com/2015/03/28/「请稍候」与「请稍后」/</id>
     <published>2015-03-28T06:15:30.000Z</published>
     <updated>2015-12-15T13:19:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="正文">正文</h2><p>现在很多软件在载入界面时显示<strong>「请稍后」</strong>，其实是有问题的。</p>
@@ -731,18 +731,18 @@
     
     </summary>
     
-      <category term="网络" scheme="http://lvxu.site/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="文化" scheme="http://lvxu.site/tags/%E6%96%87%E5%8C%96/"/>
+      <category term="文化" scheme="https://lvxublog.com/tags/%E6%96%87%E5%8C%96/"/>
     
-      <category term="杂谈" scheme="http://lvxu.site/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://lvxublog.com/categories/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[新博客，新开始]]></title>
-    <link href="http://lvxu.site/2015/03/26/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
-    <id>http://lvxu.site/2015/03/26/新博客新开始/</id>
+    <link href="https://lvxublog.com/2015/03/26/%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
+    <id>https://lvxublog.com/2015/03/26/新博客新开始/</id>
     <published>2015-03-26T06:37:14.000Z</published>
     <updated>2020-04-01T13:43:45.000Z</updated>
     <content type="html"><![CDATA[<h2 id="搭建博客的过程">搭建博客的过程</h2><p>之前一直是在新浪 SAE 平台上用 wordpress4SAE 搭建<a href="http://lvxu1987.sinaapp.com/" target="_blank" rel="noopener">我的博客</a>。虽然也听说过静态博客、 GitHub Pages 什么的，但是一直也没有动力去弄。</p>
@@ -793,11 +793,11 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://lvxu.site/tags/hexo/"/>
+      <category term="hexo" scheme="https://lvxublog.com/tags/hexo/"/>
     
-      <category term="github" scheme="http://lvxu.site/tags/github/"/>
+      <category term="github" scheme="https://lvxublog.com/tags/github/"/>
     
-      <category term="网络" scheme="http://lvxu.site/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://lvxublog.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   

@@ -4,23 +4,25 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   
-    <title>吕旭说</title>
+    <title>使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决 | 吕旭说</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="吕旭">
     
 
     
-    <meta name="description" content="吕旭的个人博客，写一些工作内外感兴趣的东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="吕旭说">
-<meta property="og:url" content="https://lvxublog.com/index.html">
+    <meta name="description" content="一个使用ipv6以后能ping到ipv6地址的网站无法解决的问题。">
+<meta name="keywords" content="ipv6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决">
+<meta property="og:url" content="https://lvxublog.com/2022/10/14/使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决/index.html">
 <meta property="og:site_name" content="吕旭说">
-<meta property="og:description" content="吕旭的个人博客，写一些工作内外感兴趣的东西">
+<meta property="og:description" content="一个使用ipv6以后能ping到ipv6地址的网站无法解决的问题。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2022-10-14T14:52:53.181Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="吕旭说">
-<meta name="twitter:description" content="吕旭的个人博客，写一些工作内外感兴趣的东西">
+<meta name="twitter:title" content="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决">
+<meta name="twitter:description" content="一个使用ipv6以后能ping到ipv6地址的网站无法解决的问题。">
 
     
     <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
@@ -73,12 +75,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2022/10/14/使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决/" title="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决" itemprop="url">使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决</a>
@@ -92,9 +92,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>今天领导布置了一个在CCTV-1上看节目的任务，我急忙在电脑上搜CCTV，结果央视的网站居然打不开了。赶快上搜一下，结果有的指向了知乎，结果发现知乎也打不开了。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>今天领导布置了一个在CCTV-1上看节目的任务，我急忙在电脑上搜CCTV，结果央视的网站居然打不开了。赶快上搜一下，结果有的指向了知乎，结果发现知乎也打不开了。</p>
 <p>ping了一下，发现打不开的网站ping到的都是ipv6的地址。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PS C:\WINDOWS\system32&gt; ping tv.cctv.com</span><br><span class="line"></span><br><span class="line">正在 Ping g2.ctc.cctvcdn.net.lxdns.com [240e:918:1a00:201::15] 具有 32 字节的数据:</span><br><span class="line">来自 240e:918:1a00:201::15 的回复: 时间=13ms</span><br><span class="line">来自 240e:918:1a00:201::15 的回复: 时间=13ms</span><br><span class="line">来自 240e:918:1a00:201::15 的回复: 时间=13ms</span><br><span class="line">来自 240e:918:1a00:201::15 的回复: 时间=13ms</span><br><span class="line"></span><br><span class="line">240e:918:1a00:201::15 的 Ping 统计信息:</span><br><span class="line">    数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，</span><br><span class="line">往返行程的估计时间(以毫秒为单位):</span><br><span class="line">    最短 = 13ms，最长 = 13ms，平均 = 13ms</span><br></pre></td></tr></table></figure>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PS C:\WINDOWS\system32&gt; <span class="built_in">ping</span> www.zhihu.com</span><br><span class="line"></span><br><span class="line">正在 <span class="built_in">Ping</span> <span class="number">1595096</span>.sched.d0-dk.tdnsdp1.cn [<span class="number">240</span>e:<span class="number">925</span>:<span class="number">2</span>:<span class="number">730</span>::<span class="number">40</span>] 具有 <span class="number">32</span> 字节的数据:</span><br><span class="line">来自 <span class="number">240</span>e:<span class="number">925</span>:<span class="number">2</span>:<span class="number">730</span>::<span class="number">40</span> 的回复: 时间=<span class="number">2</span>ms</span><br><span class="line">来自 <span class="number">240</span>e:<span class="number">925</span>:<span class="number">2</span>:<span class="number">730</span>::<span class="number">40</span> 的回复: 时间=<span class="number">2</span>ms</span><br><span class="line">来自 <span class="number">240</span>e:<span class="number">925</span>:<span class="number">2</span>:<span class="number">730</span>::<span class="number">40</span> 的回复: 时间=<span class="number">2</span>ms</span><br><span class="line">来自 <span class="number">240</span>e:<span class="number">925</span>:<span class="number">2</span>:<span class="number">730</span>::<span class="number">40</span> 的回复: 时间=<span class="number">2</span>ms</span><br><span class="line"></span><br><span class="line"><span class="number">240</span>e:<span class="number">925</span>:<span class="number">2</span>:<span class="number">730</span>::<span class="number">40</span> 的 <span class="built_in">Ping</span> 统计信息:</span><br><span class="line">    数据包: 已发送 = <span class="number">4</span>，已接收 = <span class="number">4</span>，丢失 = <span class="number">0</span> (<span class="number">0</span>% 丢失)，</span><br><span class="line">往返行程的估计时间(以毫秒为单位):</span><br><span class="line">    最短 = <span class="number">2</span>ms，最长 = <span class="number">2</span>ms，平均 = <span class="number">2</span>ms</span><br></pre></td></tr></table></figure>
@@ -103,15 +110,36 @@
 <p>尝试根据以前的方法清除DNS缓存，通过管理员权限打开CMD</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 清除DNS缓存信息</span><br><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br><span class="line"></span><br><span class="line"># 重置winsock 目录设置</span><br><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
 <p>重启之后，没有解决问题</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2022/10/14/使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+<a id="more"></a>
+<p>后来我在搜索时找到这篇文章<a href="https://neucrack.com/p/400" target="_blank" rel="noopener">使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决-次世代BUG池 (neucrack.com)</a></p>
+<p>文章中说：</p>
+<blockquote>
+<p>由于 IPv6 对 MTU 的长度和 IPv4 不同，导致使用 IPv6 时会出现某些网站偶尔无法访问，其实就是 MTU 设置太大，有时候需要分包的时候被网络中一些不支持分包的设备给丢弃了，导致网站无法访问</p>
+<blockquote>
+<p>版权声明：本文为 neucrack 的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://neucrack.com/p/400" target="_blank" rel="noopener">https://neucrack.com/p/400</a></p>
+</blockquote>
+<p>公司网络支持 IPv6 后就一直访问一些网站有时候无法访问或者特别慢， 经过 @vowstar 的排查解决了问题:</p>
+<p>由于 IPv6 对 MTU 的长度和 IPv4 不同，导致使用 IPv6 时会出现某些网站偶尔无法访问，其实就是 MTU 设置太大，有时候需要分包的时候被网络中一些不支持分包并且不会相应请求设备需要分包的设备给丢弃了，导致网站无法访问。 解决方法就是将(路由器的) MTU 设置小一点（比 IPV4 小 20 字节，比如 1432 字节）</p>
+<p>这里记录下，以下为其原话：</p>
+<blockquote>
+<p>之前ipv6环境下简书时而可以访问时而不能访问的root cause找到了，原因是PMTU黑洞，其细节如下：<br>终端设备在发包时，也可以设置 DF （ Don’t Fragment ）标记来告诉路由器不要分片。这时中间路由器会丢掉超过 MTU 的包，回复一条 ICMP Fragmentation Needed 消息。发送者收到这个包后，下次就会发小一点的包，这个过程叫做 PMTU Discovery 。现实中可以看到 HTTPS （ TLS ）的流量大都是带 DF 标记的。<br>然而，互联网上有大量的中间设备为了所谓的“安全”或者没有正确配置，不回应 ICMP Fragmentation Needed 包，这使得访问某些网站时如果某个包的大小超过了 PMTU，会被无声地丢弃，直到 TCP 协议发现超时丢包进行重传，这非常缓慢。遇到这种情况，我们可以说你和目标服务器的路径上存在 PMTU 黑洞。<br>由于我们到简书之间的目标链路一直在变化，在链路节点中如果遇到了这种被错误配置的设备，就会导致我们无法访问简书。<br>现在国内 ISP 一般都是通过 PPPoE 虚拟拨号建立 WAN 口连接的。Ethernet 的默认 MTU 是 1500，但是 PPPoE 隧道有 8 个 bytes 的开销，所以 PPPoE 虚连接的 MTU 就是 1500-8=1492，减掉 IPv4 包头（ 20 字节）和 TCP 包头（ 20 字节），可以得知 IPv4 下需要把 MSS 设为 1452 以下。IPv6 的包头是 40 字节，所以 IPv6 下需要把 MSS 设为 1432 以下。<br>解决方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt; #set security flow tcp-mss all-tcp mss 1452</span><br><span class="line">&gt; &gt; set security flow tcp-mss all-tcp mss 1432</span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;<br>&gt;</p>
+<blockquote>
+<p>原先的设置值是1452, 改成1432后，强制丢包现象消失，原先无法访问的简书可以被访问了。</p>
+</blockquote>
+<p>路由器后台一般都可以直接更改，电脑 linux 可以临时：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; sudo ifconfig enp7s0 mtu 1432 up</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+</blockquote>
+<p>我的路由器是TP-LINK的TL-R473GP-AC，在后台找到<code>基本设置</code> <code>WAN设置</code> <code>IPv6</code> 将<code>MTU</code> 设置为1432，重启路由器，问题解决。</p>
+<p>但是CCTV-1上的节目也结束了。-_-||</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -129,302 +157,63 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="https://lvxublog.com/2022/10/14/使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决/" data-title="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2022/05/09/注册一个微软365的E5帐号/" title="注册一个微软365的E5帐号" itemprop="url">注册一个微软365的E5帐号</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2022-05-09T12:53:34.000Z" itemprop="datePublished"> 发表于 2022-05-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <a id="more"></a>
-<p>虽然我已经有了一个Microsoft 365 的个人帐号，但是365个人帐号的Onedrive只有1G的容量，而E5开发帐号的Onedrive可以达到5T的容量，况且可以白嫖，拿来备份一下电影、视频什么的最合适不过了。</p>
-<p>激活E5的方法，网上已经的教程很多了，我就不重复一遍了。我是参考<a href="https://www.mspace.cc/archives/479?msclkid=004df6f9cf6a11eca00578af8b60c507" target="_blank" rel="noopener">2022 免费申请永久正版 Office E5 开发者订阅+ 5T 不限速网盘教程 (mspace.cc)</a>操作的，大家也可以参考。</p>
-<p>下面把我在操作中遇到的问题说一下。</p>
-<h2 id="手机收不到激活码">手机收不到激活码</h2><p>注册的过程中，有一步是要输入手机号接收验证码，但是我始终无法收到验证码。网上搜了一下，都说是接收验证码使用了Google的服务，需要解决访问海外网站的问题。</p>
-<p>我在实践中发现，除了需要能访问谷歌的服务之外，还需要把中文页面换成英文页面，才能收到验证码。也就是把<a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/zh-cn/microsoft-365/profile</a>中间的<code>zh-cn</code>改成<code>en-us</code>就可以了，即访问<a href="https://developer.microsoft.com/en-us/microsoft-365/profile" target="_blank" rel="noopener">https://developer.microsoft.com/en-us/microsoft-365/profile</a></p>
-<!--more-->
-<h2 id="涉及到的一些网站">涉及到的一些网站</h2><ol>
-<li><a href="https://developer.microsoft.com/zh-cn/microsoft-365/profile" target="_blank" rel="noopener">仪表板 - Microsoft 365 开发人员中心</a> ：用于注册，及查看剩余天数。</li>
-<li><a href="https://admin.onedrive.com/?v=StorageSettings" target="_blank" rel="noopener">SharePoint 管理中心</a>：可以设置Onedrive容量。</li>
-<li><a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 admin center</a>：管理用户</li>
-<li><a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" rel="noopener">Microsoft Azure</a> ：注册应用、API等，用于访问微软的API以延长续订。</li>
-<li><a href="https://e5.qyi.io/" target="_blank" rel="noopener">E5续订 (qyi.io)</a>  ：一个访问outlook API 以续订E5的网站。</li>
-<li><a href="https://e5renew.com/" target="_blank" rel="noopener">E5 Renew Plus 官方网站</a> ： 一个续订E5的桌面版软件。</li>
-</ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Onedrive/">Onedrive</a><a href="/tags/Microsoft-365/">Microsoft 365</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2022/05/09/注册一个微软365的E5帐号/"  title="注册一个微软365的E5帐号">
+ <strong>下一篇：</strong><br/> 
+ <span>注册一个微软365的E5帐号
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2022/05/09/一个网页乱码问题/" title="一个网页乱码问题" itemprop="url">一个网页乱码问题</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2022-05-09T12:29:52.000Z" itemprop="datePublished"> 发表于 2022-05-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>之前的文章「<a href="https://lvxu.site/2022/05/01/自己制作的第一个WEB应用/" target="_blank" rel="noopener">自己制作的第一个WEB应用 | 吕旭说 (lvxu.site)</a>」里描述了我的第一个网页应用。页面开发出来一开始是发布在Github上的。在Github上一切正常。但是这个页面要给别人用，考虑到访问速度，就用Gitee的导入功能，从Github复制了一份到Gitee上。</p>
-<p>没想到在Github上一切正常的网页，在Gitee上就成了乱码。</p>
-<p>在网上搜了一下，都说是中文编码的问题，如果网页HTML文件的编码和文件中<code>&lt;meta charset=&quot;&quot;&gt;</code>里面不一致的话，就会有这种情况。比如网页HTML文件的编码是GBK（在Windows下，ANSI即为GBK），而文件中将编码规定为UTF-8（<code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>），则中文会呈现为乱码。</p>
-<p>而我这个显然不是这种情况。我的HTML文件是用notepad++编写的，一开始就是UTF-8编码格式，况且网页在Github Page里面显示是正常的。同时，我点右键打开乱码网页的源代码，发现源代码就是乱码的。</p>
-<p>我又考虑到，是否是换行码的问题。我尝试将HTML文档的Windows换行符<code>CR</code> <code>LF</code>改成了Unix换行符 <code>LF</code>，重新上传，没有解决问题。</p>
-<p>最后，我尝试在windows下，先用系统自带的<strong>记事本</strong>将HTML的编码转为ANSI，再重新保存为UTF-8，发现页面里多出来几个「?」，删除这几个问号后，再上传，问题解决。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/乱码/">乱码</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
 	
-</div>
-
-</footer>
-
-
-    </article>
 
 
 
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'dac9155eb78fe699d034',
+    clientSecret: '199d4d8a8d9af47bd32b503af3203f4206030c41',
+    repo: 'lvxu_site',
+    owner: 'lvxu1987',
+    admin: ['lvxu1987'],
+    id: 'Fri Oct 14 2022 22:35:11 GMT+0800',      // Ensure uniqueness and length less than 50 默认为 location.href
+    distractionFreeMode: true  // Facebook-like distraction free mode
+  })
 
+  gitalk.render('gitalk-container')
 
+</script>
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2022/05/01/自己制作的第一个WEB应用/" title="自己制作的第一个WEB应用" itemprop="url">自己制作的第一个WEB应用</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2022-05-01T02:34:32.000Z" itemprop="datePublished"> 发表于 2022-05-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>前两天自己完成了第一个HTML5+JavaScript的Web应用，发文纪念一下。</p>
-<h2 id="应用的作用">应用的作用</h2><p>很多使用多连杆后桥的汽车，由于配置或预留了后桥转向功能，因此后桥的前束控制臂无法用于四轮定位参数的调整。此时，后桥的两个调整螺栓调整时，会使得前束和外倾同时变化，导致不太容易调整。</p>
-<p>传统上，需要在一张特定的坐标图上根据当前的四轮定位外倾值、前束值和目标外倾值、前束值根据规定的斜率规律进行绘图，找到一个中间值。这样就能分两步，先调整到中间值，再调整到目标值，实现两步调整。如果不这样的话可能会导致反复调整，效率较低。</p>
-<p>我之前是做了一个EXCEL文档，用数学方式代替作图，实现输入数据自动计算中间值和调整顺序。但是在手机上，这个文档需要用WPS手机版打开，不太方便，因此萌生了用网页实现这个功能的想法。</p>
-<h2 id="页面开发">页面开发</h2><p>基本思路就是HTML5搭建页面框架，用JavaScript进行计算。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2022/05/01/自己制作的第一个WEB应用/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>►<a class="article-category-link" href="/categories/网络/汽车/">汽车</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/汽车维修/">汽车维修</a><a href="/tags/四轮定位/">四轮定位</a><a href="/tags/网页应用/">网页应用</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/" title="免费开源剪辑软件Shotcut推荐和使用教程" itemprop="url">免费开源剪辑软件Shotcut推荐和使用教程</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2020-04-03T14:40:11.000Z" itemprop="datePublished"> 发表于 2020-04-03</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
-<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-c9cde800af774a25.png" alt="Shotcut软件的界面.png"></p>
-<p>下面大概说一下这个软件怎么使用。</p>
-<h2 id="导入素材，建立时间线">导入素材，建立时间线</h2><ol>
-<li><p>将需要剪辑的素材拖动到「播放列表」区域，将素材导入到软件。</p>
-</li>
-<li><p>点击时间线下面的「三横线符号」，打开附加操作菜单，在里面选择添加视频轨道，根据需要可以再添加音频轨道或多个视频轨道。</p>
-</li>
-</ol>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/视频剪辑/">视频剪辑</a><a href="/tags/Shotcut/">Shotcut</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
-  </nav>
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -634,6 +423,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -653,6 +444,62 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+    
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://qr.liantu.com/api.php?&w=260&el=l&text=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -661,6 +508,27 @@ $(document).ready(function(){
 
 
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
 
 
 
@@ -713,4 +581,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

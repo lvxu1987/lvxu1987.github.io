@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="吕旭说">
 <meta property="og:description" content="一个使用ipv6以后能ping到ipv6地址的网站无法解决的问题。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-10-14T14:52:53.181Z">
+<meta property="og:updated_time" content="2022-10-14T14:57:53.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决">
 <meta name="twitter:description" content="一个使用ipv6以后能ping到ipv6地址的网站无法解决的问题。">
@@ -110,9 +110,9 @@
 <p>尝试根据以前的方法清除DNS缓存，通过管理员权限打开CMD</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 清除DNS缓存信息</span><br><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br><span class="line"></span><br><span class="line"># 重置winsock 目录设置</span><br><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
 <p>重启之后，没有解决问题</p>
-<a id="more"></a>
 <p>后来我在搜索时找到这篇文章<a href="https://neucrack.com/p/400" target="_blank" rel="noopener">使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决-次世代BUG池 (neucrack.com)</a></p>
 <p>文章中说：</p>
+<a id="more"></a>
 <blockquote>
 <p>由于 IPv6 对 MTU 的长度和 IPv4 不同，导致使用 IPv6 时会出现某些网站偶尔无法访问，其实就是 MTU 设置太大，有时候需要分包的时候被网络中一些不支持分包的设备给丢弃了，导致网站无法访问</p>
 <blockquote>
@@ -123,17 +123,11 @@
 <p>这里记录下，以下为其原话：</p>
 <blockquote>
 <p>之前ipv6环境下简书时而可以访问时而不能访问的root cause找到了，原因是PMTU黑洞，其细节如下：<br>终端设备在发包时，也可以设置 DF （ Don’t Fragment ）标记来告诉路由器不要分片。这时中间路由器会丢掉超过 MTU 的包，回复一条 ICMP Fragmentation Needed 消息。发送者收到这个包后，下次就会发小一点的包，这个过程叫做 PMTU Discovery 。现实中可以看到 HTTPS （ TLS ）的流量大都是带 DF 标记的。<br>然而，互联网上有大量的中间设备为了所谓的“安全”或者没有正确配置，不回应 ICMP Fragmentation Needed 包，这使得访问某些网站时如果某个包的大小超过了 PMTU，会被无声地丢弃，直到 TCP 协议发现超时丢包进行重传，这非常缓慢。遇到这种情况，我们可以说你和目标服务器的路径上存在 PMTU 黑洞。<br>由于我们到简书之间的目标链路一直在变化，在链路节点中如果遇到了这种被错误配置的设备，就会导致我们无法访问简书。<br>现在国内 ISP 一般都是通过 PPPoE 虚拟拨号建立 WAN 口连接的。Ethernet 的默认 MTU 是 1500，但是 PPPoE 隧道有 8 个 bytes 的开销，所以 PPPoE 虚连接的 MTU 就是 1500-8=1492，减掉 IPv4 包头（ 20 字节）和 TCP 包头（ 20 字节），可以得知 IPv4 下需要把 MSS 设为 1452 以下。IPv6 的包头是 40 字节，所以 IPv6 下需要把 MSS 设为 1432 以下。<br>解决方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt; #set security flow tcp-mss all-tcp mss 1452</span><br><span class="line">&gt; &gt; set security flow tcp-mss all-tcp mss 1432</span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;<br>&gt;</p>
-<blockquote>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt; #<span class="built_in">set</span> security flow tcp-mss all-tcp mss <span class="number">1452</span></span><br><span class="line">&gt; &gt; <span class="built_in">set</span> security flow tcp-mss all-tcp mss <span class="number">1432</span></span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
 <p>原先的设置值是1452, 改成1432后，强制丢包现象消失，原先无法访问的简书可以被访问了。</p>
 </blockquote>
 <p>路由器后台一般都可以直接更改，电脑 linux 可以临时：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; sudo ifconfig enp7s0 mtu 1432 up</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; sudo ifconfig enp7s0 mtu <span class="number">1432</span> up</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>我的路由器是TP-LINK的TL-R473GP-AC，在后台找到<code>基本设置</code> <code>WAN设置</code> <code>IPv6</code> 将<code>MTU</code> 设置为1432，重启路由器，问题解决。</p>
 <p>但是CCTV-1上的节目也结束了。-_-||</p>

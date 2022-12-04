@@ -81,6 +81,81 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2022/12/04/利用Ventoy构建真机虚拟机双启动ubuntu系统/" title="利用Ventoy构建真机虚拟机双启动ubuntu系统" itemprop="url">利用Ventoy构建真机虚拟机双启动ubuntu系统</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
+		
+  <p class="article-time">
+    <time datetime="2022-12-04T00:11:04.000Z" itemprop="datePublished"> 发表于 2022-12-04</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>出于研究ROS2、Apollo等自动驾驶相关系统，需要安装一个ubuntu系统。Apollo显示要求Ubuntu18.04以上系统，ROS Humble版本要求Ubuntu 22.04。综合两者的要求，选择的最新的LTS版，Ubuntu 22.04.1 LTS进行安装。</p>
+<p>具体步骤如下：</p>
+<ol>
+<li><p>在Virtualbox新建虚拟机，注意以下两点：</p>
+<ul>
+<li>在设置内存、处理器时，选中<code>Enable EFI</code>，以便将来系统既可以在<code>UEFI</code>下启动，也可以在<code>Legacy BIOS</code>下启动。</li>
+<li>需要在新建虚拟磁盘时，选中<code>Pre-allocate Full Size</code>，新建固定大小的vdi文件。</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>启动虚拟机，安装系统，完成设置。根据ventoy的文档，完成安装后，部分linux系统需要Legacy BIOS启动的补充包（比如Deepin），Ubuntu不需要这一步就省略了。为了让ubuntu顺利支持ventoy，需要从<a href="https://github.com/ventoy/vtoyboot/releases下载一个压缩包，并解压后执行脚本，然后关机即可。" target="_blank" rel="noopener">https://github.com/ventoy/vtoyboot/releases下载一个压缩包，并解压后执行脚本，然后关机即可。</a></p>
+</li>
+<li><p>在Virtualbox的虚拟介质管理中，释放新建虚拟机的虚拟硬盘。然后在文件资源管理器中找到这个文件，将文件后缀名由<code>.vdi</code>改为<code>.vdi.vtoy</code>。再在Virtualbox中注册这个虚拟硬盘。注意，由于后缀名改了，注册时，文件类型要选择所有文件才能找到改后缀名后的虚拟硬盘文件。</p>
+</li>
+<li>在<a href="https://www.ventoy.net/cn/download.html" target="_blank" rel="noopener">Ventoy官方网站</a>下载最新版的Ventoy。自从 Ventoy 1.0.66 版本开始，Ventoy 支持启动本地硬盘中的镜像文件，这也是我们能使用Ventoy实现虚拟机、真机双启动的基础。</li>
+<li>找一个不用的U盘，容量无所谓，使用Ventoy将其制作为启动U盘。再使用<code>VentoyVlnk.exe</code>程序，创建一个虚拟硬盘的链接文件，后缀为<code>.vdi.vlnk.vtoy</code>。将这个链接文件复制到Ventoy启动U盘的中。重启电脑，在启动选项中使用这个U盘作为启动盘，就会进入Ventoy界面，在Ventoy界面中，选择刚才复制过来的链接，就会从vdi虚拟硬盘中启动系统，从而实现真机上运行Ubuntu的功能，发挥其最大性能。</li>
+<li>重启进入windows系统，仍然可以从Virtualbox中启动虚拟机运行Ubuntu。</li>
+</ol>
+<p>至此，目标完成。</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2022/12/04/利用Ventoy构建真机虚拟机双启动ubuntu系统/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/网络/">网络</a>
+</div>
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2022/10/14/使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决/" title="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决" itemprop="url">使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决</a>
   </h1>
   <p class="article-author">By
@@ -350,76 +425,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/" title="免费开源剪辑软件Shotcut推荐和使用教程" itemprop="url">免费开源剪辑软件Shotcut推荐和使用教程</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
-		
-  <p class="article-time">
-    <time datetime="2020-04-03T14:40:11.000Z" itemprop="datePublished"> 发表于 2020-04-03</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
-<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。这是一个开源的免费软件，官网地址是<a href="https://shotcut.org/" target="_blank" rel="noopener">https://shotcut.org/</a>。 官网进去是英文版的，不要恐慌，软件下载下来界面有中文版。</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-c9cde800af774a25.png" alt="Shotcut软件的界面.png"></p>
-<p>下面大概说一下这个软件怎么使用。</p>
-<h2 id="导入素材，建立时间线">导入素材，建立时间线</h2><ol>
-<li><p>将需要剪辑的素材拖动到「播放列表」区域，将素材导入到软件。</p>
-</li>
-<li><p>点击时间线下面的「三横线符号」，打开附加操作菜单，在里面选择添加视频轨道，根据需要可以再添加音频轨道或多个视频轨道。</p>
-</li>
-</ol>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网络/">网络</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/视频剪辑/">视频剪辑</a><a href="/tags/Shotcut/">Shotcut</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -450,7 +455,7 @@
 		  
 		
 		  
-			<li><a href="/categories/网络/" title="网络">网络<sup>11</sup></a></li>
+			<li><a href="/categories/网络/" title="网络">网络<sup>12</sup></a></li>
 		  
 		
 		</ul>
@@ -475,11 +480,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/视频剪辑/" title="视频剪辑">视频剪辑<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/视频剪辑/" title="视频剪辑">视频剪辑<sup>2</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -487,11 +492,11 @@
 			
 		
 			
-				<li><a href="/tags/ipv6/" title="ipv6">ipv6<sup>1</sup></a></li>
+				<li><a href="/tags/乱码/" title="乱码">乱码<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/乱码/" title="乱码">乱码<sup>1</sup></a></li>
+				<li><a href="/tags/ipv6/" title="ipv6">ipv6<sup>1</sup></a></li>
 			
 		
 			
@@ -511,11 +516,7 @@
 			
 		
 			
-				<li><a href="/tags/Onedrive/" title="Onedrive">Onedrive<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Microsoft-365/" title="Microsoft 365">Microsoft 365<sup>1</sup></a></li>
+				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
 			
 		
 			
@@ -531,7 +532,11 @@
 			
 		
 			
-				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+				<li><a href="/tags/Onedrive/" title="Onedrive">Onedrive<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Microsoft-365/" title="Microsoft 365">Microsoft 365<sup>1</sup></a></li>
 			
 		
 		</ul>

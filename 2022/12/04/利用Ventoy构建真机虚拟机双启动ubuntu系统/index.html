@@ -4,30 +4,24 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   
-    <title>那些年被抛弃的免费剪辑软件 | 吕旭说</title>
+    <title>利用Ventoy构建真机虚拟机双启动ubuntu系统 | 吕旭说</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="吕旭">
     
 
     
-    <meta name="description" content="最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。 简单研究了一下免费的剪辑软件，最后选择了Shutcut。 Shutcut的事情另外一篇文章里会说另外一篇文章里会说，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。">
-<meta name="keywords" content="网络,视频剪辑">
+    <meta name="description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="那些年被抛弃的免费剪辑软件">
-<meta property="og:url" content="https://lvxublog.com/2020/04/03/那些年被抛弃的免费剪辑软件/index.html">
+<meta property="og:title" content="利用Ventoy构建真机虚拟机双启动ubuntu系统">
+<meta property="og:url" content="https://lvxublog.com/2022/12/04/利用Ventoy构建真机虚拟机双启动ubuntu系统/index.html">
 <meta property="og:site_name" content="吕旭说">
-<meta property="og:description" content="最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。 简单研究了一下免费的剪辑软件，最后选择了Shutcut。 Shutcut的事情另外一篇文章里会说另外一篇文章里会说，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。">
+<meta property="og:description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-92d2b7ff2873ca53.png">
-<meta property="og:image" content="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-dd67bd25ada15005.jpg">
-<meta property="og:image" content="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-9feded2e23b1f31c.png">
-<meta property="og:image" content="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-0a01894beb4e87c1.png">
-<meta property="og:updated_time" content="2020-04-24T06:17:02.000Z">
+<meta property="og:updated_time" content="2022-12-04T00:46:39.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="那些年被抛弃的免费剪辑软件">
-<meta name="twitter:description" content="最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。 简单研究了一下免费的剪辑软件，最后选择了Shutcut。 Shutcut的事情另外一篇文章里会说另外一篇文章里会说，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。">
-<meta name="twitter:image" content="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-92d2b7ff2873ca53.png">
+<meta name="twitter:title" content="利用Ventoy构建真机虚拟机双启动ubuntu系统">
+<meta name="twitter:description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
 
     
     <link rel="alternative" href="/atom.xml" title="吕旭说" type="application/atom+xml">
@@ -86,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2020/04/03/那些年被抛弃的免费剪辑软件/" title="那些年被抛弃的免费剪辑软件" itemprop="url">那些年被抛弃的免费剪辑软件</a>
+      <a href="/2022/12/04/利用Ventoy构建真机虚拟机双启动ubuntu系统/" title="利用Ventoy构建真机虚拟机双启动ubuntu系统" itemprop="url">利用Ventoy构建真机虚拟机双启动ubuntu系统</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://lvxublog.com/about" title="吕旭" target="_blank" itemprop="author">吕旭</a>
 		
   <p class="article-time">
-    <time datetime="2020-04-03T14:36:11.000Z" itemprop="datePublished"> 发表于 2020-04-03</time>
+    <time datetime="2022-12-04T00:11:04.000Z" itemprop="datePublished"> 发表于 2022-12-04</time>
     
   </p>
 </header>
@@ -102,23 +96,35 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑王："><span class="toc-number">1.</span> <span class="toc-text">视频编辑王：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#爱剪辑"><span class="toc-number">2.</span> <span class="toc-text">爱剪辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑器"><span class="toc-number">3.</span> <span class="toc-text">视频编辑器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenShot"><span class="toc-number">4.</span> <span class="toc-text">OpenShot</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">1.</span> <span class="toc-text">参考文档</span></a></li></ol>
 		
 		</div>
 		
-		<p>最近想剪辑一下教学视频，想着能不用盗版尽量不用盗版，况且自己的需求并不复杂，又不是剪辑电影电视剧了，就没有下载那几个大牌的剪辑软件。</p>
-<p>简单研究了一下免费的剪辑软件，最后选择了Shutcut。</p>
-<p>Shutcut的事情另外一篇文章里会说<a href="http://lvxu.site/2020/04/03/%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6Shotcut%E6%8E%A8%E8%8D%90%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">另外一篇文章里会说</a>，在这主要说说我试用了，但是没有选用的剪辑软件的存在问题。</p>
+		<p>出于研究ROS2、Apollo等自动驾驶相关系统，需要安装一个ubuntu系统。Apollo显示要求Ubuntu18.04以上系统，ROS Humble版本要求Ubuntu 22.04。综合两者的要求，选择的最新的LTS版，Ubuntu 22.04.1 LTS进行安装。</p>
+<p>具体步骤如下：</p>
+<ol>
+<li><p>在Virtualbox新建虚拟机，注意以下两点：</p>
+<ul>
+<li>在设置内存、处理器时，选中<code>Enable EFI</code>，以便将来系统既可以在<code>UEFI</code>下启动，也可以在<code>Legacy BIOS</code>下启动。</li>
+<li>需要在新建虚拟磁盘时，选中<code>Pre-allocate Full Size</code>，新建固定大小的vdi文件。</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>启动虚拟机，安装系统，完成设置。根据ventoy的文档，完成安装后，部分linux系统需要Legacy BIOS启动的补充包（比如Deepin），Ubuntu不需要这一步就省略了。为了让ubuntu顺利支持ventoy，需要从<a href="https://github.com/ventoy/vtoyboot/releases下载一个压缩包，并解压后执行脚本，然后关机即可。" target="_blank" rel="noopener">https://github.com/ventoy/vtoyboot/releases下载一个压缩包，并解压后执行脚本，然后关机即可。</a></p>
+</li>
+<li><p>在Virtualbox的虚拟介质管理中，释放新建虚拟机的虚拟硬盘。然后在文件资源管理器中找到这个文件，将文件后缀名由<code>.vdi</code>改为<code>.vdi.vtoy</code>。再在Virtualbox中注册这个虚拟硬盘。注意，由于后缀名改了，注册时，文件类型要选择所有文件才能找到改后缀名后的虚拟硬盘文件。</p>
+</li>
+<li>在<a href="https://www.ventoy.net/cn/download.html" target="_blank" rel="noopener">Ventoy官方网站</a>下载最新版的Ventoy。自从 Ventoy 1.0.66 版本开始，Ventoy 支持启动本地硬盘中的镜像文件，这也是我们能使用Ventoy实现虚拟机、真机双启动的基础。</li>
+<li>找一个不用的U盘，容量无所谓，使用Ventoy将其制作为启动U盘。再使用<code>VentoyVlnk.exe</code>程序，创建一个虚拟硬盘的链接文件，后缀为<code>.vdi.vlnk.vtoy</code>。将这个链接文件复制到Ventoy启动U盘的中。重启电脑，在启动选项中使用这个U盘作为启动盘，就会进入Ventoy界面，在Ventoy界面中，选择刚才复制过来的链接，就会从vdi虚拟硬盘中启动系统，从而实现真机上运行Ubuntu的功能，发挥其最大性能。</li>
+<li>重启进入windows系统，仍然可以从Virtualbox中启动虚拟机运行Ubuntu。</li>
+</ol>
+<p>至此，目标完成。</p>
 <a id="more"></a>
-<h4 id="视频编辑王：">视频编辑王：</h4><p>没有找到怎么调整画中画的位置（也许是我不会用？），而且免费版不能导出1080P，导出后的视频也有水印。<br><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-92d2b7ff2873ca53.png" alt="免费版无法导出1080P且有水印"></p>
-<h4 id="爱剪辑">爱剪辑</h4><p>爱剪辑导出的时候会强制添加片头片尾，所以在网上名气很大，尤其是在某个特定领域的视频。</p>
-<p>试了一下爱剪辑，发现这个软件都没有时间轴，其实就是一个加转场效果和背景音乐的工具。那我还不如直接用windows10自带的「视频编辑器」了。</p>
-<p>而且这个软件现在坑了，剪辑完了导出的时候问你要9.9。虽然钱不多吧，但是这样之前不说，剪辑完了要钱，就像是敲诈勒索一样，感觉像吃了一坨Shi。</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-dd67bd25ada15005.jpg" alt="爱剪辑要钱界面"></p>
-<h4 id="视频编辑器">视频编辑器</h4><p>视频编辑器是Windows10自带的视频编辑软件，可以连接视频，添加背景音乐，添加一些动作，功能过于简单。</p>
-<p>适合把照片导出成视频。实际上这个软件会自动把你电脑里相似的照片制作成视频，有点类似谷歌照片的功能。</p>
-<p><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-9feded2e23b1f31c.png" alt="Windows10视频编辑器.png"></p>
-<h4 id="OpenShot">OpenShot</h4><p>在开源剪辑界名气也不小，不知道为什么，在我的Windows10系统上始终无法正常运行，下了32位版和64位版都不行，最后只能放弃了。<br><img src="https://gitee.com/lvxu1987/bolgimage/raw/master/img/49719-0a01894beb4e87c1.png" alt="image"></p>
+<p>撰文时VirtualBox版本为7.0.2 ，Ventoy版本为1.0.84。</p>
+<h2 id="参考文档">参考文档</h2><ol>
+<li><a href="https://www.ventoy.net/cn/plugin_vtoyboot.html" target="_blank" rel="noopener">Plugin.VtoyBoot . Ventoy：Linux vDisk 文件启动插件</a></li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -130,18 +136,13 @@
 </div>
 
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/网络/">网络</a><a href="/tags/视频剪辑/">视频剪辑</a>
-  </div>
-
 </div>
 
 
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://lvxublog.com/2020/04/03/那些年被抛弃的免费剪辑软件/" data-title="那些年被抛弃的免费剪辑软件 | 吕旭说" data-tsina="1657002674" class="share clearfix">
+	  <div data-url="https://lvxublog.com/2022/12/04/利用Ventoy构建真机虚拟机双启动ubuntu系统/" data-title="利用Ventoy构建真机虚拟机双启动ubuntu系统 | 吕旭说" data-tsina="1657002674" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -154,19 +155,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2020/04/03/免费开源剪辑软件Shotcut推荐和使用教程/" title="免费开源剪辑软件Shotcut推荐和使用教程">
-  <strong>上一篇：</strong><br/>
-  <span>
-  免费开源剪辑软件Shotcut推荐和使用教程</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2020/04/01/为Win10的UWP应用使用设置代理/"  title="为Win10的UWP应用使用设置代理">
+<a href="/2022/10/14/使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决/"  title="使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决">
  <strong>下一篇：</strong><br/> 
- <span>为Win10的UWP应用使用设置代理
+ <span>使用IPv6后一些网站无法访问，有时能访问有时无法访问问题解决
 </span>
 </a>
 </div>
@@ -187,7 +180,7 @@
     repo: 'lvxu_site',
     owner: 'lvxu1987',
     admin: ['lvxu1987'],
-    id: 'Fri Apr 03 2020 22:36:11 GMT+0800',      // Ensure uniqueness and length less than 50 默认为 location.href
+    id: 'Sun Dec 04 2022 08:11:04 GMT+0800',      // Ensure uniqueness and length less than 50 默认为 location.href
     distractionFreeMode: true  // Facebook-like distraction free mode
   })
 
@@ -201,7 +194,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑王："><span class="toc-number">1.</span> <span class="toc-text">视频编辑王：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#爱剪辑"><span class="toc-number">2.</span> <span class="toc-text">爱剪辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频编辑器"><span class="toc-number">3.</span> <span class="toc-text">视频编辑器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenShot"><span class="toc-number">4.</span> <span class="toc-text">OpenShot</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">1.</span> <span class="toc-text">参考文档</span></a></li></ol>
  
   </div>
 

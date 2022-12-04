@@ -98,20 +98,19 @@
 <p>具体步骤如下：</p>
 <ol>
 <li><p>在Virtualbox新建虚拟机，注意以下两点：</p>
-<ul>
-<li>在设置内存、处理器时，选中<code>Enable EFI</code>，以便将来系统既可以在<code>UEFI</code>下启动，也可以在<code>Legacy BIOS</code>下启动。</li>
-<li>需要在新建虚拟磁盘时，选中<code>Pre-allocate Full Size</code>，新建固定大小的vdi文件。</li>
-</ul>
+<p>（1）在设置内存、处理器时，选中<code>Enable EFI</code>，以便将来系统既可以在<code>UEFI</code>下启动，也可以在<code>Legacy BIOS</code>下启动。</p>
+<p>（2）需要在新建虚拟磁盘时，选中<code>Pre-allocate Full Size</code>，新建固定大小的vdi文件。</p>
 </li>
-</ol>
-<ol>
 <li><p>启动虚拟机，安装系统，完成设置。根据ventoy的文档，完成安装后，部分linux系统需要Legacy BIOS启动的补充包（比如Deepin），Ubuntu不需要这一步就省略了。为了让ubuntu顺利支持ventoy，需要从<a href="https://github.com/ventoy/vtoyboot/releases下载一个压缩包，并解压后执行脚本，然后关机即可。" target="_blank" rel="noopener">https://github.com/ventoy/vtoyboot/releases下载一个压缩包，并解压后执行脚本，然后关机即可。</a></p>
 </li>
 <li><p>在Virtualbox的虚拟介质管理中，释放新建虚拟机的虚拟硬盘。然后在文件资源管理器中找到这个文件，将文件后缀名由<code>.vdi</code>改为<code>.vdi.vtoy</code>。再在Virtualbox中注册这个虚拟硬盘。注意，由于后缀名改了，注册时，文件类型要选择所有文件才能找到改后缀名后的虚拟硬盘文件。</p>
 </li>
-<li>在<a href="https://www.ventoy.net/cn/download.html" target="_blank" rel="noopener">Ventoy官方网站</a>下载最新版的Ventoy。自从 Ventoy 1.0.66 版本开始，Ventoy 支持启动本地硬盘中的镜像文件，这也是我们能使用Ventoy实现虚拟机、真机双启动的基础。</li>
-<li>找一个不用的U盘，容量无所谓，使用Ventoy将其制作为启动U盘。再使用<code>VentoyVlnk.exe</code>程序，创建一个虚拟硬盘的链接文件，后缀为<code>.vdi.vlnk.vtoy</code>。将这个链接文件复制到Ventoy启动U盘的中。重启电脑，在启动选项中使用这个U盘作为启动盘，就会进入Ventoy界面，在Ventoy界面中，选择刚才复制过来的链接，就会从vdi虚拟硬盘中启动系统，从而实现真机上运行Ubuntu的功能，发挥其最大性能。</li>
-<li>重启进入windows系统，仍然可以从Virtualbox中启动虚拟机运行Ubuntu。</li>
+<li><p>在<a href="https://www.ventoy.net/cn/download.html" target="_blank" rel="noopener">Ventoy官方网站</a>下载最新版的Ventoy。自从 Ventoy 1.0.66 版本开始，Ventoy 支持启动本地硬盘中的镜像文件，这也是我们能使用Ventoy实现虚拟机、真机双启动的基础。</p>
+</li>
+<li><p>找一个不用的U盘，容量无所谓，使用Ventoy将其制作为启动U盘。再使用<code>VentoyVlnk.exe</code>程序，创建一个虚拟硬盘的链接文件，后缀为<code>.vdi.vlnk.vtoy</code>。将这个链接文件复制到Ventoy启动U盘的中。重启电脑，在启动选项中使用这个U盘作为启动盘，就会进入Ventoy界面，在Ventoy界面中，选择刚才复制过来的链接，就会从vdi虚拟硬盘中启动系统，从而实现真机上运行Ubuntu的功能，发挥其最大性能。</p>
+</li>
+<li><p>重启进入windows系统，仍然可以从Virtualbox中启动虚拟机运行Ubuntu。</p>
+</li>
 </ol>
 <p>至此，目标完成。</p>
         

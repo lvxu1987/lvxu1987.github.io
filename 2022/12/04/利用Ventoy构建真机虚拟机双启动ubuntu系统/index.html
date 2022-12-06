@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="吕旭说">
 <meta property="og:description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-12-04T00:51:06.354Z">
+<meta property="og:updated_time" content="2022-12-06T04:42:47.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Ventoy构建真机虚拟机双启动ubuntu系统">
 <meta name="twitter:description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
@@ -96,12 +96,12 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">1.</span> <span class="toc-text">参考文档</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作步骤"><span class="toc-number">1.</span> <span class="toc-text">操作步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进一步的设想"><span class="toc-number">2.</span> <span class="toc-text">进一步的设想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
 		
 		</div>
 		
 		<p>出于研究ROS2、Apollo等自动驾驶相关系统，需要安装一个ubuntu系统。Apollo显示要求Ubuntu18.04以上系统，ROS Humble版本要求Ubuntu 22.04。综合两者的要求，选择的最新的LTS版，Ubuntu 22.04.1 LTS进行安装。</p>
-<p>具体步骤如下：</p>
+<h2 id="操作步骤">操作步骤</h2><p>具体操作步骤如下：</p>
 <ol>
 <li><p>在Virtualbox新建虚拟机，注意以下两点：</p>
 <p>（1）在设置内存、处理器时，选中<code>Enable EFI</code>，以便将来系统既可以在<code>UEFI</code>下启动，也可以在<code>Legacy BIOS</code>下启动。</p>
@@ -121,8 +121,16 @@
 <p>至此，目标完成。</p>
 <a id="more"></a>
 <p>撰文时VirtualBox版本为7.0.2 ，Ventoy版本为1.0.84。</p>
+<h2 id="进一步的设想">进一步的设想</h2><p>windows在真机启动后，能将ubuntu作为虚拟机启动，是因为ubuntu是存在于一个vdi虚拟硬盘中。而windows本身也是可以安装在vhd(x)文件中的，如果真机上的windows以vhdx的形式启动，是否能在ubuntu中将windows也作为虚拟机启动，从而实现windows和ubuntu互为虚拟机呢？</p>
+<p>这个方案如果要实现，需要在通过ventoy启动ubuntu时，在ventoy的配置中，将<code>VTOY_LINUX_REMOUNT</code>配置为<code>&quot;0&quot;</code>。ventoy的文档对这个功能是这样描述的。</p>
+<blockquote>
+<p> “0”: Linux启动后不需要继续访问ISO文件所在的分区。  “1”: Linux启动后需要继续访问ISO文件所在的分区。默认值是 “0”。 该选项只对 Linux 系统镜像有效。 默认情况下，受Linux内核相关功能的限制，对于Linux系统，在启动后无法继续访问ISO文件所在的分区。在mount的时候会提示 device busy。 如果这里选择 1，则 Ventoy 会尝试通过一些特殊的手段绕过内核的这个限制，但是这个功能是实验性质的，没有经过大规模和长时间的验证。</p>
+</blockquote>
+<p>这样就能在ubuntu启动后，继续访问启动时的硬盘，从而在ubuntu中访问windows的vhd文件。此时使用虚拟机挂载这个虚拟硬盘，应该就可以在虚拟机中启动windows了。</p>
+<p>不过这个还是一个设想，没有尝试过，先记录在这。</p>
 <h2 id="参考文档">参考文档</h2><ol>
 <li><a href="https://www.ventoy.net/cn/plugin_vtoyboot.html" target="_blank" rel="noopener">Plugin.VtoyBoot . Ventoy：Linux vDisk 文件启动插件</a></li>
+<li><a href="https://www.ventoy.net/cn/plugin_control.html" target="_blank" rel="noopener">Plugin.control . Ventoy：Ventoy 全局控制插件</a></li>
 </ol>
   
 	</div>
@@ -193,7 +201,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">1.</span> <span class="toc-text">参考文档</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作步骤"><span class="toc-number">1.</span> <span class="toc-text">操作步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进一步的设想"><span class="toc-number">2.</span> <span class="toc-text">进一步的设想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
  
   </div>
 

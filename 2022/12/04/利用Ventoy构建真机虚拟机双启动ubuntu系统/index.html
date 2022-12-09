@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="吕旭说">
 <meta property="og:description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-12-06T04:42:47.358Z">
+<meta property="og:updated_time" content="2022-12-09T04:14:16.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Ventoy构建真机虚拟机双启动ubuntu系统">
 <meta name="twitter:description" content="构建一个既能在windows下用virtualbox作为虚拟机启动，又能利用ventoy在真机下启动的ubuntu系统">
@@ -121,7 +121,7 @@
 <p>至此，目标完成。</p>
 <a id="more"></a>
 <p>撰文时VirtualBox版本为7.0.2 ，Ventoy版本为1.0.84。</p>
-<h2 id="进一步的设想">进一步的设想</h2><p>windows在真机启动后，能将ubuntu作为虚拟机启动，是因为ubuntu是存在于一个vdi虚拟硬盘中。而windows本身也是可以安装在vhd(x)文件中的，如果真机上的windows以vhdx的形式启动，是否能在ubuntu中将windows也作为虚拟机启动，从而实现windows和ubuntu互为虚拟机呢？</p>
+<h2 id="进一步的设想">进一步的设想</h2><p>windows在真机启动后，能将ubuntu作为虚拟机启动，是因为ubuntu是存在于一个vdi虚拟硬盘中。而windows本身也是可以安装在vhd文件中的，如果真机上的windows以vhd的形式启动，是否能在ubuntu中将windows也作为虚拟机启动，从而实现windows和ubuntu互为虚拟机呢？</p>
 <p>这个方案如果要实现，需要在通过ventoy启动ubuntu时，在ventoy的配置中，将<code>VTOY_LINUX_REMOUNT</code>配置为<code>&quot;0&quot;</code>。ventoy的文档对这个功能是这样描述的。</p>
 <blockquote>
 <p> “0”: Linux启动后不需要继续访问ISO文件所在的分区。  “1”: Linux启动后需要继续访问ISO文件所在的分区。默认值是 “0”。 该选项只对 Linux 系统镜像有效。 默认情况下，受Linux内核相关功能的限制，对于Linux系统，在启动后无法继续访问ISO文件所在的分区。在mount的时候会提示 device busy。 如果这里选择 1，则 Ventoy 会尝试通过一些特殊的手段绕过内核的这个限制，但是这个功能是实验性质的，没有经过大规模和长时间的验证。</p>
@@ -264,10 +264,6 @@
 			
 		
 			
-				<li><a href="/tags/乱码/" title="乱码">乱码<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/UWP软件/" title="UWP软件">UWP软件<sup>1</sup></a></li>
 			
 		
@@ -276,27 +272,19 @@
 			
 		
 			
-				<li><a href="/tags/ipv6/" title="ipv6">ipv6<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Shotcut/" title="Shotcut">Shotcut<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Onedrive/" title="Onedrive">Onedrive<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Microsoft-365/" title="Microsoft 365">Microsoft 365<sup>1</sup></a></li>
+				<li><a href="/tags/ipv6/" title="ipv6">ipv6<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/流氓软件/" title="流氓软件">流氓软件<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
 			
 		
 			
@@ -309,6 +297,18 @@
 		
 			
 				<li><a href="/tags/网页应用/" title="网页应用">网页应用<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Onedrive/" title="Onedrive">Onedrive<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Microsoft-365/" title="Microsoft 365">Microsoft 365<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/乱码/" title="乱码">乱码<sup>1</sup></a></li>
 			
 		
 		</ul>
